@@ -1,0 +1,543 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Apr 27 17:50:33 2026
+# Process ID: 25092
+# Current directory: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1
+# Command line: vivado.exe -log system_overlay_core_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_overlay_core_0_2.tcl
+# Log file: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1/system_overlay_core_0_2.vds
+# Journal file: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1\vivado.jou
+# Running On        :LAPTOP-AMKTF75G
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+# CPU Frequency     :2096 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :6387 MB
+# Swap memory       :14642 MB
+# Total Virtual     :21029 MB
+# Available Virtual :2360 MB
+#-----------------------------------------------------------
+source system_overlay_core_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 501.453 ; gain = 202.816
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_overlay_core_0_2
+Command: synth_design -top system_overlay_core_0_2 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27072
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1391.852 ; gain = 448.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_overlay_core_0_2' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/synth/system_overlay_core_0_2.vhd:99]
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:11' bound to instance 'U0' of component 'overlay_core' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/synth/system_overlay_core_0_2.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'overlay_core' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:57]
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:11' bound to instance 'grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:336]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:56]
+	Parameter DataWidth bound to: 7 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_3_3_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:451]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R.vhd:28]
+	Parameter DataWidth bound to: 7 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_2_1_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:463]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R.vhd:32]
+	Parameter DataWidth bound to: 7 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_2_0_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:478]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R.vhd:28]
+	Parameter DataWidth bound to: 7 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_4_1_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:490]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R.vhd:28]
+	Parameter DataWidth bound to: 7 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_5_2_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:502]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R.vhd:28]
+	Parameter DataWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_0_0_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:514]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R.vhd:28]
+	Parameter DataWidth bound to: 2 - type: integer 
+	Parameter AddressRange bound to: 5 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R.vhd:10' bound to instance 'p_ZL8font_5x7_1_3_U' of component 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:526]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-3491] module 'overlay_core_flow_control_loop_pipe_sequential_init' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'overlay_core_flow_control_loop_pipe_sequential_init' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:538]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_flow_control_loop_pipe_sequential_init' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_flow_control_loop_pipe_sequential_init.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_flow_control_loop_pipe_sequential_init.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH.vhd:56]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_CTRL_s_axi' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_CTRL_s_axi.vhd:12' bound to instance 'CTRL_s_axi_U' of component 'overlay_core_CTRL_s_axi' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:379]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_CTRL_s_axi' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_CTRL_s_axi.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_CTRL_s_axi' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_CTRL_s_axi.vhd:94]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_mul_16ns_16ns_32_2_1' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_mul_16ns_16ns_32_2_1.vhd:7' bound to instance 'mul_16ns_16ns_32_2_1_U38' of component 'overlay_core_mul_16ns_16ns_32_2_1' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:415]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_mul_16ns_16ns_32_2_1' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_mul_16ns_16ns_32_2_1.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_mul_16ns_16ns_32_2_1' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_mul_16ns_16ns_32_2_1.vhd:27]
+	Parameter DataWidth bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_data_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:430]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_regslice_both' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:30]
+	Parameter DataWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_keep_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:444]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_regslice_both__parameterized1' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_regslice_both__parameterized1' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:30]
+	Parameter DataWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_strb_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:458]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_user_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:472]
+INFO: [Synth 8-638] synthesizing module 'overlay_core_regslice_both__parameterized3' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core_regslice_both__parameterized3' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:30]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_last_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:486]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_id_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:500]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_in_V_dest_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:514]
+	Parameter DataWidth bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_data_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:528]
+	Parameter DataWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_keep_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:542]
+	Parameter DataWidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_strb_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:556]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_user_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:570]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_last_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:584]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_id_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:598]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'overlay_core_regslice_both' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_regslice_both.vhd:12' bound to instance 'regslice_both_stream_out_V_dest_V_U' of component 'overlay_core_regslice_both' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:612]
+INFO: [Synth 8-256] done synthesizing module 'overlay_core' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'system_overlay_core_0_2' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/synth/system_overlay_core_0_2.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/1c8d/hdl/vhdl/overlay_core_CTRL_s_axi.vhd:338]
+WARNING: [Synth 8-7129] Port reset in module overlay_core_mul_16ns_16ns_32_2_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[1] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[0] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[31] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ap_done_int in module overlay_core_flow_control_loop_pipe_sequential_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_1_3_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_0_0_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_5_2_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_4_1_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_0_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_2_1_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_p_ZL8font_5x7_3_3_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TSTRB[2] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TSTRB[1] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TSTRB[0] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TID[0] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TDEST[0] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1522.410 ; gain = 578.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 1522.410 ; gain = 578.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 1522.410 ; gain = 578.734
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1522.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/constraints/overlay_core_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/constraints/overlay_core_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1626.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1626.531 ; gain = 0.340
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:01:10 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:01:10 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:10 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'overlay_core_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'overlay_core_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'overlay_core_regslice_both'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'overlay_core_regslice_both__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'overlay_core_regslice_both__parameterized3'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'overlay_core_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'overlay_core_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                               00 |                               10
+                     one |                               10 |                               11
+                     two |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'overlay_core_regslice_both'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                               00 |                               10
+                     one |                               10 |                               11
+                     two |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'overlay_core_regslice_both__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                               00 |                               10
+                     one |                               10 |                               11
+                     two |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'overlay_core_regslice_both__parameterized3'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:01:13 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 6     
+	   2 Input   16 Bit       Adders := 9     
+	   3 Input   16 Bit       Adders := 5     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 8     
+	               17 Bit    Registers := 6     
+	               16 Bit    Registers := 19    
+	                8 Bit    Registers := 12    
+	                7 Bit    Registers := 10    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 12    
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 88    
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 9     
+	   6 Input    7 Bit        Muxes := 6     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 6     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 141   
+	   3 Input    2 Bit        Muxes := 42    
+	   4 Input    2 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 73    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_ln74_reg_389_reg, operation Mode is: (A*B)'.
+DSP Report: register mul_ln74_reg_389_reg is absorbed into DSP mul_ln74_reg_389_reg.
+DSP Report: register mul_16ns_16ns_32_2_1_U38/buff0_reg is absorbed into DSP mul_ln74_reg_389_reg.
+DSP Report: operator mul_16ns_16ns_32_2_1_U38/tmp_product is absorbed into DSP mul_ln74_reg_389_reg.
+WARNING: [Synth 8-7129] Port AWADDR[1] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[0] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[31] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module overlay_core_CTRL_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TSTRB[2] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TSTRB[1] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TSTRB[0] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TID[0] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stream_in_TDEST[0] in module overlay_core_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (CTRL_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (CTRL_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_in_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_in_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_in_V_id_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_in_V_id_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_in_V_dest_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_in_V_dest_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_out_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_out_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_out_V_id_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_out_V_id_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_out_V_dest_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module overlay_core.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_stream_out_V_dest_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module overlay_core.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:28 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+ Sort Area is  mul_ln74_reg_389_reg_0 : 0 0 : 2010 2010 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|overlay_core | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:56 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:02:03 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:23 ; elapsed = 00:02:04 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:37 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:37 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:37 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:37 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+-----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+-----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/pixel_in_keep_reg_1266_pp0_iter3_reg_reg[2] | 4      | 3     | NO           | NO                 | YES               | 3      | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/pixel_in_user_reg_1271_pp0_iter3_reg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/pixel_in_last_reg_1276_pp0_iter3_reg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/ap_loop_exit_ready_pp0_iter3_reg_reg        | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/b_reg_1293_pp0_iter3_reg_reg[0]             | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/pixel_in_data_reg_1259_pp0_iter3_reg_reg[1] | 4      | 21    | NO           | NO                 | YES               | 21     | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/g_reg_1287_pp0_iter3_reg_reg[0]             | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|overlay_core | grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154/r_reg_1281_pp0_iter3_reg_reg[0]             | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-------------+-----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|overlay_core | ((A'*B')')' | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   121|
+|2     |DSP48E1 |     1|
+|3     |LUT1    |    59|
+|4     |LUT2    |   165|
+|5     |LUT3    |   116|
+|6     |LUT4    |   237|
+|7     |LUT5    |    91|
+|8     |LUT6    |   130|
+|9     |SRL16E  |    30|
+|10    |FDRE    |   736|
+|11    |FDSE    |     3|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:37 ; elapsed = 00:02:22 . Memory (MB): peak = 1626.531 ; gain = 682.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.531 ; gain = 578.734
+Synthesis Optimization Complete : Time (s): cpu = 00:01:37 ; elapsed = 00:02:24 . Memory (MB): peak = 1626.531 ; gain = 682.855
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1626.531 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 122 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1626.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 61dfc9d9
+INFO: [Common 17-83] Releasing license: Synthesis
+90 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:50 ; elapsed = 00:02:49 . Memory (MB): peak = 1626.531 ; gain = 1112.105
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1626.531 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1/system_overlay_core_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_overlay_core_0_2, cache-ID = 02532cbccbf25c02
+INFO: [Coretcl 2-1174] Renamed 19 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1626.531 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_2_synth_1/system_overlay_core_0_2.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_overlay_core_0_2_utilization_synth.rpt -pb system_overlay_core_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 27 17:54:11 2026...

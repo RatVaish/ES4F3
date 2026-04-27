@@ -1,0 +1,156 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 67, Column: 13 }
+Function:        _Z9draw_textPKci7ap_uintILi16EES2_S2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'draw_char(char, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 36, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'draw_text(char const*, int, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 61, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 139, Column: 25 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'draw_text(char const*, int, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 61, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'overlay_core(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, ap_uint<1>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 82, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 132, Column: 25 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'draw_text(char const*, int, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 61, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'overlay_core(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, ap_uint<1>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 82, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: overlay_core.cpp, Line: 64, Column: 19 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_64_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: overlay_core.cpp, Line: 64, Column: 19 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_64_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: overlay_core.cpp, Line: 82, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_64_1
+  - String:          ''' ('
+  - LoopLoc:         'overlay_core.cpp:64:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          overlay_core
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: overlay_core.cpp, Line: 82, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_64_1
+  - String:          ''' ('
+  - LoopLoc:         'overlay_core.cpp:64:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          overlay_core
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 5, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=6 variable=_ZL8font_5x7'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:5:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:107:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 107, Column: 9 }
+  - VarName:         font_5x7
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 107, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '6'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_5x7
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 5, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8font_5x7
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '6'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

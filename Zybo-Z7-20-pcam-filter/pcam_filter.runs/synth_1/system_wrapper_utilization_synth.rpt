@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sat Apr 25 19:15:33 2026
-| Host         : DESKTOP-4LETMJQ running 64-bit major release  (build 9200)
+| Date         : Mon Apr 27 17:56:48 2026
+| Host         : LAPTOP-AMKTF75G running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
 | Device       : xc7z020clg400-1
@@ -164,11 +164,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | system_vtg_0                   |    1 |
 | system_video_dynclk_0          |    1 |
 | system_v_axi4s_vid_out_0_0     |    1 |
+| system_smartconnect_0_0        |    1 |
 | system_singlepix_ctrl_0_0      |    1 |
 | system_rst_vid_clk_dyn_0       |    1 |
 | system_rst_clk_wiz_0_50M_0     |    1 |
+| system_rst_clk_wiz_0_150M_0    |    1 |
 | system_rgb2dvi_0_0             |    1 |
 | system_processing_system7_0_0  |    1 |
+| system_overlay_core_0_2        |    1 |
 | system_multipix_ctrl_0_0       |    1 |
 | system_clk_wiz_0_0             |    1 |
 | system_axi_vdma_0_0            |    1 |

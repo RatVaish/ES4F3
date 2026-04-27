@@ -1,0 +1,14 @@
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="hls_overlay_prj" ideType="classic" top="overlay_core">
+    <files>
+        <file name="overlay_core.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="overlay_core.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="../../overlay_core_test.cpp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
+    </files>
+    <solutions>
+        <solution name="solution1" status=""/>
+    </solutions>
+    <Simulation argv="">
+        <SimFlow name="csim" setup="false" optimizeCompile="false" clean="false" ldflags="" mflags=""/>
+    </Simulation>
+</AutoPilot:project>
+

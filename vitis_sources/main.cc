@@ -6,6 +6,9 @@
 #include "ov5640/AXI_VDMA.h"
 #include "ov5640/PS_IIC.h"
 
+#include "EasterEgg.h"
+#include "SequenceDetector.h" 
+
 #include "MIPI_D_PHY_RX.h"
 #include "MIPI_CSI_2_RX.h"
 
@@ -76,6 +79,13 @@ int main()
 	PS_GPIO<ScuGicInterruptController> gpio_driver(GPIO_DEVID, irpt_ctl, GPIO_IRPT_ID);
 	PS_IIC<ScuGicInterruptController> iic_driver(CAM_I2C_DEVID, irpt_ctl, CAM_I2C_IRPT_ID, 100000);
 
+	XGpioPs_SetDirectionPin(&gpio_driver.getInstance(), 0, 0);  // sw[0] input
+	XGpioPs_SetDirectionPin(&gpio_driver.getInstance(), 1, 0);  // sw[1] input  
+	XGpioPs_SetDirectionPin(&gpio_driver.getInstance(), 2, 0);  // sw[2] input
+
+	EasterEggController easter_egg;
+	SequenceDetector sequence(&gpio_driver.getInstance(), 0);
+
 	OV5640 cam(iic_driver, gpio_driver);
 	AXI_VDMA<ScuGicInterruptController> vdma_driver(VDMA_DEVID, MEM_BASE_ADDR, irpt_ctl,
 			VDMA_MM2S_IRPT_ID,
@@ -98,6 +108,15 @@ int main()
 	uint8_t reg_value;
 
 	while (1) {
+		if (sequence.update()) {
+    			if (!easter_egg.is_active()) {
+        			easter_egg.activate();
+    			} else {
+        			easter_egg.deactivate();
+        			sequence.reset();
+    			}
+		}
+
 		xil_printf("\r\n\r\n\r\nPcam 5C MAIN OPTIONS\r\n");
 		xil_printf("\r\nPlease press the key corresponding to the desired option:");
 		xil_printf("\r\n  a. Change Resolution");

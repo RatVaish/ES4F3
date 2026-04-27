@@ -1,0 +1,196 @@
+
+
+================================================================
+== Vitis HLS Report for 'overlay_core'
+================================================================
+* Date:           Mon Apr 27 15:52:22 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hls_overlay_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  6.547 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+-----------+------------+-----+------------+---------+
+    |   Latency (cycles)   |   Latency (absolute)   |     Interval     | Pipeline|
+    |   min   |     max    |    min    |     max    | min |     max    |   Type  |
+    +---------+------------+-----------+------------+-----+------------+---------+
+    |        6|  4294836234|  40.002 ns|  28.634 sec|    7|  4294836235|       no|
+    +---------+------------+-----------+------------+-----+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------+----------------------------------------------+---------+------------+-----------+------------+-----+------------+-----------------------------------------------+
+        |                                                         |                                              |   Latency (cycles)   |   Latency (absolute)   |     Interval     |                    Pipeline                   |
+        |                         Instance                        |                    Module                    |   min   |     max    |    min    |     max    | min |     max    |                      Type                     |
+        +---------------------------------------------------------+----------------------------------------------+---------+------------+-----------+------------+-----+------------+-----------------------------------------------+
+        |grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154  |overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH  |        2|  4294836230|  13.334 ns|  28.634 sec|    1|  4294836226|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +---------------------------------------------------------+----------------------------------------------+---------+------------+-----------+------------+-----+------------+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    261|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    1|     972|   1716|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     40|    -|
+|Register         |        -|    -|     269|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    1|    1241|   2017|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|       1|      3|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+------+-----+
+    |                         Instance                        |                    Module                    | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+------+-----+
+    |CTRL_s_axi_U                                             |CTRL_s_axi                                    |        0|   0|  131|   170|    0|
+    |mul_16ns_16ns_32_2_1_U38                                 |mul_16ns_16ns_32_2_1                          |        0|   1|   67|     2|    0|
+    |grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154  |overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH  |        0|   0|  774|  1544|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                    |                                              |        0|   1|  972|  1716|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                               Variable Name                               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_i_i135_fu_271_p2                                                       |         +|   0|  0|  24|          17|           5|
+    |add_i_i163_fu_265_p2                                                       |         +|   0|  0|  24|          17|           4|
+    |add_i_i458_fu_254_p2                                                       |         +|   0|  0|  24|          17|           4|
+    |add_i_i486_fu_248_p2                                                       |         +|   0|  0|  24|          17|           2|
+    |add_i_i533_fu_242_p2                                                       |         +|   0|  0|  24|          17|           8|
+    |add_i_i564_fu_233_p2                                                       |         +|   0|  0|  24|          17|           5|
+    |char_x_2_fu_282_p2                                                         |         +|   0|  0|  23|          16|           5|
+    |char_x_fu_277_p2                                                           |         +|   0|  0|  23|          16|           4|
+    |start_x_fu_260_p2                                                          |         +|   0|  0|  23|          16|           3|
+    |y_1_fu_292_p2                                                              |         -|   0|  0|  23|           5|          16|
+    |y_fu_287_p2                                                                |         -|   0|  0|  23|           3|          16|
+    |grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154_stream_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    +---------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                      |          |   0|  0| 261|         159|          73|
+    +---------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  31|          6|    1|          6|
+    |stream_in_TREADY_int_regslice  |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  40|          8|    2|          8|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                 | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |add_i_i135_reg_364                                                    |  17|   0|   17|          0|
+    |add_i_i163_reg_359                                                    |  17|   0|   17|          0|
+    |add_i_i458_reg_349                                                    |  17|   0|   17|          0|
+    |add_i_i486_reg_344                                                    |  17|   0|   17|          0|
+    |add_i_i533_reg_339                                                    |  17|   0|   17|          0|
+    |add_i_i564_reg_334                                                    |  17|   0|   17|          0|
+    |ap_CS_fsm                                                             |   5|   0|    5|          0|
+    |char_x_2_reg_374                                                      |  16|   0|   16|          0|
+    |char_x_reg_369                                                        |  16|   0|   16|          0|
+    |enable_read_reg_319                                                   |   1|   0|    1|          0|
+    |grp_overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH_fu_154_ap_start_reg  |   1|   0|    1|          0|
+    |mul_ln74_reg_389                                                      |  32|   0|   32|          0|
+    |start_x_reg_354                                                       |  16|   0|   16|          0|
+    |width_read_reg_297                                                    |  16|   0|   16|          0|
+    |x_pos_read_reg_310                                                    |  16|   0|   16|          0|
+    |y_1_reg_384                                                           |  16|   0|   16|          0|
+    |y_pos_read_reg_302                                                    |  16|   0|   16|          0|
+    |y_reg_379                                                             |  16|   0|   16|          0|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                 | 269|   0|  269|          0|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+---------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++--------------------+-----+-----+------------+---------------------+--------------+
+|s_axi_CTRL_AWVALID  |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_AWREADY  |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_AWADDR   |   in|    6|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WVALID   |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WREADY   |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WDATA    |   in|   32|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WSTRB    |   in|    4|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_ARVALID  |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_ARREADY  |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_ARADDR   |   in|    6|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RVALID   |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RREADY   |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RDATA    |  out|   32|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RRESP    |  out|    2|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_BVALID   |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_BREADY   |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_BRESP    |  out|    2|       s_axi|                 CTRL|        scalar|
+|ap_clk              |   in|    1|  ap_ctrl_hs|         overlay_core|  return value|
+|ap_rst_n            |   in|    1|  ap_ctrl_hs|         overlay_core|  return value|
+|interrupt           |  out|    1|  ap_ctrl_hs|         overlay_core|  return value|
+|stream_in_TDATA     |   in|   24|        axis|   stream_in_V_data_V|       pointer|
+|stream_in_TVALID    |   in|    1|        axis|   stream_in_V_dest_V|       pointer|
+|stream_in_TREADY    |  out|    1|        axis|   stream_in_V_dest_V|       pointer|
+|stream_in_TDEST     |   in|    1|        axis|   stream_in_V_dest_V|       pointer|
+|stream_in_TKEEP     |   in|    3|        axis|   stream_in_V_keep_V|       pointer|
+|stream_in_TSTRB     |   in|    3|        axis|   stream_in_V_strb_V|       pointer|
+|stream_in_TUSER     |   in|    1|        axis|   stream_in_V_user_V|       pointer|
+|stream_in_TLAST     |   in|    1|        axis|   stream_in_V_last_V|       pointer|
+|stream_in_TID       |   in|    1|        axis|     stream_in_V_id_V|       pointer|
+|stream_out_TDATA    |  out|   24|        axis|  stream_out_V_data_V|       pointer|
+|stream_out_TVALID   |  out|    1|        axis|  stream_out_V_dest_V|       pointer|
+|stream_out_TREADY   |   in|    1|        axis|  stream_out_V_dest_V|       pointer|
+|stream_out_TDEST    |  out|    1|        axis|  stream_out_V_dest_V|       pointer|
+|stream_out_TKEEP    |  out|    3|        axis|  stream_out_V_keep_V|       pointer|
+|stream_out_TSTRB    |  out|    3|        axis|  stream_out_V_strb_V|       pointer|
+|stream_out_TUSER    |  out|    1|        axis|  stream_out_V_user_V|       pointer|
+|stream_out_TLAST    |  out|    1|        axis|  stream_out_V_last_V|       pointer|
+|stream_out_TID      |  out|    1|        axis|    stream_out_V_id_V|       pointer|
++--------------------+-----+-----+------------+---------------------+--------------+
+

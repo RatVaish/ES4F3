@@ -1,0 +1,595 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Apr 27 17:50:33 2026
+# Process ID: 23232
+# Current directory: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1
+# Command line: vivado.exe -log system_smartconnect_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_smartconnect_0_0.tcl
+# Log file: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1/system_smartconnect_0_0.vds
+# Journal file: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1\vivado.jou
+# Running On        :LAPTOP-AMKTF75G
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+# CPU Frequency     :2096 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :6387 MB
+# Swap memory       :14642 MB
+# Total Virtual     :21029 MB
+# Available Virtual :2360 MB
+#-----------------------------------------------------------
+source system_smartconnect_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 502.258 ; gain = 202.895
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_smartconnect_0_0
+Command: synth_design -top system_smartconnect_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26564
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 1407.480 ; gain = 446.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_smartconnect_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/synth/system_smartconnect_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1ESA9AA' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:614]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1ESA9AA' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:614]
+WARNING: [Synth 8-7071] port 'M00_ARESETN' of module 'clk_map_imp_1ESA9AA' is unconnected for instance 'clk_map' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:304]
+WARNING: [Synth 8-7071] port 'S00_ARESETN' of module 'clk_map_imp_1ESA9AA' is unconnected for instance 'clk_map' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:304]
+WARNING: [Synth 8-7023] instance 'clk_map' of module 'clk_map_imp_1ESA9AA' has 8 connections declared, but only 6 given [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:304]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_M3NP7D' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:642]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_m00e_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_10/synth/bd_919a_m00e_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_m00e_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_10/synth/bd_919a_m00e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_M3NP7D' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:642]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_m00s2a_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_919a_m00s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_m00s2a_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_919a_m00s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_s00a2s_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_3/synth/bd_919a_s00a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_s00a2s_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_3/synth/bd_919a_s00a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1KR8Y8Q' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:939]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_s00mmu_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_0/synth/bd_919a_s00mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_s00mmu_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_0/synth/bd_919a_s00mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_s00sic_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_2/synth/bd_919a_s00sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_s00sic_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_2/synth/bd_919a_s00sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_s00tr_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/synth/bd_919a_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_s00tr_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/synth/bd_919a_s00tr_0.sv:53]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_919a_s00tr_0' is unconnected for instance 's00_transaction_regulator' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:1393]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_919a_s00tr_0' is unconnected for instance 's00_transaction_regulator' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:1393]
+WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_919a_s00tr_0' has 82 connections declared, but only 80 given [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:1393]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1KR8Y8Q' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:939]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1O9PSU8' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:1476]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_sarn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/synth/bd_919a_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_sarn_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/synth/bd_919a_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_sawn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/synth/bd_919a_sawn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_sawn_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/synth/bd_919a_sawn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_sbn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_919a_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized0' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized0' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_sbn_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_919a_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_srn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/synth/bd_919a_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized1' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized1' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_srn_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/synth/bd_919a_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_919a_swn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_919a_swn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized2' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized2' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a_swn_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_919a_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1O9PSU8' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:1476]
+INFO: [Synth 8-6155] done synthesizing module 'bd_919a' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'system_smartconnect_0_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/synth/system_smartconnect_0_0.v:53]
+WARNING: [Synth 8-3848] Net M00_ARESETN in module/entity clk_map_imp_1ESA9AA does not have driver. [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:624]
+WARNING: [Synth 8-3848] Net S00_ARESETN in module/entity clk_map_imp_1ESA9AA does not have driver. [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:626]
+WARNING: [Synth 8-3848] Net swbd_aresetn in module/entity clk_map_imp_1ESA9AA does not have driver. [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/synth/bd_919a.v:630]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-7129] Port din[0] in module sc_util_v1_0_4_onehot_to_binary is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_node_v1_0_16_reg_slice3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_node_v1_0_16_reg_slice3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_node_v1_0_16_reg_slice3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_req[0] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_info[0] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tvalid in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[15] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[14] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[13] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[12] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[11] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[10] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[9] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[8] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[7] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[6] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[5] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[4] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[3] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[2] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[1] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_arb_tdata[0] in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_arb_tready in module sc_node_v1_0_16_si_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_axic_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_axic_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_axic_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_sc_aclken in module sc_node_v1_0_16_top__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_sc_aclken in module sc_node_v1_0_16_top__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_sc_aclken in module sc_node_v1_0_16_top__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_sc_aclken in module sc_node_v1_0_16_top__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_sc_aclken in module sc_node_v1_0_16_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_aid[0] in module sc_transaction_regulator_v1_0_11_singleorder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[0] in module sc_transaction_regulator_v1_0_11_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[0] in module sc_transaction_regulator_v1_0_11_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_axi_reg_stall is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_axi_reg_stall is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_axi_reg_stall is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_stall in module sc_util_v1_0_4_axi_reg_stall is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resume in module sc_util_v1_0_4_axi_reg_stall is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2177] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2176] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2175] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2174] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2173] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2172] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2171] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2170] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2169] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2168] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2167] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2166] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2165] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2164] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2163] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2162] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2161] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2160] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2159] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2158] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2157] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2156] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2155] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2154] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2153] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2152] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2151] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2150] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_arvector[2149] in module sc_util_v1_0_4_vector2axi__parameterized2 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 1597.453 ; gain = 636.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 1597.453 ; gain = 636.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 1597.453 ; gain = 636.395
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1597.453 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/bd_919a_sarn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_ar_node/inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/bd_919a_sarn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_ar_node/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/bd_919a_sarn_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/bd_919a_srn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_r_node/inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/bd_919a_srn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_r_node/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/bd_919a_srn_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/bd_919a_sawn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_aw_node/inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/bd_919a_sawn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_aw_node/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/bd_919a_sawn_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_7/bd_919a_swn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_w_node/inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_7/bd_919a_swn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_w_node/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_7/bd_919a_swn_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_8/bd_919a_sbn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_b_node/inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_8/bd_919a_sbn_0_clocks.xdc] for cell 'inst/s00_nodes/s00_b_node/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_8/bd_919a_sbn_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/smartconnect.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/smartconnect.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/smartconnect.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_smartconnect_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_smartconnect_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 29 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1756.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.304 . Memory (MB): peak = 1763.914 ; gain = 6.961
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:13 ; elapsed = 00:01:50 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:13 ; elapsed = 00:01:50 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1/dont_touch.xdc, line 74).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_exit_pipeline/m00_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_reg_fifo_async.inst_reg_fifo_async /\gen_xpm_cdc_handshake_array[0].inst_cdc_handshake /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:51 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              110
+*
+              SM_WR_IDLE |                            00010 |                              000
+              SM_WR_FULL |                            00100 |                              011
+              SM_WR_WAIT |                            01000 |                              010
+                  iSTATE |                            10000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SM_RD_IDLE |                              001 |                               10
+             SM_RD_VALID |                              010 |                               00
+              SM_RD_WAIT |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              110
+*
+              SM_WR_IDLE |                            00010 |                              000
+              SM_WR_FULL |                            00100 |                              011
+              SM_WR_WAIT |                            01000 |                              010
+                  iSTATE |                            10000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SM_RD_IDLE |                              001 |                               10
+             SM_RD_VALID |                              010 |                               00
+              SM_RD_WAIT |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              110
+*
+              SM_WR_IDLE |                            00010 |                              000
+              SM_WR_FULL |                            00100 |                              011
+              SM_WR_WAIT |                            01000 |                              010
+                  iSTATE |                            10000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SM_RD_IDLE |                              001 |                               10
+             SM_RD_VALID |                              010 |                               00
+              SM_RD_WAIT |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              110
+*
+              SM_WR_IDLE |                            00010 |                              000
+              SM_WR_FULL |                            00100 |                              011
+              SM_WR_WAIT |                            01000 |                              010
+                  iSTATE |                            10000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SM_RD_IDLE |                              001 |                               10
+             SM_RD_VALID |                              010 |                               00
+              SM_RD_WAIT |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              110
+*
+              SM_WR_IDLE |                            00010 |                              000
+              SM_WR_FULL |                            00100 |                              011
+              SM_WR_WAIT |                            01000 |                              010
+                  iSTATE |                            10000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SM_RD_IDLE |                              001 |                               10
+             SM_RD_VALID |                              010 |                               00
+              SM_RD_WAIT |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'one-hot' in module 'sc_node_v1_0_16_reg_fifo_async__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:18 ; elapsed = 00:01:57 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 5     
+	   3 Input    1 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 19    
++---Registers : 
+	              156 Bit    Registers := 4     
+	               70 Bit    Registers := 2     
+	               69 Bit    Registers := 2     
+	               47 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 29    
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 91    
++---Muxes : 
+	   2 Input    7 Bit        Muxes := 10    
+	   4 Input    5 Bit        Muxes := 5     
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 15    
+	   4 Input    3 Bit        Muxes := 5     
+	   3 Input    3 Bit        Muxes := 5     
+	   3 Input    2 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 27    
+	   4 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[4]) is unused and will be removed from module sc_node_v1_0_16_top.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[0]) is unused and will be removed from module sc_node_v1_0_16_top.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[4]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[0]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[4]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[0]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[4]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[0]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized2.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[4]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo_async.inst_reg_fifo_async/FSM_onehot_wr_state_reg[0]) is unused and will be removed from module sc_node_v1_0_16_top__parameterized3.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:27 ; elapsed = 00:02:10 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:02:29 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:02:30 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:41 ; elapsed = 00:02:31 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |    33|
+|2     |LUT2 |    29|
+|3     |LUT3 |    22|
+|4     |LUT4 |    27|
+|5     |LUT5 |     2|
+|6     |LUT6 |    28|
+|7     |FDRE |   839|
+|8     |FDSE |    15|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:02:48 . Memory (MB): peak = 1763.914 ; gain = 802.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13493 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:02:11 . Memory (MB): peak = 1763.914 ; gain = 636.395
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:02:49 . Memory (MB): peak = 1763.914 ; gain = 802.855
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 1763.914 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1763.914 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e65d4a00
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:07 ; elapsed = 00:03:07 . Memory (MB): peak = 1763.914 ; gain = 1237.832
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1763.914 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1/system_smartconnect_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_smartconnect_0_0, cache-ID = 5a665eb77ab0ec67
+INFO: [Coretcl 2-1174] Renamed 74 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1763.914 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_smartconnect_0_0_synth_1/system_smartconnect_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_smartconnect_0_0_utilization_synth.rpt -pb system_smartconnect_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 27 17:54:37 2026...
