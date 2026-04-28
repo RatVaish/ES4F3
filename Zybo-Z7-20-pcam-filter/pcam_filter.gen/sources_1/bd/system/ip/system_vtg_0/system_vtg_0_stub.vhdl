@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Sat Apr 25 14:55:37 2026
+-- Date        : Sat Apr 25 14:55:35 2026
 -- Host        : DESKTOP-4LETMJQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_vtg_0/system_vtg_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top system_vtg_0 -prefix
+--               system_vtg_0_ system_vtg_0_stub.vhdl
 -- Design      : system_vtg_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

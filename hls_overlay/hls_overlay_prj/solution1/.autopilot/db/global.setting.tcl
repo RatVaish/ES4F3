@@ -7,7 +7,7 @@ set CombLogicFlag 0
 set PipelineFlag 0
 set DataflowTaskPipelineFlag 1
 set TrivialPipelineFlag 0
-set noPortSwitchingFlag 0
+set noPortSwitchingFlag 1
 set FloatingPointFlag 0
 set FftOrFirFlag 0
 set NbRWValue 0
@@ -42,15 +42,15 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
-set SourceFiles {sc {} c {../.././overlay_core.h ../.././overlay_core.cpp ../../overlay_core.cpp}}
-set SourceFlags {sc {} c {{ } {} { } {} {}}}
+set SourceFiles {sc {} c ../../overlay_core.cpp}
+set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog ../../overlay_core_test.cpp bc ../../overlay_core_test.cpp sc ../../overlay_core_test.cpp vhdl ../../overlay_core_test.cpp c {} cas ../../overlay_core_test.cpp}
+set TBFiles {verilog ../../overlay_core_test.cpp bc ../../overlay_core_test.cpp vhdl ../../overlay_core_test.cpp sc ../../overlay_core_test.cpp cas ../../overlay_core_test.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

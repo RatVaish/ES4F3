@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Sat Apr 25 14:55:15 2026
+// Date        : Sat Apr 25 14:55:14 2026
 // Host        : DESKTOP-4LETMJQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_rst_vid_clk_dyn_0/system_rst_vid_clk_dyn_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_rst_vid_clk_dyn_0 -prefix
+//               system_rst_vid_clk_dyn_0_ system_rst_vid_clk_dyn_0_stub.v
 // Design      : system_rst_vid_clk_dyn_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

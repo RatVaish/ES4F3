@@ -1,0 +1,135 @@
+#ifndef SEQUENCEDETECTOR_H_
+#define SEQUENCEDETECTOR_H_
+
+#include "xgpio.h"
+#include "xil_printf.h"
+
+// AXI GPIO base address
+#define AXI_GPIO_BASEADDR 0x40010000
+
+// GPIO channels
+#define GPIO_SWITCHES_CHANNEL  1  // Channel 1 = GPIO (switches)
+#define GPIO_BUTTONS_CHANNEL   2  // Channel 2 = GPIO2 (buttons)
+
+/**
+ * Detects the secret switch sequence to trigger the easter egg
+ * Sequence: sw[0] ON -> sw[1] ON (both on) -> sw[0] OFF (only sw[1]) -> sw[2] ON -> TRIGGERED!
+ */
+class SequenceDetector {
+public:
+    enum State {
+        IDLE,         // Waiting for sequence to start
+        SW0_ON,       // sw[0] is ON
+        SW0_SW1_ON,   // sw[0] and sw[1] are both ON  
+        SW1_ON,       // sw[1] is ON, sw[0] turned OFF
+        TRIGGERED     // sw[2] turned ON -> Easter Egg!
+    };
+    
+    /**
+     * Constructor - initializes AXI GPIO
+     */
+    SequenceDetector() : state_(IDLE), triggered_this_cycle_(false) {
+        
+        // Initialize AXI GPIO (Device ID 0 = first AXI GPIO)
+        int status = XGpio_Initialize(&gpio_inst_, 0);
+        if (status != XST_SUCCESS) {
+            xil_printf("ERROR: AXI GPIO initialization failed!\r\n");
+            return;
+        }
+        
+        // Set data direction for switches (all inputs = 0xF)
+        XGpio_SetDataDirection(&gpio_inst_, GPIO_SWITCHES_CHANNEL, 0xF);
+        
+        // Set data direction for buttons (all inputs = 0xF)
+        XGpio_SetDataDirection(&gpio_inst_, GPIO_BUTTONS_CHANNEL, 0xF);
+        
+        xil_printf("Sequence Detector initialized\r\n");
+        xil_printf("Secret sequence: sw0 ON -> sw1 ON -> sw0 OFF -> sw2 ON\r\n");
+    }
+    
+    /**
+     * Update the state machine based on current switch states
+     * Call this regularly in your main loop
+     * @return true if easter egg was just triggered this cycle
+     */
+    bool update() {
+        // Read switch states from AXI GPIO Channel 1
+        u32 switch_data = XGpio_DiscreteRead(&gpio_inst_, GPIO_SWITCHES_CHANNEL);
+        
+        // Extract individual switch states
+        bool sw0 = (switch_data & 0x01) != 0;
+        bool sw1 = (switch_data & 0x02) != 0;
+        bool sw2 = (switch_data & 0x04) != 0;
+        bool sw3 = (switch_data & 0x08) != 0;
+        
+        // Reset the triggered flag
+        triggered_this_cycle_ = false;
+        
+        switch (state_) {
+            case IDLE:
+                if (sw0 && !sw1 && !sw2 && !sw3) {
+                    state_ = SW0_ON;
+                    xil_printf("[Easter Egg] Step 1/4: sw0 ON\r\n");
+                }
+                break;
+                
+            case SW0_ON:
+                if (sw0 && sw1 && !sw2 && !sw3) {
+                    state_ = SW0_SW1_ON;
+                    xil_printf("[Easter Egg] Step 2/4: sw0 and sw1 ON\r\n");
+                } else if (!sw0) {
+                    state_ = IDLE;
+                    xil_printf("[Easter Egg] Reset\r\n");
+                }
+                break;
+                
+            case SW0_SW1_ON:
+                if (!sw0 && sw1 && !sw2 && !sw3) {
+                    state_ = SW1_ON;
+                    xil_printf("[Easter Egg] Step 3/4: sw0 OFF, sw1 ON\r\n");
+                } else if (!sw1) {
+                    state_ = IDLE;
+                    xil_printf("[Easter Egg] Reset\r\n");
+                }
+                break;
+                
+            case SW1_ON:
+                if (!sw0 && sw1 && sw2 && !sw3) {
+                    state_ = TRIGGERED;
+                    triggered_this_cycle_ = true;
+                    xil_printf("\r\n");
+                    xil_printf("═══════════════════════════════════════\r\n");
+                    xil_printf("  SEQUENCE COMPLETE! EASTER EGG FOUND!\r\n");
+                    xil_printf("═══════════════════════════════════════\r\n");
+                    xil_printf("\r\n");
+                } else if (!sw1) {
+                    state_ = IDLE;
+                    xil_printf("[Easter Egg] Reset\r\n");
+                }
+                break;
+                
+            case TRIGGERED:
+                if (!sw0 && !sw1 && !sw2 && !sw3) {
+                    state_ = IDLE;
+                    xil_printf("[Easter Egg] Ready for next activation\r\n");
+                }
+                break;
+        }
+        
+        return triggered_this_cycle_;
+    }
+    
+    void reset() {
+        state_ = IDLE;
+        triggered_this_cycle_ = false;
+    }
+    
+    State get_state() const { return state_; }
+    
+private:
+    XGpio gpio_inst_;
+    State state_;
+    bool triggered_this_cycle_;
+};
+
+#endif

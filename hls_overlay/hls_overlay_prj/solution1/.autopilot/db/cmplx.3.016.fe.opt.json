@@ -1,18 +1,17 @@
 {
   "0": {
-    "basicblocks": 33,
+    "basicblocks": 10,
     "calls": "",
     "file": "overlay_core.cpp",
     "fileloc": 74,
-    "instructions": 284,
+    "instructions": 120,
     "loads": {
-      "G": 8,
-      "L": 4
+      "L": 7
     },
     "name": "overlay_core",
     "stores": {
       "L": 7
     },
-    "total_instructions": 284
+    "total_instructions": 120
   }
 }

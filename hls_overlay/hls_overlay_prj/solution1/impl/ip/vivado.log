@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Apr 27 15:52:29 2026
-# Process ID: 2780
+# Start of session at: Tue Apr 28 01:32:14 2026
+# Process ID: 26628
 # Current directory: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/vivado.log
@@ -17,30 +17,29 @@
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :6387 MB
-# Swap memory       :14302 MB
-# Total Virtual     :20689 MB
-# Available Virtual :4513 MB
+# Swap memory       :18610 MB
+# Total Virtual     :24997 MB
+# Available Virtual :5929 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
 INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/solution1_data.json outdir=C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip srcdir=C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1 sort_interfaces_ports=false
 INFO: Copied 1 ipmisc file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/misc
-INFO: Copied 23 verilog file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/verilog
-INFO: Copied 13 vhdl file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/vhdl
+INFO: Copied 5 verilog file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/verilog
+INFO: Copied 3 vhdl file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/vhdl
 INFO: Copied 10 swdriver file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 506.840 ; gain = 194.414
+ipx::create_core: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 504.352 ; gain = 192.121
 INFO: Import ports from HDL: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/vhdl/overlay_core.vhd (overlay_core)
 INFO: Add axi4lite interface s_axi_CTRL
 INFO: Add clock interface ap_clk
 INFO: Add reset interface ap_rst_n
-INFO: Add interrupt interface interrupt
+INFO: Add axi4stream interface stream_in
+INFO: Add axi4stream interface stream_out
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
-INFO: Add axi4stream interface stream_in
-INFO: Add axi4stream interface stream_out
 INFO: Calling post_process_vitis to specialize IP
 INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/component.xml
 INFO: Created IP archive C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/user_org_user_overlay_core_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 27 15:52:54 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 01:32:38 2026...

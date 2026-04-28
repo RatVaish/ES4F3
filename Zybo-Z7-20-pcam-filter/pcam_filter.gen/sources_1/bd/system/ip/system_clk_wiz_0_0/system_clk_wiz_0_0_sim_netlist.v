@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
 // Date        : Sat Apr 25 14:55:23 2026
 // Host        : DESKTOP-4LETMJQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top system_clk_wiz_0_0 -prefix
+//               system_clk_wiz_0_0_ system_clk_wiz_0_0_sim_netlist.v
 // Design      : system_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -32,7 +32,7 @@ module system_clk_wiz_0_0
   wire clk_out3;
   wire locked;
 
-  system_clk_wiz_0_0_clk_wiz inst
+  system_clk_wiz_0_0_system_clk_wiz_0_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
@@ -40,7 +40,7 @@ module system_clk_wiz_0_0
         .locked(locked));
 endmodule
 
-module system_clk_wiz_0_0_clk_wiz
+module system_clk_wiz_0_0_system_clk_wiz_0_0_clk_wiz
    (clk_out1,
     clk_out2,
     clk_out3,

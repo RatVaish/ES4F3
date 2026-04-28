@@ -8,14 +8,15 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sat Apr 25 14:53:57 2026
+  **** Start of session at: Tue Apr 28 00:58:24 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source system_DVIClocking_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 530.477 ; gain = 199.191
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 500.578 ; gain = 202.465
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Embedded/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
 Command: synth_design -top system_DVIClocking_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -25,36 +26,36 @@ INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1296
+INFO: [Synth 8-7075] Helper process launched with PID 1860
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1420.316 ; gain = 448.176
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1390.121 ; gain = 445.852
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_DVIClocking_0_0' [c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
-INFO: [Synth 8-3491] module 'DVIClocking' declared at 'C:/Embedded/ES4F3/project_sources/sources_1/DVIClocking.vhd:34' bound to instance 'U0' of component 'DVIClocking' [c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'DVIClocking' [C:/Embedded/ES4F3/project_sources/sources_1/DVIClocking.vhd:42]
-INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [C:/Embedded/ES4F3/project_sources/sources_1/DVIClocking.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'system_DVIClocking_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'DVIClocking' declared at 'C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/DVIClocking.vhd:34' bound to instance 'U0' of component 'DVIClocking' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'DVIClocking' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/DVIClocking.vhd:42]
+INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/DVIClocking.vhd:47]
 	Parameter BUFR_DIVIDE bound to: 5 - type: string 
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [C:/Embedded/ES4F3/project_sources/sources_1/DVIClocking.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'ResetBridge' [C:/Embedded/ES4F3/project_sources/sources_1/SyncAsyncReset.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync' [C:/Embedded/ES4F3/project_sources/sources_1/SyncAsync.vhd:66]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (0#1) [C:/Embedded/ES4F3/project_sources/sources_1/SyncAsync.vhd:66]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (0#1) [C:/Embedded/ES4F3/project_sources/sources_1/SyncAsyncReset.vhd:65]
-INFO: [Synth 8-256] done synthesizing module 'DVIClocking' (0#1) [C:/Embedded/ES4F3/project_sources/sources_1/DVIClocking.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'system_DVIClocking_0_0' (0#1) [c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
+INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/DVIClocking.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/SyncAsyncReset.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/SyncAsync.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (0#1) [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/SyncAsync.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (0#1) [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/SyncAsyncReset.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'DVIClocking' (0#1) [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/DVIClocking.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'system_DVIClocking_0_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1536.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1505.074 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -63,30 +64,30 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1536.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1505.074 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1536.641 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1505.074 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -111,25 +112,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -147,37 +148,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -199,28 +200,28 @@ Report Cell Usage:
 |4     |FDCE  |     2|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 1536.641 ; gain = 564.500
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1536.641 ; gain = 564.500
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 1505.074 ; gain = 560.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1505.074 ; gain = 560.805
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1536.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1505.074 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1536.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1505.074 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: efbf44af
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1536.641 ; gain = 992.746
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:25 . Memory (MB): peak = 1505.074 ; gain = 990.156
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1536.641 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_DVIClocking_0_0_synth_1/system_DVIClocking_0_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1505.074 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_DVIClocking_0_0_synth_1/system_DVIClocking_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_DVIClocking_0_0_utilization_synth.rpt -pb system_DVIClocking_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 25 14:54:58 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 01:00:17 2026...

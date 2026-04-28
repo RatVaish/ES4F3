@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Apr 27 15:52:29 2026
-# Process ID: 2780
+# Start of session at: Tue Apr 28 01:32:14 2026
+# Process ID: 26628
 # Current directory: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/vivado.log
@@ -17,8 +17,8 @@
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :6387 MB
-# Swap memory       :14302 MB
-# Total Virtual     :20689 MB
-# Available Virtual :4513 MB
+# Swap memory       :18610 MB
+# Total Virtual     :24997 MB
+# Available Virtual :5929 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace

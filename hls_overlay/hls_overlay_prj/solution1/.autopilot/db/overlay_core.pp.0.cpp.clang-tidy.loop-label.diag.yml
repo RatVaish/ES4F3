@@ -55,4 +55,13 @@ Diagnostics:
         Offset:          1061075
         Length:          0
         ReplacementText: 'VITIS_LOOP_64_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_1:  '
+    FileOffset:      100
+    FilePath:        overlay_core.cpp
+    Replacements:    
+      - FilePath:        'C:\Users\ratul\ES4F3\ES4F3\hls_overlay\hls_overlay_prj\solution1\.autopilot\db\overlay_core.pp.0.cpp'
+        Offset:          1062329
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_1: '
 ...

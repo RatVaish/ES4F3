@@ -42,10 +42,6 @@ width {
 	offset 48
 	offset_end 55
 }
-ap_start { }
-ap_done { }
-ap_ready { }
-ap_idle { }
 interrupt {
 }
 }

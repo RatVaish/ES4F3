@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'overlay_core'
 ================================================================
-* Date:           Mon Apr 27 15:52:20 2026
+* Date:           Tue Apr 28 01:32:06 2026
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        hls_overlay_prj
@@ -20,24 +20,29 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.67 ns|  6.547 ns|     1.80 ns|
+    |ap_clk  |  6.67 ns|  5.275 ns|     1.80 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+------------+-----------+------------+-----+------------+---------+
-    |   Latency (cycles)   |   Latency (absolute)   |     Interval     | Pipeline|
-    |   min   |     max    |    min    |     max    | min |     max    |   Type  |
-    +---------+------------+-----------+------------+-----+------------+---------+
-    |        6|  4294836234|  40.002 ns|  28.634 sec|    7|  4294836235|       no|
-    +---------+------------+-----------+------------+-----+------------+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        N/A
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_100_1  |        ?|        ?|         6|          1|          1|   inf|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -51,8 +56,8 @@ IsTopModel: 1
 ResetActiveHigh: 1
 IsCombinational: 0
 IsDatapathOnly: 0
-HasWiredReturn: 1
-HasMFsm: 0
+HasWiredReturn: 0
+HasMFsm: 2
 HasVarLatency: 1
 IsPipeline: 0
 IsRtlPipelined: 0
@@ -61,12 +66,16 @@ IsDontTouch: 0
 HasImplIP: 0
 IsGatedGlobalClock: 0
 
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 5
-* Pipeline : 0
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 2 3 4 5 6 7 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -74,80 +83,133 @@ IsGatedGlobalClock: 0
 2 --> 3 
 3 --> 4 
 4 --> 5 
-5 --> 
+5 --> 6 
+6 --> 7 
+7 --> 2 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 4.34>
-ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%width_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %width" [overlay_core.cpp:77]   --->   Operation 6 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%height_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %height" [overlay_core.cpp:77]   --->   Operation 7 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%y_pos_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %y_pos" [overlay_core.cpp:77]   --->   Operation 8 'read' 'y_pos_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%x_pos_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %x_pos" [overlay_core.cpp:77]   --->   Operation 9 'read' 'x_pos_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 10 [1/1] (1.00ns)   --->   "%enable_read = read i1 @_ssdm_op_Read.s_axilite.i1, i1 %enable" [overlay_core.cpp:77]   --->   Operation 10 'read' 'enable_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln74 = zext i16 %height_read" [overlay_core.cpp:74]   --->   Operation 11 'zext' 'zext_ln74' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln74_1 = zext i16 %width_read" [overlay_core.cpp:74]   --->   Operation 12 'zext' 'zext_ln74_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [2/2] (3.34ns)   --->   "%mul_ln74 = mul i32 %zext_ln74, i32 %zext_ln74_1" [overlay_core.cpp:74]   --->   Operation 13 'mul' 'mul_ln74' <Predicate = true> <Delay = 3.34> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 3.34> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 8 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty_19 = alloca i32 1"   --->   Operation 9 'alloca' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%spectopmodule_ln74 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_12" [overlay_core.cpp:74]   --->   Operation 10 'spectopmodule' 'spectopmodule_ln74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln74 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_13, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0" [overlay_core.cpp:74]   --->   Operation 11 'specinterface' 'specinterface_ln74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %stream_in_V_data_V"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_in_V_keep_V"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_in_V_strb_V"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_user_V"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_last_V"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_id_V"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_dest_V"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %stream_out_V_data_V"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_out_V_keep_V"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_out_V_strb_V"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_user_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_last_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_id_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_dest_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %enable"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %enable, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_4, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %enable, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %x_pos"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %x_pos, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_6, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %x_pos, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %y_pos"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %y_pos, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_7, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %y_pos, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %height"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_8, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %width"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_9, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (1.00ns)   --->   "%enable_read = read i1 @_ssdm_op_Read.s_axilite.i1, i1 %enable"   --->   Operation 44 'read' 'enable_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln100 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, void @empty_10" [overlay_core.cpp:100]   --->   Operation 45 'specaxissidechannel' 'specaxissidechannel_ln100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln100 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V, void @empty_11" [overlay_core.cpp:100]   --->   Operation 46 'specaxissidechannel' 'specaxissidechannel_ln100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %empty_19"   --->   Operation 47 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 48 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %empty"   --->   Operation 48 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 49 [1/1] (1.58ns)   --->   "%br_ln100 = br void %while.body" [overlay_core.cpp:100]   --->   Operation 49 'br' 'br_ln100' <Predicate = true> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 3.34>
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%y_pos_cast = zext i16 %y_pos_read" [overlay_core.cpp:77]   --->   Operation 14 'zext' 'y_pos_cast' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 15 [1/1] (2.07ns)   --->   "%add_i_i564 = add i17 %y_pos_cast, i17 20" [overlay_core.cpp:77]   --->   Operation 15 'add' 'add_i_i564' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%x_pos_cast = zext i16 %x_pos_read" [overlay_core.cpp:77]   --->   Operation 16 'zext' 'x_pos_cast' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (2.07ns)   --->   "%add_i_i533 = add i17 %x_pos_cast, i17 200" [overlay_core.cpp:77]   --->   Operation 17 'add' 'add_i_i533' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 18 [1/1] (2.07ns)   --->   "%add_i_i486 = add i17 %y_pos_cast, i17 3" [overlay_core.cpp:77]   --->   Operation 18 'add' 'add_i_i486' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 19 [1/1] (2.07ns)   --->   "%add_i_i458 = add i17 %y_pos_cast, i17 10" [overlay_core.cpp:77]   --->   Operation 19 'add' 'add_i_i458' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 20 [1/1] (2.07ns)   --->   "%start_x = add i16 %x_pos_read, i16 5" [overlay_core.cpp:77]   --->   Operation 20 'add' 'start_x' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 21 [1/1] (2.07ns)   --->   "%add_i_i163 = add i17 %y_pos_cast, i17 11" [overlay_core.cpp:77]   --->   Operation 21 'add' 'add_i_i163' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 22 [1/1] (2.07ns)   --->   "%add_i_i135 = add i17 %y_pos_cast, i17 18" [overlay_core.cpp:77]   --->   Operation 22 'add' 'add_i_i135' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 23 [1/1] (2.07ns)   --->   "%char_x = add i16 %x_pos_read, i16 11" [overlay_core.cpp:77]   --->   Operation 23 'add' 'char_x' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 24 [1/1] (2.07ns)   --->   "%char_x_2 = add i16 %x_pos_read, i16 17" [overlay_core.cpp:77]   --->   Operation 24 'add' 'char_x_2' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 25 [1/1] (2.07ns)   --->   "%y = sub i16 65533, i16 %y_pos_read" [overlay_core.cpp:77]   --->   Operation 25 'sub' 'y' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 26 [1/1] (2.07ns)   --->   "%y_1 = sub i16 65525, i16 %y_pos_read" [overlay_core.cpp:77]   --->   Operation 26 'sub' 'y_1' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 27 [1/2] (3.34ns)   --->   "%mul_ln74 = mul i32 %zext_ln74, i32 %zext_ln74_1" [overlay_core.cpp:74]   --->   Operation 27 'mul' 'mul_ln74' <Predicate = true> <Delay = 3.34> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 3.34> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 28 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 3.06>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%empty_20 = phi i1 0, void %entry, i1 %select_ln105, void %if.end93" [overlay_core.cpp:105]   --->   Operation 50 'phi' 'empty_20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.48ns)   --->   "%empty_21 = read i34 @_ssdm_op_Read.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V" [overlay_core.cpp:103]   --->   Operation 51 'read' 'empty_21' <Predicate = true> <Delay = 0.48> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%pixel_in_data = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 52 'extractvalue' 'pixel_in_data' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%pixel_in_keep = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 53 'extractvalue' 'pixel_in_keep' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%pixel_in_strb = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 54 'extractvalue' 'pixel_in_strb' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%pixel_in_user = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 55 'extractvalue' 'pixel_in_user' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%pixel_in_last = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 56 'extractvalue' 'pixel_in_last' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%pixel_in_id = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 57 'extractvalue' 'pixel_in_id' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%pixel_in_dest = extractvalue i34 %empty_21" [overlay_core.cpp:103]   --->   Operation 58 'extractvalue' 'pixel_in_dest' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.99ns)   --->   "%select_ln105 = select i1 %pixel_in_user, i1 %enable_read, i1 %empty_20" [overlay_core.cpp:105]   --->   Operation 59 'select' 'select_ln105' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (1.58ns)   --->   "%br_ln114 = br i1 %select_ln105, void %if.end93, void %if.then14" [overlay_core.cpp:114]   --->   Operation 60 'br' 'br_ln114' <Predicate = true> <Delay = 1.58>
 
-State 3 <SV = 2> <Delay = 4.14>
-ST_3 : Operation 29 [2/2] (4.14ns)   --->   "%call_ln74 = call void @overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH, i32 %mul_ln74, i16 %width_read, i17 %add_i_i486, i17 %add_i_i458, i16 %y, i17 %add_i_i163, i17 %add_i_i135, i16 %y_1, i16 %y_pos_read, i17 %add_i_i564, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V, i16 %x_pos_read, i17 %add_i_i533, i16 %start_x, i16 %char_x, i16 %char_x_2, i1 %enable_read, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, i7 %p_ZL8font_5x7_3_3, i7 %p_ZL8font_5x7_2_1, i7 %p_ZL8font_5x7_2_0, i7 %p_ZL8font_5x7_4_1, i7 %p_ZL8font_5x7_5_2, i6 %p_ZL8font_5x7_0_0, i2 %p_ZL8font_5x7_1_3" [overlay_core.cpp:74]   --->   Operation 29 'call' 'call_ln74' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 3 <SV = 2> <Delay = 5.27>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%p_load25 = load i16 %empty" [overlay_core.cpp:105]   --->   Operation 61 'load' 'p_load25' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%p_load = load i16 %empty_19" [overlay_core.cpp:146]   --->   Operation 62 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%specpipeline_ln101 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [overlay_core.cpp:101]   --->   Operation 63 'specpipeline' 'specpipeline_ln101' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln100 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [overlay_core.cpp:100]   --->   Operation 64 'specloopname' 'specloopname_ln100' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.80ns)   --->   "%select_ln105_1 = select i1 %pixel_in_user, i16 0, i16 %p_load25" [overlay_core.cpp:105]   --->   Operation 65 'select' 'select_ln105_1' <Predicate = (select_ln105)> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (2.07ns)   --->   "%add_ln116 = add i16 %select_ln105_1, i16 65486" [overlay_core.cpp:116]   --->   Operation 66 'add' 'add_ln116' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [1/1] (0.80ns)   --->   "%select_ln105_2 = select i1 %pixel_in_user, i16 0, i16 %p_load" [overlay_core.cpp:105]   --->   Operation 67 'select' 'select_ln105_2' <Predicate = (select_ln105)> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (2.07ns)   --->   "%add_ln116_1 = add i16 %select_ln105_2, i16 65486" [overlay_core.cpp:116]   --->   Operation 68 'add' 'add_ln116_1' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (2.07ns)   --->   "%add_ln146 = add i16 %p_load, i16 1" [overlay_core.cpp:146]   --->   Operation 69 'add' 'add_ln146' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.80ns)   --->   "%select_ln105_3 = select i1 %pixel_in_user, i16 0, i16 %p_load25" [overlay_core.cpp:105]   --->   Operation 70 'select' 'select_ln105_3' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (2.07ns)   --->   "%add_ln149 = add i16 %select_ln105_3, i16 1" [overlay_core.cpp:149]   --->   Operation 71 'add' 'add_ln149' <Predicate = (pixel_in_last)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.00ns) (grouped into LUT with out node select_ln147)   --->   "%select_ln147_2 = select i1 %pixel_in_last, i16 0, i16 1" [overlay_core.cpp:147]   --->   Operation 72 'select' 'select_ln147_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node select_ln147)   --->   "%or_ln147 = or i1 %pixel_in_last, i1 %pixel_in_user" [overlay_core.cpp:147]   --->   Operation 73 'or' 'or_ln147' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln147 = select i1 %or_ln147, i16 %select_ln147_2, i16 %add_ln146" [overlay_core.cpp:147]   --->   Operation 74 'select' 'select_ln147' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.80ns)   --->   "%select_ln147_1 = select i1 %pixel_in_last, i16 %add_ln149, i16 %select_ln105_3" [overlay_core.cpp:147]   --->   Operation 75 'select' 'select_ln147_1' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 76 [1/1] (1.58ns)   --->   "%store_ln147 = store i16 %select_ln147, i16 %empty_19" [overlay_core.cpp:147]   --->   Operation 76 'store' 'store_ln147' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 77 [1/1] (1.58ns)   --->   "%store_ln147 = store i16 %select_ln147_1, i16 %empty" [overlay_core.cpp:147]   --->   Operation 77 'store' 'store_ln147' <Predicate = true> <Delay = 1.58>
 
-State 4 <SV = 3> <Delay = 6.33>
-ST_4 : Operation 30 [1/2] (6.33ns)   --->   "%call_ln74 = call void @overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH, i32 %mul_ln74, i16 %width_read, i17 %add_i_i486, i17 %add_i_i458, i16 %y, i17 %add_i_i163, i17 %add_i_i135, i16 %y_1, i16 %y_pos_read, i17 %add_i_i564, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V, i16 %x_pos_read, i17 %add_i_i533, i16 %start_x, i16 %char_x, i16 %char_x_2, i1 %enable_read, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, i7 %p_ZL8font_5x7_3_3, i7 %p_ZL8font_5x7_2_1, i7 %p_ZL8font_5x7_2_0, i7 %p_ZL8font_5x7_4_1, i7 %p_ZL8font_5x7_5_2, i6 %p_ZL8font_5x7_0_0, i2 %p_ZL8font_5x7_1_3" [overlay_core.cpp:74]   --->   Operation 30 'call' 'call_ln74' <Predicate = true> <Delay = 6.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 4 <SV = 3> <Delay = 5.13>
+ST_4 : Operation 78 [1/1] (2.07ns)   --->   "%icmp_ln116 = icmp_ult  i16 %add_ln116, i16 100" [overlay_core.cpp:116]   --->   Operation 78 'icmp' 'icmp_ln116' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (2.07ns)   --->   "%icmp_ln116_1 = icmp_ult  i16 %add_ln116_1, i16 500" [overlay_core.cpp:116]   --->   Operation 79 'icmp' 'icmp_ln116_1' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [1/1] (0.97ns)   --->   "%and_ln116 = and i1 %icmp_ln116_1, i1 %icmp_ln116" [overlay_core.cpp:116]   --->   Operation 80 'and' 'and_ln116' <Predicate = (select_ln105)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (1.58ns)   --->   "%br_ln116 = br i1 %and_ln116, void %if.end36, void %_ZrsILi24ELb0EEN11ap_int_baseIXT_ELb0EE5RTypeIXL3$_032EEXLb1EEE4arg1ERK12ap_range_refIXT_EXT0_EEi.exit" [overlay_core.cpp:116]   --->   Operation 81 'br' 'br_ln116' <Predicate = (select_ln105)> <Delay = 1.58>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%b = partselect i7 @_ssdm_op_PartSelect.i7.i24.i32.i32, i24 %pixel_in_data, i32 1, i32 7" [overlay_core.cpp:121]   --->   Operation 82 'partselect' 'b' <Predicate = (select_ln105 & and_ln116)> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln122 = zext i7 %b" [overlay_core.cpp:122]   --->   Operation 83 'zext' 'zext_ln122' <Predicate = (select_ln105 & and_ln116)> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (1.58ns)   --->   "%br_ln123 = br void %if.end36" [overlay_core.cpp:123]   --->   Operation 84 'br' 'br_ln123' <Predicate = (select_ln105 & and_ln116)> <Delay = 1.58>
+ST_4 : Operation 85 [1/1] (2.07ns)   --->   "%icmp_ln126 = icmp_ult  i16 %add_ln116, i16 5" [overlay_core.cpp:126]   --->   Operation 85 'icmp' 'icmp_ln126' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/1] (0.97ns)   --->   "%and_ln126 = and i1 %icmp_ln116_1, i1 %icmp_ln126" [overlay_core.cpp:126]   --->   Operation 86 'and' 'and_ln126' <Predicate = (select_ln105)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln126 = br i1 %and_ln126, void %lor.lhs.false, void %if.then67" [overlay_core.cpp:126]   --->   Operation 87 'br' 'br_ln126' <Predicate = (select_ln105)> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (2.07ns)   --->   "%add_ln127 = add i16 %select_ln105_1, i16 65391" [overlay_core.cpp:127]   --->   Operation 88 'add' 'add_ln127' <Predicate = (select_ln105 & !and_ln126)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [1/1] (2.07ns)   --->   "%icmp_ln127 = icmp_ult  i16 %add_ln127, i16 5" [overlay_core.cpp:127]   --->   Operation 89 'icmp' 'icmp_ln127' <Predicate = (select_ln105 & !and_ln126)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [1/1] (2.07ns)   --->   "%icmp_ln128 = icmp_ult  i16 %add_ln116_1, i16 5" [overlay_core.cpp:128]   --->   Operation 90 'icmp' 'icmp_ln128' <Predicate = (select_ln105 & !and_ln126)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node or_ln127)   --->   "%and_ln127 = and i1 %icmp_ln116_1, i1 %icmp_ln127" [overlay_core.cpp:127]   --->   Operation 91 'and' 'and_ln127' <Predicate = (select_ln105 & !and_ln126)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node or_ln127)   --->   "%and_ln127_1 = and i1 %icmp_ln116, i1 %icmp_ln128" [overlay_core.cpp:127]   --->   Operation 92 'and' 'and_ln127_1' <Predicate = (select_ln105 & !and_ln126)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln127 = or i1 %and_ln127, i1 %and_ln127_1" [overlay_core.cpp:127]   --->   Operation 93 'or' 'or_ln127' <Predicate = (select_ln105 & !and_ln126)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln127 = br i1 %or_ln127, void %lor.lhs.false59, void %if.then67" [overlay_core.cpp:127]   --->   Operation 94 'br' 'br_ln127' <Predicate = (select_ln105 & !and_ln126)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (2.07ns)   --->   "%add_ln129 = add i16 %select_ln105_2, i16 64991" [overlay_core.cpp:129]   --->   Operation 95 'add' 'add_ln129' <Predicate = (select_ln105 & !and_ln126 & !or_ln127)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 96 [1/1] (2.07ns)   --->   "%icmp_ln129 = icmp_ult  i16 %add_ln129, i16 5" [overlay_core.cpp:129]   --->   Operation 96 'icmp' 'icmp_ln129' <Predicate = (select_ln105 & !and_ln126 & !or_ln127)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 97 [1/1] (2.07ns)   --->   "%add_ln134 = add i16 %select_ln105_1, i16 65466" [overlay_core.cpp:134]   --->   Operation 97 'add' 'add_ln134' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 98 [1/1] (2.07ns)   --->   "%icmp_ln134 = icmp_ult  i16 %add_ln134, i16 20" [overlay_core.cpp:134]   --->   Operation 98 'icmp' 'icmp_ln134' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 99 [1/1] (2.07ns)   --->   "%add_ln134_1 = add i16 %select_ln105_2, i16 65466" [overlay_core.cpp:134]   --->   Operation 99 'add' 'add_ln134_1' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 100 [1/1] (2.07ns)   --->   "%icmp_ln134_1 = icmp_ult  i16 %add_ln134_1, i16 460" [overlay_core.cpp:134]   --->   Operation 100 'icmp' 'icmp_ln134_1' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 101 [1/1] (2.07ns)   --->   "%add_ln139 = add i16 %select_ln105_1, i16 65426" [overlay_core.cpp:139]   --->   Operation 101 'add' 'add_ln139' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 102 [1/1] (2.07ns)   --->   "%icmp_ln139 = icmp_ult  i16 %add_ln139, i16 20" [overlay_core.cpp:139]   --->   Operation 102 'icmp' 'icmp_ln139' <Predicate = (select_ln105)> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
 
-State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%spectopmodule_ln74 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_12" [overlay_core.cpp:74]   --->   Operation 31 'spectopmodule' 'spectopmodule_ln74' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %stream_in_V_data_V"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_in_V_keep_V"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_in_V_strb_V"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_user_V"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_last_V"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_id_V"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_in_V_dest_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %stream_out_V_data_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_out_V_keep_V"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %stream_out_V_strb_V"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_user_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_last_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_id_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %stream_out_V_dest_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %enable"   --->   Operation 48 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %enable, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_4, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %enable, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %x_pos"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %x_pos, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_6, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %x_pos, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %y_pos"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %y_pos, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_7, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %y_pos, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %height"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_8, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %width"   --->   Operation 60 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_2, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_9, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_5, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln105 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, void @empty_10" [overlay_core.cpp:105]   --->   Operation 64 'specaxissidechannel' 'specaxissidechannel_ln105' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln105 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %stream_in_V_data_V, i3 %stream_in_V_keep_V, i3 %stream_in_V_strb_V, i1 %stream_in_V_user_V, i1 %stream_in_V_last_V, i1 %stream_in_V_id_V, i1 %stream_in_V_dest_V, void @empty_11" [overlay_core.cpp:105]   --->   Operation 65 'specaxissidechannel' 'specaxissidechannel_ln105' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%ret_ln163 = ret" [overlay_core.cpp:163]   --->   Operation 66 'ret' 'ret_ln163' <Predicate = true> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 2.56>
+ST_5 : Operation 103 [1/1] (0.00ns)   --->   "%pixel_out_data_2 = phi i24 %zext_ln122, void %_ZrsILi24ELb0EEN11ap_int_baseIXT_ELb0EE5RTypeIXL3$_032EEXLb1EEE4arg1ERK12ap_range_refIXT_EXT0_EEi.exit, i24 %pixel_in_data, void %if.then14"   --->   Operation 103 'phi' 'pixel_out_data_2' <Predicate = (select_ln105)> <Delay = 0.00>
+ST_5 : Operation 104 [1/1] (0.97ns)   --->   "%and_ln129 = and i1 %icmp_ln116, i1 %icmp_ln129" [overlay_core.cpp:129]   --->   Operation 104 'and' 'and_ln129' <Predicate = (select_ln105 & !and_ln126 & !or_ln127)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 105 [1/1] (1.58ns)   --->   "%br_ln129 = br i1 %and_ln129, void %if.end70, void %if.then67" [overlay_core.cpp:129]   --->   Operation 105 'br' 'br_ln129' <Predicate = (select_ln105 & !and_ln126 & !or_ln127)> <Delay = 1.58>
+ST_5 : Operation 106 [1/1] (1.58ns)   --->   "%br_ln131 = br void %if.end70" [overlay_core.cpp:131]   --->   Operation 106 'br' 'br_ln131' <Predicate = (select_ln105 & and_ln129) | (select_ln105 & or_ln127) | (select_ln105 & and_ln126)> <Delay = 1.58>
+
+State 6 <SV = 5> <Delay = 3.83>
+ST_6 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node pixel_out_data_3)   --->   "%pixel_out_data_1 = phi i24 16777215, void %if.then67, i24 %pixel_out_data_2, void %lor.lhs.false59"   --->   Operation 107 'phi' 'pixel_out_data_1' <Predicate = (select_ln105)> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node pixel_out_data_3)   --->   "%or_ln139 = or i1 %icmp_ln139, i1 %icmp_ln134" [overlay_core.cpp:139]   --->   Operation 108 'or' 'or_ln139' <Predicate = (select_ln105)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node pixel_out_data_3)   --->   "%and_ln139 = and i1 %icmp_ln134_1, i1 %or_ln139" [overlay_core.cpp:139]   --->   Operation 109 'and' 'and_ln139' <Predicate = (select_ln105)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 110 [1/1] (0.97ns) (out node of the LUT)   --->   "%pixel_out_data_3 = select i1 %and_ln139, i24 16777215, i24 %pixel_out_data_1" [overlay_core.cpp:139]   --->   Operation 110 'select' 'pixel_out_data_3' <Predicate = (select_ln105)> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 111 [1/1] (1.58ns)   --->   "%br_ln142 = br void %if.end93" [overlay_core.cpp:142]   --->   Operation 111 'br' 'br_ln142' <Predicate = (select_ln105)> <Delay = 1.58>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "%pixel_out_data_4 = phi i24 %pixel_out_data_3, void %if.end70, i24 %pixel_in_data, void %while.body"   --->   Operation 112 'phi' 'pixel_out_data_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 113 [2/2] (1.26ns)   --->   "%write_ln144 = write void @_ssdm_op_Write.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, i24 %pixel_out_data_4, i3 %pixel_in_keep, i3 %pixel_in_strb, i1 %pixel_in_user, i1 %pixel_in_last, i1 %pixel_in_id, i1 %pixel_in_dest" [overlay_core.cpp:144]   --->   Operation 113 'write' 'write_ln144' <Predicate = true> <Delay = 1.26> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+
+State 7 <SV = 6> <Delay = 1.26>
+ST_7 : Operation 114 [1/2] (1.26ns)   --->   "%write_ln144 = write void @_ssdm_op_Write.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %stream_out_V_data_V, i3 %stream_out_V_keep_V, i3 %stream_out_V_strb_V, i1 %stream_out_V_user_V, i1 %stream_out_V_last_V, i1 %stream_out_V_id_V, i1 %stream_out_V_dest_V, i24 %pixel_out_data_4, i3 %pixel_in_keep, i3 %pixel_in_strb, i1 %pixel_in_user, i1 %pixel_in_last, i1 %pixel_in_id, i1 %pixel_in_dest" [overlay_core.cpp:144]   --->   Operation 114 'write' 'write_ln144' <Predicate = true> <Delay = 1.26> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%br_ln100 = br void %while.body" [overlay_core.cpp:100]   --->   Operation 115 'br' 'br_ln100' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -155,25 +217,48 @@ ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%ret_ln163 = ret" [overlay_core.cpp
 ============================================================
 Target clock period: 6.667ns, clock uncertainty: 1.800ns.
 
- <State 1>: 4.349ns
+ <State 1>: 1.588ns
 The critical path consists of the following:
-	s_axi read operation ('width_read', overlay_core.cpp:77) on port 'width' (overlay_core.cpp:77) [60]  (1.000 ns)
-	'mul' operation 32 bit ('mul_ln74', overlay_core.cpp:74) [82]  (3.349 ns)
+	'alloca' operation 16 bit ('empty_19') [21]  (0.000 ns)
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'empty_19' [59]  (1.588 ns)
 
- <State 2>: 3.349ns
+ <State 2>: 3.068ns
 The critical path consists of the following:
-	'mul' operation 32 bit ('mul_ln74', overlay_core.cpp:74) [82]  (3.349 ns)
+	axis read operation ('empty_21', overlay_core.cpp:103) on port 'stream_in_V_data_V' (overlay_core.cpp:103) [68]  (0.487 ns)
+	'select' operation 1 bit ('select_ln105', overlay_core.cpp:105) [76]  (0.993 ns)
+	multiplexor before 'phi' operation 24 bit ('pixel_in.data') with incoming values : ('pixel_in.data', overlay_core.cpp:103) ('pixel_out.data', overlay_core.cpp:139) [124]  (1.588 ns)
 
- <State 3>: 4.140ns
+ <State 3>: 5.275ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln74', overlay_core.cpp:74) to 'overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH' [84]  (4.140 ns)
+	'load' operation 16 bit ('p_load25', overlay_core.cpp:105) on local variable 'empty' [64]  (0.000 ns)
+	'select' operation 16 bit ('select_ln105_3', overlay_core.cpp:105) [127]  (0.805 ns)
+	'add' operation 16 bit ('add_ln149', overlay_core.cpp:149) [128]  (2.077 ns)
+	'select' operation 16 bit ('select_ln147_1', overlay_core.cpp:147) [132]  (0.805 ns)
+	'store' operation 0 bit ('store_ln147', overlay_core.cpp:147) of variable 'select_ln147_1', overlay_core.cpp:147 on local variable 'empty' [134]  (1.588 ns)
 
- <State 4>: 6.339ns
+ <State 4>: 5.132ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln74', overlay_core.cpp:74) to 'overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH' [84]  (6.339 ns)
+	'add' operation 16 bit ('add_ln127', overlay_core.cpp:127) [97]  (2.077 ns)
+	'icmp' operation 1 bit ('icmp_ln127', overlay_core.cpp:127) [98]  (2.077 ns)
+	'and' operation 1 bit ('and_ln127', overlay_core.cpp:127) [100]  (0.000 ns)
+	'or' operation 1 bit ('or_ln127', overlay_core.cpp:127) [102]  (0.978 ns)
 
- <State 5>: 0.000ns
+ <State 5>: 2.566ns
 The critical path consists of the following:
+	'and' operation 1 bit ('and_ln129', overlay_core.cpp:129) [107]  (0.978 ns)
+	multiplexor before 'phi' operation 24 bit ('pixel_out.data') with incoming values : ('pixel_in.data', overlay_core.cpp:103) ('zext_ln122', overlay_core.cpp:122) [112]  (1.588 ns)
+
+ <State 6>: 3.831ns
+The critical path consists of the following:
+	'phi' operation 24 bit ('pixel_out.data') with incoming values : ('pixel_in.data', overlay_core.cpp:103) ('zext_ln122', overlay_core.cpp:122) [112]  (0.000 ns)
+	'select' operation 24 bit ('pixel_out.data', overlay_core.cpp:139) [121]  (0.978 ns)
+	multiplexor before 'phi' operation 24 bit ('pixel_in.data') with incoming values : ('pixel_in.data', overlay_core.cpp:103) ('pixel_out.data', overlay_core.cpp:139) [124]  (1.588 ns)
+	'phi' operation 24 bit ('pixel_in.data') with incoming values : ('pixel_in.data', overlay_core.cpp:103) ('pixel_out.data', overlay_core.cpp:139) [124]  (0.000 ns)
+	axis write operation ('write_ln144', overlay_core.cpp:144) on port 'stream_out_V_data_V' (overlay_core.cpp:144) [125]  (1.265 ns)
+
+ <State 7>: 1.265ns
+The critical path consists of the following:
+	axis write operation ('write_ln144', overlay_core.cpp:144) on port 'stream_out_V_data_V' (overlay_core.cpp:144) [125]  (1.265 ns)
 
 
 ============================================================
@@ -189,6 +274,8 @@ N/A
 	State 3
 	State 4
 	State 5
+	State 6
+	State 7
 
 
 ============================================================

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'overlay_core'
 ================================================================
 + General Information: 
-    * Date:           Mon Apr 27 15:52:22 2026
+    * Date:           Tue Apr 28 01:32:07 2026
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        hls_overlay_prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,14 +15,13 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------------------------------------------+--------+-------+------------+-----------+----------+------------+------------+----------+------+---------+-----------+-----------+-----+
-    |                     Modules                     |  Issue |       |  Latency   |  Latency  | Iteration|            |    Trip    |          |      |         |           |           |     |
-    |                     & Loops                     |  Type  | Slack |  (cycles)  |    (ns)   |  Latency |  Interval  |    Count   | Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
-    +-------------------------------------------------+--------+-------+------------+-----------+----------+------------+------------+----------+------+---------+-----------+-----------+-----+
-    |+ overlay_core                                   |  Timing|  -1.68|  4294836234|  2.863e+10|         -|  4294836235|           -|        no|     -|  1 (~0%)|  1241 (1%)|  2017 (3%)|    -|
-    | + overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH  |  Timing|  -1.68|  4294836230|  2.863e+10|         -|  4294836230|           -|        no|     -|        -|  774 (~0%)|  1544 (2%)|    -|
-    |  o LOOP_HEIGHT_LOOP_WIDTH                       |       -|   4.87|  4294836228|  2.863e+10|         5|           1|  4294836225|       yes|     -|        -|          -|          -|    -|
-    +-------------------------------------------------+--------+-------+------------+-----------+----------+------------+------------+----------+------+---------+-----------+-----------+-----+
+    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
+    |       Modules       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |            |           |     |
+    |       & Loops       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |    LUT    | URAM|
+    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
+    |+ overlay_core       |  Timing|  -0.41|        -|       -|         -|        -|     -|        no|     -|   -|  1018 (~0%)|  1107 (2%)|    -|
+    | o VITIS_LOOP_100_1  |       -|   4.87|        -|       -|         6|        1|     -|       yes|     -|   -|           -|          -|    -|
+    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
 
 
 ================================================================
@@ -36,19 +35,15 @@
 +------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| Interface  | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
-+------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| s_axi_CTRL | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
-| s_axi_CTRL | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
-| s_axi_CTRL | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
-| s_axi_CTRL | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
-| s_axi_CTRL | enable   | 0x10   | 32    | W      | Data signal of enable            |                                                                      |
-| s_axi_CTRL | x_pos    | 0x18   | 32    | W      | Data signal of x_pos             |                                                                      |
-| s_axi_CTRL | y_pos    | 0x20   | 32    | W      | Data signal of y_pos             |                                                                      |
-| s_axi_CTRL | height   | 0x28   | 32    | W      | Data signal of height            |                                                                      |
-| s_axi_CTRL | width    | 0x30   | 32    | W      | Data signal of width             |                                                                      |
-+------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
++------------+----------+--------+-------+--------+-----------------------+
+| Interface  | Register | Offset | Width | Access | Description           |
++------------+----------+--------+-------+--------+-----------------------+
+| s_axi_CTRL | enable   | 0x10   | 32    | W      | Data signal of enable |
+| s_axi_CTRL | x_pos    | 0x18   | 32    | W      | Data signal of x_pos  |
+| s_axi_CTRL | y_pos    | 0x20   | 32    | W      | Data signal of y_pos  |
+| s_axi_CTRL | height   | 0x28   | 32    | W      | Data signal of height |
+| s_axi_CTRL | width    | 0x30   | 32    | W      | Data signal of width  |
++------------+----------+--------+-------+--------+-----------------------+
 
 * AXIS
 +------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
@@ -59,14 +54,13 @@
 +------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
 
 * TOP LEVEL CONTROL
-+-----------+------------+-----------+
-| Interface | Type       | Ports     |
-+-----------+------------+-----------+
-| ap_clk    | clock      | ap_clk    |
-| ap_rst_n  | reset      | ap_rst_n  |
-| interrupt | interrupt  | interrupt |
-| ap_ctrl   | ap_ctrl_hs |           |
-+-----------+------------+-----------+
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
 
 
 ================================================================
@@ -102,140 +96,58 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-------------------------------------------------+-----+--------+----------------------+--------+-----------+---------+
-| Name                                            | DSP | Pragma | Variable             | Op     | Impl      | Latency |
-+-------------------------------------------------+-----+--------+----------------------+--------+-----------+---------+
-| + overlay_core                                  | 1   |        |                      |        |           |         |
-|   add_i_i564_fu_233_p2                          |     |        | add_i_i564           | add    | fabric    | 0       |
-|   add_i_i533_fu_242_p2                          |     |        | add_i_i533           | add    | fabric    | 0       |
-|   add_i_i486_fu_248_p2                          |     |        | add_i_i486           | add    | fabric    | 0       |
-|   add_i_i458_fu_254_p2                          |     |        | add_i_i458           | add    | fabric    | 0       |
-|   start_x_fu_260_p2                             |     |        | start_x              | add    | fabric    | 0       |
-|   add_i_i163_fu_265_p2                          |     |        | add_i_i163           | add    | fabric    | 0       |
-|   add_i_i135_fu_271_p2                          |     |        | add_i_i135           | add    | fabric    | 0       |
-|   char_x_fu_277_p2                              |     |        | char_x               | add    | fabric    | 0       |
-|   char_x_2_fu_282_p2                            |     |        | char_x_2             | add    | fabric    | 0       |
-|   y_fu_287_p2                                   |     |        | y                    | sub    | fabric    | 0       |
-|   y_1_fu_292_p2                                 |     |        | y_1                  | sub    | fabric    | 0       |
-|   mul_16ns_16ns_32_2_1_U38                      | 1   |        | mul_ln74             | mul    | auto      | 1       |
-|  + overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH | 0   |        |                      |        |           |         |
-|    icmp_ln105_fu_437_p2                         |     |        | icmp_ln105           | seteq  | auto      | 0       |
-|    add_ln105_fu_443_p2                          |     |        | add_ln105            | add    | fabric    | 0       |
-|    icmp_ln106_fu_500_p2                         |     |        | icmp_ln106           | seteq  | auto      | 0       |
-|    select_ln105_fu_505_p3                       |     |        | select_ln105         | select | auto_sel  | 0       |
-|    add_ln105_1_fu_513_p2                        |     |        | add_ln105_1          | add    | fabric    | 0       |
-|    select_ln105_1_fu_519_p3                     |     |        | select_ln105_1       | select | auto_sel  | 0       |
-|    ult_fu_546_p2                                |     |        | ult                  | setlt  | auto      | 0       |
-|    rev_fu_829_p2                                |     |        | rev                  | xor    | auto      | 0       |
-|    cmp_i435_fu_551_p2                           |     |        | cmp_i435             | setgt  | auto      | 0       |
-|    rel_y_fu_556_p2                              |     |        | rel_y                | add    | fabric    | 0       |
-|    shl_i_i328_fu_706_p2                         |     |        | shl_i_i328           | shl    | auto_pipe | 0       |
-|    ult39_fu_560_p2                              |     |        | ult39                | setlt  | auto      | 0       |
-|    rev40_fu_834_p2                              |     |        | rev40                | xor    | auto      | 0       |
-|    cmp_i112_fu_565_p2                           |     |        | cmp_i112             | setgt  | auto      | 0       |
-|    rel_y_1_fu_570_p2                            |     |        | rel_y_1              | add    | fabric    | 0       |
-|    shl_i_i_fu_719_p2                            |     |        | shl_i_i              | shl    | auto_pipe | 0       |
-|    ult41_fu_574_p2                              |     |        | ult41                | setlt  | auto      | 0       |
-|    rev42_fu_578_p2                              |     |        | rev42                | xor    | auto      | 0       |
-|    notrhs_fu_584_p2                             |     |        | notrhs               | setgt  | auto      | 0       |
-|    cmp_i_i17_i_i319_not_fu_729_p2               |     |        | cmp_i_i17_i_i319_not | setgt  | auto      | 0       |
-|    spec_select1222_fu_839_p2                    |     |        | spec_select1222      | and    | auto      | 0       |
-|    cmp_i_i17_i_i_not_fu_734_p2                  |     |        | cmp_i_i17_i_i_not    | setgt  | auto      | 0       |
-|    icmp_ln123_fu_589_p2                         |     |        | icmp_ln123           | setlt  | auto      | 0       |
-|    xor_ln123_fu_593_p2                          |     |        | xor_ln123            | xor    | auto      | 0       |
-|    icmp_ln123_1_fu_602_p2                       |     |        | icmp_ln123_1         | setgt  | auto      | 0       |
-|    and_ln122_fu_607_p2                          |     |        | and_ln122            | and    | auto      | 0       |
-|    and_ln122_2_fu_613_p2                        |     |        | and_ln122_2          | and    | auto      | 0       |
-|    and_ln122_1_fu_619_p2                        |     |        | and_ln122_1          | and    | auto      | 0       |
-|    select_ln122_fu_883_p3                       |     |        | select_ln122         | select | auto_sel  | 0       |
-|    select_ln122_1_fu_889_p3                     |     |        | select_ln122_1       | select | auto_sel  | 0       |
-|    b_3_fu_895_p3                                |     |        | b_3                  | select | auto_sel  | 0       |
-|    rel_x_fu_625_p2                              |     |        | rel_x                | sub    | fabric    | 0       |
-|    icmp_ln49_fu_629_p2                          |     |        | icmp_ln49            | setgt  | auto      | 0       |
-|    or_ln49_fu_901_p2                            |     |        | or_ln49              | or     | auto      | 0       |
-|    and_ln52_fu_739_p2                           |     |        | and_ln52             | and    | auto      | 0       |
-|    rel_x_1_fu_641_p2                            |     |        | rel_x_1              | sub    | fabric    | 0       |
-|    icmp_ln49_1_fu_645_p2                        |     |        | icmp_ln49_1          | setgt  | auto      | 0       |
-|    or_ln49_1_fu_905_p2                          |     |        | or_ln49_1            | or     | auto      | 0       |
-|    and_ln52_1_fu_745_p2                         |     |        | and_ln52_1           | and    | auto      | 0       |
-|    rel_x_2_fu_657_p2                            |     |        | rel_x_2              | sub    | fabric    | 0       |
-|    icmp_ln49_2_fu_661_p2                        |     |        | icmp_ln49_2          | setgt  | auto      | 0       |
-|    or_ln49_2_fu_909_p2                          |     |        | or_ln49_2            | or     | auto      | 0       |
-|    and_ln52_2_fu_913_p2                         |     |        | and_ln52_2           | and    | auto      | 0       |
-|    icmp_ln49_3_fu_751_p2                        |     |        | icmp_ln49_3          | setgt  | auto      | 0       |
-|    or_ln49_3_fu_917_p2                          |     |        | or_ln49_3            | or     | auto      | 0       |
-|    and_ln52_3_fu_756_p2                         |     |        | and_ln52_3           | and    | auto      | 0       |
-|    icmp_ln49_4_fu_762_p2                        |     |        | icmp_ln49_4          | setgt  | auto      | 0       |
-|    or_ln49_4_fu_921_p2                          |     |        | or_ln49_4            | or     | auto      | 0       |
-|    and_ln52_4_fu_767_p2                         |     |        | and_ln52_4           | and    | auto      | 0       |
-|    xor_ln49_fu_925_p2                           |     |        | xor_ln49             | xor    | auto      | 0       |
-|    icmp_ln52_fu_773_p2                          |     |        | icmp_ln52            | setne  | auto      | 0       |
-|    and_ln52_8_fu_931_p2                         |     |        | and_ln52_8           | and    | auto      | 0       |
-|    xor_ln49_1_fu_936_p2                         |     |        | xor_ln49_1           | xor    | auto      | 0       |
-|    icmp_ln52_1_fu_779_p2                        |     |        | icmp_ln52_1          | setne  | auto      | 0       |
-|    and_ln52_9_fu_942_p2                         |     |        | and_ln52_9           | and    | auto      | 0       |
-|    xor_ln49_2_fu_947_p2                         |     |        | xor_ln49_2           | xor    | auto      | 0       |
-|    icmp_ln52_2_fu_953_p2                        |     |        | icmp_ln52_2          | setne  | auto      | 0       |
-|    and_ln52_10_fu_959_p2                        |     |        | and_ln52_10          | and    | auto      | 0       |
-|    xor_ln49_3_fu_965_p2                         |     |        | xor_ln49_3           | xor    | auto      | 0       |
-|    icmp_ln52_3_fu_785_p2                        |     |        | icmp_ln52_3          | setne  | auto      | 0       |
-|    and_ln52_11_fu_971_p2                        |     |        | and_ln52_11          | and    | auto      | 0       |
-|    xor_ln49_4_fu_976_p2                         |     |        | xor_ln49_4           | xor    | auto      | 0       |
-|    icmp_ln52_4_fu_791_p2                        |     |        | icmp_ln52_4          | setne  | auto      | 0       |
-|    and_ln52_12_fu_982_p2                        |     |        | and_ln52_12          | and    | auto      | 0       |
-|    or_ln52_fu_987_p2                            |     |        | or_ln52              | or     | auto      | 0       |
-|    or_ln52_1_fu_993_p2                          |     |        | or_ln52_1            | or     | auto      | 0       |
-|    or_ln52_2_fu_999_p2                          |     |        | or_ln52_2            | or     | auto      | 0       |
-|    or_ln52_3_fu_1005_p2                         |     |        | or_ln52_3            | or     | auto      | 0       |
-|    and_ln52_13_fu_1011_p2                       |     |        | and_ln52_13          | and    | auto      | 0       |
-|    draw_pixel_fu_1016_p2                        |     |        | draw_pixel           | and    | auto      | 0       |
-|    or_ln49_5_fu_1022_p2                         |     |        | or_ln49_5            | or     | auto      | 0       |
-|    and_ln52_5_fu_1026_p2                        |     |        | and_ln52_5           | and    | auto      | 0       |
-|    or_ln49_6_fu_1030_p2                         |     |        | or_ln49_6            | or     | auto      | 0       |
-|    and_ln52_6_fu_801_p2                         |     |        | and_ln52_6           | and    | auto      | 0       |
-|    or_ln49_7_fu_1034_p2                         |     |        | or_ln49_7            | or     | auto      | 0       |
-|    and_ln52_7_fu_811_p2                         |     |        | and_ln52_7           | and    | auto      | 0       |
-|    xor_ln49_5_fu_1038_p2                        |     |        | xor_ln49_5           | xor    | auto      | 0       |
-|    icmp_ln52_5_fu_1044_p2                       |     |        | icmp_ln52_5          | setne  | auto      | 0       |
-|    and_ln52_15_fu_1050_p2                       |     |        | and_ln52_15          | and    | auto      | 0       |
-|    xor_ln49_6_fu_1056_p2                        |     |        | xor_ln49_6           | xor    | auto      | 0       |
-|    icmp_ln52_6_fu_817_p2                        |     |        | icmp_ln52_6          | setne  | auto      | 0       |
-|    and_ln52_16_fu_1062_p2                       |     |        | and_ln52_16          | and    | auto      | 0       |
-|    xor_ln49_7_fu_1067_p2                        |     |        | xor_ln49_7           | xor    | auto      | 0       |
-|    icmp_ln52_7_fu_823_p2                        |     |        | icmp_ln52_7          | setne  | auto      | 0       |
-|    and_ln52_17_fu_1073_p2                       |     |        | and_ln52_17          | and    | auto      | 0       |
-|    or_ln52_4_fu_1078_p2                         |     |        | or_ln52_4            | or     | auto      | 0       |
-|    empty_20_fu_1084_p2                          |     |        | empty_20             | or     | auto      | 0       |
-|    draw_pixel_1_fu_1090_p2                      |     |        | draw_pixel_1         | and    | auto      | 0       |
-|    draw_pixel_2_fu_1096_p2                      |     |        | draw_pixel_2         | or     | auto      | 0       |
-|    r_3_fu_1102_p3                               |     |        | r_3                  | select | auto_sel  | 0       |
-|    g_3_fu_1110_p3                               |     |        | g_3                  | select | auto_sel  | 0       |
-|    b_4_fu_1118_p3                               |     |        | b_4                  | select | auto_sel  | 0       |
-|    r_2_fu_1126_p3                               |     |        | r_2                  | select | auto_sel  | 0       |
-|    g_2_fu_1132_p3                               |     |        | g_2                  | select | auto_sel  | 0       |
-|    b_2_fu_1138_p3                               |     |        | b_2                  | select | auto_sel  | 0       |
-|    add_ln106_fu_527_p2                          |     |        | add_ln106            | add    | fabric    | 0       |
-+-------------------------------------------------+-----+--------+----------------------+--------+-----------+---------+
++------------------------------+-----+--------+------------------+--------+----------+---------+
+| Name                         | DSP | Pragma | Variable         | Op     | Impl     | Latency |
++------------------------------+-----+--------+------------------+--------+----------+---------+
+| + overlay_core               | 0   |        |                  |        |          |         |
+|   select_ln105_fu_266_p3     |     |        | select_ln105     | select | auto_sel | 0       |
+|   select_ln105_1_fu_279_p3   |     |        | select_ln105_1   | select | auto_sel | 0       |
+|   add_ln116_fu_286_p2        |     |        | add_ln116        | add    | fabric   | 0       |
+|   icmp_ln116_fu_360_p2       |     |        | icmp_ln116       | setlt  | auto     | 0       |
+|   select_ln105_2_fu_292_p3   |     |        | select_ln105_2   | select | auto_sel | 0       |
+|   add_ln116_1_fu_299_p2      |     |        | add_ln116_1      | add    | fabric   | 0       |
+|   icmp_ln116_1_fu_365_p2     |     |        | icmp_ln116_1     | setlt  | auto     | 0       |
+|   and_ln116_fu_370_p2        |     |        | and_ln116        | and    | auto     | 0       |
+|   icmp_ln126_fu_389_p2       |     |        | icmp_ln126       | setlt  | auto     | 0       |
+|   and_ln126_fu_394_p2        |     |        | and_ln126        | and    | auto     | 0       |
+|   add_ln127_fu_400_p2        |     |        | add_ln127        | add    | fabric   | 0       |
+|   icmp_ln127_fu_405_p2       |     |        | icmp_ln127       | setlt  | auto     | 0       |
+|   icmp_ln128_fu_411_p2       |     |        | icmp_ln128       | setlt  | auto     | 0       |
+|   and_ln127_fu_416_p2        |     |        | and_ln127        | and    | auto     | 0       |
+|   and_ln127_1_fu_422_p2      |     |        | and_ln127_1      | and    | auto     | 0       |
+|   or_ln127_fu_428_p2         |     |        | or_ln127         | or     | auto     | 0       |
+|   add_ln129_fu_434_p2        |     |        | add_ln129        | add    | fabric   | 0       |
+|   icmp_ln129_fu_439_p2       |     |        | icmp_ln129       | setlt  | auto     | 0       |
+|   and_ln129_fu_478_p2        |     |        | and_ln129        | and    | auto     | 0       |
+|   add_ln134_fu_445_p2        |     |        | add_ln134        | add    | fabric   | 0       |
+|   icmp_ln134_fu_450_p2       |     |        | icmp_ln134       | setlt  | auto     | 0       |
+|   add_ln134_1_fu_456_p2      |     |        | add_ln134_1      | add    | fabric   | 0       |
+|   icmp_ln134_1_fu_461_p2     |     |        | icmp_ln134_1     | setlt  | auto     | 0       |
+|   add_ln139_fu_467_p2        |     |        | add_ln139        | add    | fabric   | 0       |
+|   icmp_ln139_fu_472_p2       |     |        | icmp_ln139       | setlt  | auto     | 0       |
+|   or_ln139_fu_482_p2         |     |        | or_ln139         | or     | auto     | 0       |
+|   and_ln139_fu_486_p2        |     |        | and_ln139        | and    | auto     | 0       |
+|   pixel_out_data_3_fu_491_p3 |     |        | pixel_out_data_3 | select | auto_sel | 0       |
+|   add_ln146_fu_305_p2        |     |        | add_ln146        | add    | fabric   | 0       |
+|   select_ln105_3_fu_311_p3   |     |        | select_ln105_3   | select | auto_sel | 0       |
+|   add_ln149_fu_318_p2        |     |        | add_ln149        | add    | fabric   | 0       |
+|   select_ln147_2_fu_324_p3   |     |        | select_ln147_2   | select | auto_sel | 0       |
+|   or_ln147_fu_331_p2         |     |        | or_ln147         | or     | auto     | 0       |
+|   select_ln147_fu_335_p3     |     |        | select_ln147     | select | auto_sel | 0       |
+|   select_ln147_1_fu_343_p3   |     |        | select_ln147_1   | select | auto_sel | 0       |
++------------------------------+-----+--------+------------------+--------+----------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+-------------------------------------------------+-----------+-----------+------+------+--------+-------------------+------+---------+------------------+
-| Name                                            | Usage     | Type      | BRAM | URAM | Pragma | Variable          | Impl | Latency | Bitwidth, Depth, |
-|                                                 |           |           |      |      |        |                   |      |         | Banks            |
-+-------------------------------------------------+-----------+-----------+------+------+--------+-------------------+------+---------+------------------+
-| + overlay_core                                  |           |           | 0    | 0    |        |                   |      |         |                  |
-|   CTRL_s_axi_U                                  | interface | s_axilite |      |      |        |                   |      |         |                  |
-|  + overlay_core_Pipeline_LOOP_HEIGHT_LOOP_WIDTH |           |           | 0    | 0    |        |                   |      |         |                  |
-|    p_ZL8font_5x7_3_3_U                          | rom_1p    |           |      |      |        | p_ZL8font_5x7_3_3 | auto | 1       | 7, 5, 1          |
-|    p_ZL8font_5x7_2_1_U                          | rom_2p    |           |      |      |        | p_ZL8font_5x7_2_1 | auto | 1       | 7, 5, 1          |
-|    p_ZL8font_5x7_2_0_U                          | rom_1p    |           |      |      |        | p_ZL8font_5x7_2_0 | auto | 1       | 7, 5, 1          |
-|    p_ZL8font_5x7_4_1_U                          | rom_1p    |           |      |      |        | p_ZL8font_5x7_4_1 | auto | 1       | 7, 5, 1          |
-|    p_ZL8font_5x7_5_2_U                          | rom_1p    |           |      |      |        | p_ZL8font_5x7_5_2 | auto | 1       | 7, 5, 1          |
-|    p_ZL8font_5x7_0_0_U                          | rom_1p    |           |      |      |        | p_ZL8font_5x7_0_0 | auto | 1       | 6, 5, 1          |
-|    p_ZL8font_5x7_1_3_U                          | rom_1p    |           |      |      |        | p_ZL8font_5x7_1_3 | auto | 1       | 2, 5, 1          |
-+-------------------------------------------------+-----------+-----------+------+------+--------+-------------------+------+---------+------------------+
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name           | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                |           |           |      |      |        |          |      |         | Banks            |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + overlay_core |           |           | 0    | 0    |        |          |      |         |                  |
+|   CTRL_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
 
 
 ================================================================
@@ -256,14 +168,8 @@
 | interface | s_axilite port=height bundle=CTRL | overlay_core.cpp:88 in overlay_core, height     |
 | interface | s_axilite port=width bundle=CTRL  | overlay_core.cpp:89 in overlay_core, width      |
 | interface | s_axilite port=return bundle=CTRL | overlay_core.cpp:90 in overlay_core, return     |
-| pipeline  | II=1                              | overlay_core.cpp:107 in overlay_core            |
+| interface | ap_ctrl_none port=return          | overlay_core.cpp:91 in overlay_core, return     |
+| pipeline  | II=1                              | overlay_core.cpp:101 in overlay_core            |
 +-----------+-----------------------------------+-------------------------------------------------+
-
-* Inferred Pragmas
-+-------------------------------+-----------------+--------------------------------------------------+-----------------------------------+
-| Source Pragma                 | Inferred Pragma | Options                                          | Location                          |
-+-------------------------------+-----------------+--------------------------------------------------+-----------------------------------+
-| pipeline overlay_core.cpp:107 | array_partition | dim=1 type=cyclic factor=6 variable=_ZL8font_5x7 | variable font_5x7 in overlay_core |
-+-------------------------------+-----------------+--------------------------------------------------+-----------------------------------+
 
 

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Apr 27 17:54:45 2026
-# Process ID: 11248
+# Start of session at: Tue Apr 28 01:01:16 2026
+# Process ID: 13324
 # Current directory: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1
 # Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file: C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/system_wrapper.vds
@@ -17,17 +17,17 @@
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :6387 MB
-# Swap memory       :17600 MB
-# Total Virtual     :23987 MB
-# Available Virtual :6547 MB
+# Swap memory       :18610 MB
+# Total Virtual     :24998 MB
+# Available Virtual :7723 MB
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 501.258 ; gain = 197.758
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 502.227 ; gain = 202.996
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
-add_files: Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 591.402 ; gain = 86.215
+add_files: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 592.035 ; gain = 85.863
 Command: read_checkpoint -auto_incremental -incremental C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/utils_1/imports/synth_1/system_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/utils_1/imports/synth_1/system_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -41,9 +41,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17600
+INFO: [Synth 8-7075] Helper process launched with PID 26236
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1499.668 ; gain = 448.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1499.059 ; gain = 447.898
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'system_wrapper' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:58]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209' bound to instance 'cam_gpio_tri_iobuf_0' of component 'IOBUF' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:126]
@@ -51,41 +51,43 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2024.1/script
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209' bound to instance 'cam_iic_scl_iobuf' of component 'IOBUF' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:133]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209' bound to instance 'cam_iic_sda_iobuf' of component 'IOBUF' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:140]
-INFO: [Synth 8-3491] module 'system' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3039' bound to instance 'system_i' of component 'system' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'system' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3092]
-INFO: [Synth 8-3491] module 'system_AXI_BayerToRGB_1_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_AXI_BayerToRGB_1_0_stub.vhdl:6' bound to instance 'AXI_BayerToRGB_1' of component 'system_AXI_BayerToRGB_1_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4337]
-INFO: [Synth 8-638] synthesizing module 'system_AXI_BayerToRGB_1_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_AXI_BayerToRGB_1_0_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'system_AXI_GammaCorrection_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_AXI_GammaCorrection_0_0_stub.vhdl:6' bound to instance 'AXI_GammaCorrection_0' of component 'system_AXI_GammaCorrection_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4352]
-INFO: [Synth 8-638] synthesizing module 'system_AXI_GammaCorrection_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_AXI_GammaCorrection_0_0_stub.vhdl:45]
-INFO: [Synth 8-3491] module 'system_DVIClocking_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_DVIClocking_0_0_stub.vhdl:6' bound to instance 'DVIClocking_0' of component 'system_DVIClocking_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4388]
-INFO: [Synth 8-638] synthesizing module 'system_DVIClocking_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_DVIClocking_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'system_MIPI_CSI_2_RX_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_MIPI_CSI_2_RX_0_0_stub.vhdl:6' bound to instance 'MIPI_CSI_2_RX_0' of component 'system_MIPI_CSI_2_RX_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4396]
-INFO: [Synth 8-638] synthesizing module 'system_MIPI_CSI_2_RX_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_MIPI_CSI_2_RX_0_0_stub.vhdl:63]
-INFO: [Synth 8-3491] module 'system_MIPI_D_PHY_RX_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_MIPI_D_PHY_RX_0_0_stub.vhdl:6' bound to instance 'MIPI_D_PHY_RX_0' of component 'system_MIPI_D_PHY_RX_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4450]
-INFO: [Synth 8-638] synthesizing module 'system_MIPI_D_PHY_RX_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_MIPI_D_PHY_RX_0_0_stub.vhdl:89]
-INFO: [Synth 8-638] synthesizing module 'system_axi_mem_intercon_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1496]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1P403ZT' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1317]
-INFO: [Synth 8-3491] module 'system_auto_pc_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'system_auto_pc_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1416]
-INFO: [Synth 8-638] synthesizing module 'system_auto_pc_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_auto_pc_0_stub.vhdl:45]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1P403ZT' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1317]
-INFO: [Synth 8-256] done synthesizing module 'system_axi_mem_intercon_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1496]
-INFO: [Synth 8-638] synthesizing module 'system_axi_mem_intercon_1_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1647]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1AIV7DJ' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1116]
-INFO: [Synth 8-3491] module 'system_auto_pc_1' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_auto_pc_1_stub.vhdl:6' bound to instance 'auto_pc' of component 'system_auto_pc_1' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1233]
-INFO: [Synth 8-638] synthesizing module 'system_auto_pc_1' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_auto_pc_1_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1AIV7DJ' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1116]
-INFO: [Synth 8-256] done synthesizing module 'system_axi_mem_intercon_1_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1647]
-INFO: [Synth 8-3491] module 'system_axi_vdma_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_axi_vdma_0_0_stub.vhdl:6' bound to instance 'axi_vdma_0' of component 'system_axi_vdma_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4610]
-INFO: [Synth 8-638] synthesizing module 'system_axi_vdma_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_axi_vdma_0_0_stub.vhdl:79]
-INFO: [Synth 8-3491] module 'system_clk_wiz_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'system_clk_wiz_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4680]
-INFO: [Synth 8-638] synthesizing module 'system_clk_wiz_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_clk_wiz_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'system_multipix_ctrl_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_multipix_ctrl_0_0_stub.vhdl:6' bound to instance 'multipix_ctrl_0' of component 'system_multipix_ctrl_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4688]
-INFO: [Synth 8-638] synthesizing module 'system_multipix_ctrl_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_multipix_ctrl_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'system_overlay_core_0_2' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_overlay_core_0_2_stub.vhdl:6' bound to instance 'overlay_core_0' of component 'system_overlay_core_0_2' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4702]
-INFO: [Synth 8-638] synthesizing module 'system_overlay_core_0_2' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_overlay_core_0_2_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'system_processing_system7_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'system_processing_system7_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4743]
-INFO: [Synth 8-638] synthesizing module 'system_processing_system7_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_processing_system7_0_0_stub.vhdl:178]
-INFO: [Synth 8-638] synthesizing module 'system_ps7_0_axi_periph_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1958]
+INFO: [Synth 8-3491] module 'system' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3564' bound to instance 'system_i' of component 'system' [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'system' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3617]
+INFO: [Synth 8-3491] module 'system_AXI_BayerToRGB_1_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_AXI_BayerToRGB_1_0_stub.vhdl:6' bound to instance 'AXI_BayerToRGB_1' of component 'system_AXI_BayerToRGB_1_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4913]
+INFO: [Synth 8-638] synthesizing module 'system_AXI_BayerToRGB_1_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_AXI_BayerToRGB_1_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'system_AXI_GammaCorrection_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_AXI_GammaCorrection_0_0_stub.vhdl:6' bound to instance 'AXI_GammaCorrection_0' of component 'system_AXI_GammaCorrection_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4928]
+INFO: [Synth 8-638] synthesizing module 'system_AXI_GammaCorrection_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_AXI_GammaCorrection_0_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'system_DVIClocking_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_DVIClocking_0_0_stub.vhdl:6' bound to instance 'DVIClocking_0' of component 'system_DVIClocking_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4964]
+INFO: [Synth 8-638] synthesizing module 'system_DVIClocking_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_DVIClocking_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'system_MIPI_CSI_2_RX_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_MIPI_CSI_2_RX_0_0_stub.vhdl:6' bound to instance 'MIPI_CSI_2_RX_0' of component 'system_MIPI_CSI_2_RX_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:4972]
+INFO: [Synth 8-638] synthesizing module 'system_MIPI_CSI_2_RX_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_MIPI_CSI_2_RX_0_0_stub.vhdl:63]
+INFO: [Synth 8-3491] module 'system_MIPI_D_PHY_RX_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_MIPI_D_PHY_RX_0_0_stub.vhdl:6' bound to instance 'MIPI_D_PHY_RX_0' of component 'system_MIPI_D_PHY_RX_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5026]
+INFO: [Synth 8-638] synthesizing module 'system_MIPI_D_PHY_RX_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_MIPI_D_PHY_RX_0_0_stub.vhdl:89]
+INFO: [Synth 8-3491] module 'system_axi_gpio_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_axi_gpio_0_0_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'system_axi_gpio_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5106]
+INFO: [Synth 8-638] synthesizing module 'system_axi_gpio_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_axi_gpio_0_0_stub.vhdl:33]
+INFO: [Synth 8-638] synthesizing module 'system_axi_mem_intercon_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1708]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1P403ZT' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1529]
+INFO: [Synth 8-3491] module 'system_auto_pc_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'system_auto_pc_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1628]
+INFO: [Synth 8-638] synthesizing module 'system_auto_pc_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_auto_pc_0_stub.vhdl:45]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1P403ZT' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1529]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_mem_intercon_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1708]
+INFO: [Synth 8-638] synthesizing module 'system_axi_mem_intercon_1_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1859]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1AIV7DJ' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1328]
+INFO: [Synth 8-3491] module 'system_auto_pc_1' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_auto_pc_1_stub.vhdl:6' bound to instance 'auto_pc' of component 'system_auto_pc_1' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1445]
+INFO: [Synth 8-638] synthesizing module 'system_auto_pc_1' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_auto_pc_1_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1AIV7DJ' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1328]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_mem_intercon_1_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1859]
+INFO: [Synth 8-3491] module 'system_axi_vdma_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_axi_vdma_0_0_stub.vhdl:6' bound to instance 'axi_vdma_0' of component 'system_axi_vdma_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5210]
+INFO: [Synth 8-638] synthesizing module 'system_axi_vdma_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_axi_vdma_0_0_stub.vhdl:79]
+INFO: [Synth 8-3491] module 'system_clk_wiz_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'system_clk_wiz_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5280]
+INFO: [Synth 8-638] synthesizing module 'system_clk_wiz_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_clk_wiz_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'system_multipix_ctrl_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_multipix_ctrl_0_0_stub.vhdl:6' bound to instance 'multipix_ctrl_0' of component 'system_multipix_ctrl_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5288]
+INFO: [Synth 8-638] synthesizing module 'system_multipix_ctrl_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_multipix_ctrl_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'system_overlay_core_0_6' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_overlay_core_0_6_stub.vhdl:6' bound to instance 'overlay_core_0' of component 'system_overlay_core_0_6' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5302]
+INFO: [Synth 8-638] synthesizing module 'system_overlay_core_0_6' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_overlay_core_0_6_stub.vhdl:49]
+INFO: [Synth 8-3491] module 'system_processing_system7_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'system_processing_system7_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5342]
+INFO: [Synth 8-638] synthesizing module 'system_processing_system7_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_processing_system7_0_0_stub.vhdl:178]
+INFO: [Synth 8-638] synthesizing module 'system_ps7_0_axi_periph_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:2210]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1H7AUOX' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:56]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1H7AUOX' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:56]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_4Y7TYO' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:154]
@@ -100,37 +102,41 @@ INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1IWS6WN' [c:/Users/rat
 INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1IWS6WN' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:582]
 INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_1TJ5H51' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:693]
 INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_1TJ5H51' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:693]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_11SE3QO' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:823]
-INFO: [Synth 8-3491] module 'system_auto_pc_2' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_auto_pc_2_stub.vhdl:6' bound to instance 'auto_pc' of component 'system_auto_pc_2' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1006]
-INFO: [Synth 8-638] synthesizing module 'system_auto_pc_2' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_auto_pc_2_stub.vhdl:71]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_11SE3QO' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:823]
-INFO: [Synth 8-3491] module 'system_xbar_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'system_xbar_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:2881]
-INFO: [Synth 8-638] synthesizing module 'system_xbar_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_xbar_0_stub.vhdl:52]
-INFO: [Synth 8-256] done synthesizing module 'system_ps7_0_axi_periph_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1958]
-INFO: [Synth 8-3491] module 'system_rgb2dvi_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rgb2dvi_0_0_stub.vhdl:6' bound to instance 'rgb2dvi_0' of component 'system_rgb2dvi_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5097]
-INFO: [Synth 8-638] synthesizing module 'system_rgb2dvi_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rgb2dvi_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'system_rst_clk_wiz_0_150M_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_150M_0_stub.vhdl:6' bound to instance 'rst_clk_wiz_0_150M' of component 'system_rst_clk_wiz_0_150M_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5111]
-INFO: [Synth 8-638] synthesizing module 'system_rst_clk_wiz_0_150M_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_150M_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'system_rst_clk_wiz_0_50M_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_50M_0_stub.vhdl:6' bound to instance 'rst_clk_wiz_0_50M' of component 'system_rst_clk_wiz_0_50M_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5124]
-INFO: [Synth 8-638] synthesizing module 'system_rst_clk_wiz_0_50M_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_50M_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'system_rst_vid_clk_dyn_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rst_vid_clk_dyn_0_stub.vhdl:6' bound to instance 'rst_vid_clk_dyn' of component 'system_rst_vid_clk_dyn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5137]
-INFO: [Synth 8-638] synthesizing module 'system_rst_vid_clk_dyn_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_rst_vid_clk_dyn_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'system_singlepix_ctrl_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_singlepix_ctrl_0_0_stub.vhdl:6' bound to instance 'singlepix_ctrl_0' of component 'system_singlepix_ctrl_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5150]
-INFO: [Synth 8-638] synthesizing module 'system_singlepix_ctrl_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_singlepix_ctrl_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'system_smartconnect_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_smartconnect_0_0_stub.vhdl:6' bound to instance 'smartconnect_0' of component 'system_smartconnect_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5166]
-INFO: [Synth 8-638] synthesizing module 'system_smartconnect_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_smartconnect_0_0_stub.vhdl:52]
-INFO: [Synth 8-3491] module 'system_v_axi4s_vid_out_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_v_axi4s_vid_out_0_0_stub.vhdl:6' bound to instance 'v_axi4s_vid_out_0' of component 'system_v_axi4s_vid_out_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5209]
-INFO: [Synth 8-638] synthesizing module 'system_v_axi4s_vid_out_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_v_axi4s_vid_out_0_0_stub.vhdl:44]
-INFO: [Synth 8-3491] module 'system_video_dynclk_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_video_dynclk_0_stub.vhdl:6' bound to instance 'video_dynclk' of component 'system_video_dynclk_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5244]
-INFO: [Synth 8-638] synthesizing module 'system_video_dynclk_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_video_dynclk_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'system_vtg_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_vtg_0_stub.vhdl:6' bound to instance 'vtg' of component 'system_vtg_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5269]
-INFO: [Synth 8-638] synthesizing module 'system_vtg_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-11248-LAPTOP-AMKTF75G/realtime/system_vtg_0_stub.vhdl:45]
-INFO: [Synth 8-3491] module 'system_xlconcat_0_0' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'system_xlconcat_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5305]
+INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_IE0TQS' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:800]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_IE0TQS' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:800]
+INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_1KSFJCE' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:905]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_1KSFJCE' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:905]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_11SE3QO' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1035]
+INFO: [Synth 8-3491] module 'system_auto_pc_2' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_auto_pc_2_stub.vhdl:6' bound to instance 'auto_pc' of component 'system_auto_pc_2' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1218]
+INFO: [Synth 8-638] synthesizing module 'system_auto_pc_2' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_auto_pc_2_stub.vhdl:71]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_11SE3QO' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:1035]
+INFO: [Synth 8-3491] module 'system_xbar_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'system_xbar_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3335]
+INFO: [Synth 8-638] synthesizing module 'system_xbar_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'system_ps7_0_axi_periph_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:2210]
+INFO: [Synth 8-3491] module 'system_rgb2dvi_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rgb2dvi_0_0_stub.vhdl:6' bound to instance 'rgb2dvi_0' of component 'system_rgb2dvi_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5736]
+INFO: [Synth 8-638] synthesizing module 'system_rgb2dvi_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rgb2dvi_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'system_rst_clk_wiz_0_150M_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_150M_0_stub.vhdl:6' bound to instance 'rst_clk_wiz_0_150M' of component 'system_rst_clk_wiz_0_150M_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5750]
+INFO: [Synth 8-638] synthesizing module 'system_rst_clk_wiz_0_150M_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_150M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'system_rst_clk_wiz_0_50M_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_50M_0_stub.vhdl:6' bound to instance 'rst_clk_wiz_0_50M' of component 'system_rst_clk_wiz_0_50M_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5763]
+INFO: [Synth 8-638] synthesizing module 'system_rst_clk_wiz_0_50M_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rst_clk_wiz_0_50M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'system_rst_vid_clk_dyn_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rst_vid_clk_dyn_0_stub.vhdl:6' bound to instance 'rst_vid_clk_dyn' of component 'system_rst_vid_clk_dyn_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5776]
+INFO: [Synth 8-638] synthesizing module 'system_rst_vid_clk_dyn_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_rst_vid_clk_dyn_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'system_singlepix_ctrl_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_singlepix_ctrl_0_0_stub.vhdl:6' bound to instance 'singlepix_ctrl_0' of component 'system_singlepix_ctrl_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5789]
+INFO: [Synth 8-638] synthesizing module 'system_singlepix_ctrl_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_singlepix_ctrl_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'system_smartconnect_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_smartconnect_0_0_stub.vhdl:6' bound to instance 'smartconnect_0' of component 'system_smartconnect_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5805]
+INFO: [Synth 8-638] synthesizing module 'system_smartconnect_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_smartconnect_0_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'system_v_axi4s_vid_out_0_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_v_axi4s_vid_out_0_0_stub.vhdl:6' bound to instance 'v_axi4s_vid_out_0' of component 'system_v_axi4s_vid_out_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5848]
+INFO: [Synth 8-638] synthesizing module 'system_v_axi4s_vid_out_0_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_v_axi4s_vid_out_0_0_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'system_video_dynclk_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_video_dynclk_0_stub.vhdl:6' bound to instance 'video_dynclk' of component 'system_video_dynclk_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5883]
+INFO: [Synth 8-638] synthesizing module 'system_video_dynclk_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_video_dynclk_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'system_vtg_0' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_vtg_0_stub.vhdl:6' bound to instance 'vtg' of component 'system_vtg_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5908]
+INFO: [Synth 8-638] synthesizing module 'system_vtg_0' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/.Xil/Vivado-13324-LAPTOP-AMKTF75G/realtime/system_vtg_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'system_xlconcat_0_0' declared at 'c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'system_xlconcat_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:5944]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:53]
-INFO: [Synth 8-256] done synthesizing module 'system' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3092]
+INFO: [Synth 8-256] done synthesizing module 'system' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/synth/system.vhd:3617]
 INFO: [Synth 8-256] done synthesizing module 'system_wrapper' (0#1) [C:/Users/ratul/ES4F3/ES4F3/project_sources/sources_1/system_wrapper.vhd:58]
 WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
@@ -234,18 +240,18 @@ WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_6_xlconcat is eith
 WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1631.723 ; gain = 580.977
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1634.098 ; gain = 582.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1631.723 ; gain = 580.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1634.098 ; gain = 582.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1631.723 ; gain = 580.977
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1634.098 ; gain = 582.938
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 1631.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1634.098 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -292,12 +298,14 @@ Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.
 Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_multipix_ctrl_0_0/system_multipix_ctrl_0_0/system_multipix_ctrl_0_0_in_context.xdc] for cell 'system_i/multipix_ctrl_0'
 Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/system_singlepix_ctrl_0_0/system_singlepix_ctrl_0_0_in_context.xdc] for cell 'system_i/singlepix_ctrl_0'
 Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/system_singlepix_ctrl_0_0/system_singlepix_ctrl_0_0_in_context.xdc] for cell 'system_i/singlepix_ctrl_0'
-Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/system_overlay_core_0_2/system_overlay_core_0_2_in_context.xdc] for cell 'system_i/overlay_core_0'
-Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_2/system_overlay_core_0_2/system_overlay_core_0_2_in_context.xdc] for cell 'system_i/overlay_core_0'
 Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_rst_clk_wiz_0_150M_0/system_rst_clk_wiz_0_150M_0/system_rst_clk_wiz_0_150M_0_in_context.xdc] for cell 'system_i/rst_clk_wiz_0_150M'
 Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_rst_clk_wiz_0_150M_0/system_rst_clk_wiz_0_150M_0/system_rst_clk_wiz_0_150M_0_in_context.xdc] for cell 'system_i/rst_clk_wiz_0_150M'
 Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/system_smartconnect_0_0/system_smartconnect_0_0_in_context.xdc] for cell 'system_i/smartconnect_0'
 Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/system_smartconnect_0_0/system_smartconnect_0_0_in_context.xdc] for cell 'system_i/smartconnect_0'
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/axi_gpio_0'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/axi_gpio_0'
+Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_6/system_overlay_core_0_6/system_overlay_core_0_6_in_context.xdc] for cell 'system_i/overlay_core_0'
+Finished Parsing XDC File [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_6/system_overlay_core_0_6/system_overlay_core_0_6_in_context.xdc] for cell 'system_i/overlay_core_0'
 Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/project_sources/constrs_1/ZyboZ7_A.xdc]
 Finished Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/project_sources/constrs_1/ZyboZ7_A.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ratul/ES4F3/ES4F3/project_sources/constrs_1/ZyboZ7_A.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
@@ -315,25 +323,25 @@ Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.
 Finished Parsing XDC File [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1675.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1677.828 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1675.359 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1677.828 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/MIPI_CSI_2_RX_0' at clock pin 'video_aclk' is different from the actual clock period '6.667', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/MIPI_D_PHY_RX_0' at clock pin 'dphy_clk_hs_p' is different from the actual clock period '4.761', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -663,14 +671,15 @@ Applied set_property KEEP_HIERARCHY = SOFT for system_i/video_dynclk. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/vtg. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/multipix_ctrl_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/singlepix_ctrl_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/overlay_core_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_clk_wiz_0_150M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/smartconnect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_gpio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/overlay_core_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -693,25 +702,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -729,37 +738,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -778,20 +787,21 @@ Report BlackBoxes:
 |7     |system_DVIClocking_0_0         |         1|
 |8     |system_MIPI_CSI_2_RX_0_0       |         1|
 |9     |system_MIPI_D_PHY_RX_0_0       |         1|
-|10    |system_axi_vdma_0_0            |         1|
-|11    |system_clk_wiz_0_0             |         1|
-|12    |system_multipix_ctrl_0_0       |         1|
-|13    |system_overlay_core_0_2        |         1|
-|14    |system_processing_system7_0_0  |         1|
-|15    |system_rgb2dvi_0_0             |         1|
-|16    |system_rst_clk_wiz_0_150M_0    |         1|
-|17    |system_rst_clk_wiz_0_50M_0     |         1|
-|18    |system_rst_vid_clk_dyn_0       |         1|
-|19    |system_singlepix_ctrl_0_0      |         1|
-|20    |system_smartconnect_0_0        |         1|
-|21    |system_v_axi4s_vid_out_0_0     |         1|
-|22    |system_video_dynclk_0          |         1|
-|23    |system_vtg_0                   |         1|
+|10    |system_axi_gpio_0_0            |         1|
+|11    |system_axi_vdma_0_0            |         1|
+|12    |system_clk_wiz_0_0             |         1|
+|13    |system_multipix_ctrl_0_0       |         1|
+|14    |system_overlay_core_0_6        |         1|
+|15    |system_processing_system7_0_0  |         1|
+|16    |system_rgb2dvi_0_0             |         1|
+|17    |system_rst_clk_wiz_0_150M_0    |         1|
+|18    |system_rst_clk_wiz_0_50M_0     |         1|
+|19    |system_rst_vid_clk_dyn_0       |         1|
+|20    |system_singlepix_ctrl_0_0      |         1|
+|21    |system_smartconnect_0_0        |         1|
+|22    |system_v_axi4s_vid_out_0_0     |         1|
+|23    |system_video_dynclk_0          |         1|
+|24    |system_vtg_0                   |         1|
 +------+-------------------------------+----------+
 
 Report Cell Usage: 
@@ -806,47 +816,48 @@ Report Cell Usage:
 |6     |system_auto_pc_0_bbox               |     1|
 |7     |system_auto_pc_1_bbox               |     1|
 |8     |system_auto_pc_2_bbox               |     1|
-|9     |system_axi_vdma_0_0_bbox            |     1|
-|10    |system_clk_wiz_0_0_bbox             |     1|
-|11    |system_multipix_ctrl_0_0_bbox       |     1|
-|12    |system_overlay_core_0_2_bbox        |     1|
-|13    |system_processing_system7_0_0_bbox  |     1|
-|14    |system_rgb2dvi_0_0_bbox             |     1|
-|15    |system_rst_clk_wiz_0_150M_0_bbox    |     1|
-|16    |system_rst_clk_wiz_0_50M_0_bbox     |     1|
-|17    |system_rst_vid_clk_dyn_0_bbox       |     1|
-|18    |system_singlepix_ctrl_0_0_bbox      |     1|
-|19    |system_smartconnect_0_0_bbox        |     1|
-|20    |system_v_axi4s_vid_out_0_0_bbox     |     1|
-|21    |system_video_dynclk_0_bbox          |     1|
-|22    |system_vtg_0_bbox                   |     1|
-|23    |system_xbar_0_bbox                  |     1|
-|24    |IBUF                                |     8|
-|25    |IOBUF                               |     3|
+|9     |system_axi_gpio_0_0_bbox            |     1|
+|10    |system_axi_vdma_0_0_bbox            |     1|
+|11    |system_clk_wiz_0_0_bbox             |     1|
+|12    |system_multipix_ctrl_0_0_bbox       |     1|
+|13    |system_overlay_core_0_6_bbox        |     1|
+|14    |system_processing_system7_0_0_bbox  |     1|
+|15    |system_rgb2dvi_0_0_bbox             |     1|
+|16    |system_rst_clk_wiz_0_150M_0_bbox    |     1|
+|17    |system_rst_clk_wiz_0_50M_0_bbox     |     1|
+|18    |system_rst_vid_clk_dyn_0_bbox       |     1|
+|19    |system_singlepix_ctrl_0_0_bbox      |     1|
+|20    |system_smartconnect_0_0_bbox        |     1|
+|21    |system_v_axi4s_vid_out_0_0_bbox     |     1|
+|22    |system_video_dynclk_0_bbox          |     1|
+|23    |system_vtg_0_bbox                   |     1|
+|24    |system_xbar_0_bbox                  |     1|
+|25    |IBUF                                |     8|
+|26    |IOBUF                               |     3|
 +------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 1675.660 ; gain = 580.977
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1675.660 ; gain = 624.914
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1678.629 ; gain = 582.938
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.629 ; gain = 627.469
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1675.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1678.629 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1675.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1678.629 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 3 instances
 
-Synth Design complete | Checksum: 131e3925
+Synth Design complete | Checksum: bbaff8c
 INFO: [Common 17-83] Releasing license: Synthesis
-117 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+123 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:12 . Memory (MB): peak = 1675.660 ; gain = 1057.629
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1675.660 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1678.629 ; gain = 1058.930
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1678.629 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 27 17:56:48 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 01:03:02 2026...

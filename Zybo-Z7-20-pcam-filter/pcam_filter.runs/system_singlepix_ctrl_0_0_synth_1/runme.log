@@ -8,14 +8,15 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sun Apr 26 19:53:35 2026
+  **** Start of session at: Mon Apr 27 22:18:44 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source system_singlepix_ctrl_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 529.559 ; gain = 198.918
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 501.719 ; gain = 202.211
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Embedded/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
 Command: synth_design -top system_singlepix_ctrl_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -25,66 +26,66 @@ INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36960
+INFO: [Synth 8-7075] Helper process launched with PID 27092
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1420.469 ; gain = 447.879
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1389.742 ; gain = 446.547
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_singlepix_ctrl_0_0' [c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/synth/system_singlepix_ctrl_0_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'system_singlepix_ctrl_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/synth/system_singlepix_ctrl_0_0.vhd:74]
 	Parameter MAX_WIDTH bound to: 1920 - type: integer 
 	Parameter DATA_WIDTH bound to: 24 - type: integer 
-INFO: [Synth 8-3491] module 'singlepix_ctrl' declared at 'C:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23' bound to instance 'U0' of component 'singlepix_ctrl' [c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/synth/system_singlepix_ctrl_0_0.vhd:113]
-INFO: [Synth 8-6157] synthesizing module 'singlepix_ctrl' [C:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23]
-INFO: [Synth 8-6157] synthesizing module 'singlepix_filter' [C:/Embedded/files/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_filters.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'singlepix_filter' (0#1) [C:/Embedded/files/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_filters.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'singlepix_ctrl' (0#1) [C:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23]
-INFO: [Synth 8-256] done synthesizing module 'system_singlepix_ctrl_0_0' (0#1) [c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/synth/system_singlepix_ctrl_0_0.vhd:74]
+INFO: [Synth 8-3491] module 'singlepix_ctrl' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23' bound to instance 'U0' of component 'singlepix_ctrl' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/synth/system_singlepix_ctrl_0_0.vhd:113]
+INFO: [Synth 8-6157] synthesizing module 'singlepix_ctrl' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'singlepix_filter' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_filters.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'singlepix_filter' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_filters.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'singlepix_ctrl' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23]
+INFO: [Synth 8-256] done synthesizing module 'system_singlepix_ctrl_0_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_singlepix_ctrl_0_0/synth/system_singlepix_ctrl_0_0.vhd:74]
 WARNING: [Synth 8-7129] Port sw[2] in module singlepix_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[1] in module singlepix_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[0] in module singlepix_ctrl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[3] in module singlepix_ctrl is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1536.148 ; gain = 563.559
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1506.676 ; gain = 563.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1536.148 ; gain = 563.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1506.676 ; gain = 563.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1536.148 ; gain = 563.559
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1506.676 ; gain = 563.480
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1536.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1506.676 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1539.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.289 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1541.273 ; gain = 1.633
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1599.891 ; gain = 0.602
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -122,25 +123,25 @@ WARNING: [Synth 8-7129] Port sw[1] in module system_singlepix_ctrl_0_0 is either
 WARNING: [Synth 8-7129] Port sw[0] in module system_singlepix_ctrl_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[3] in module system_singlepix_ctrl_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:17 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:17 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:17 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -158,37 +159,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -214,28 +215,28 @@ Report Cell Usage:
 |8     |FDRE   |    63|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1599.891 ; gain = 656.695
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1541.273 ; gain = 563.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1541.273 ; gain = 568.684
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:22 . Memory (MB): peak = 1599.891 ; gain = 563.480
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:30 . Memory (MB): peak = 1599.891 ; gain = 656.695
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1545.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1599.891 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1549.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.891 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 403777d0
 INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+27 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:11 . Memory (MB): peak = 1549.598 ; gain = 1005.828
+synth_design: Time (s): cpu = 00:01:33 ; elapsed = 00:01:48 . Memory (MB): peak = 1599.891 ; gain = 1084.188
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1549.598 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_singlepix_ctrl_0_0_synth_1/system_singlepix_ctrl_0_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1599.891 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_singlepix_ctrl_0_0_synth_1/system_singlepix_ctrl_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_singlepix_ctrl_0_0_utilization_synth.rpt -pb system_singlepix_ctrl_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 19:55:31 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 27 22:21:07 2026...

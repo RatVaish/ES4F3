@@ -13,7 +13,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("stream_in_TDEST", 1, hls_in, 6, "axis", "in_data", 1),
 	Port_Property("stream_out_TDATA", 24, hls_out, 7, "axis", "out_data", 1),
 	Port_Property("stream_out_TVALID", 1, hls_out, 13, "axis", "out_vld", 1),
-	Port_Property("stream_out_TREADY", 1, hls_in, 13, "axis", "out_acc", 1),
+	Port_Property("stream_out_TREADY", 1, hls_in, 7, "axis", "out_acc", 1),
 	Port_Property("stream_out_TKEEP", 3, hls_out, 8, "axis", "out_data", 1),
 	Port_Property("stream_out_TSTRB", 3, hls_out, 9, "axis", "out_data", 1),
 	Port_Property("stream_out_TUSER", 1, hls_out, 10, "axis", "out_data", 1),
@@ -37,6 +37,5 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("s_axi_CTRL_BVALID", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_CTRL_BREADY", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_CTRL_BRESP", 2, hls_out, -1, "", "", 1),
-	Port_Property("interrupt", 1, hls_out, -1, "", "", 1),
 };
 const char* HLS_Design_Meta::dut_name = "overlay_core";

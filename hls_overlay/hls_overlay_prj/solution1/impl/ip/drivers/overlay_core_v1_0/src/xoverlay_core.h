@@ -92,12 +92,6 @@ int XOverlay_core_Initialize(XOverlay_core *InstancePtr, const char* InstanceNam
 int XOverlay_core_Release(XOverlay_core *InstancePtr);
 #endif
 
-void XOverlay_core_Start(XOverlay_core *InstancePtr);
-u32 XOverlay_core_IsDone(XOverlay_core *InstancePtr);
-u32 XOverlay_core_IsIdle(XOverlay_core *InstancePtr);
-u32 XOverlay_core_IsReady(XOverlay_core *InstancePtr);
-void XOverlay_core_EnableAutoRestart(XOverlay_core *InstancePtr);
-void XOverlay_core_DisableAutoRestart(XOverlay_core *InstancePtr);
 
 void XOverlay_core_Set_enable(XOverlay_core *InstancePtr, u32 Data);
 u32 XOverlay_core_Get_enable(XOverlay_core *InstancePtr);
@@ -109,14 +103,6 @@ void XOverlay_core_Set_height(XOverlay_core *InstancePtr, u32 Data);
 u32 XOverlay_core_Get_height(XOverlay_core *InstancePtr);
 void XOverlay_core_Set_width(XOverlay_core *InstancePtr, u32 Data);
 u32 XOverlay_core_Get_width(XOverlay_core *InstancePtr);
-
-void XOverlay_core_InterruptGlobalEnable(XOverlay_core *InstancePtr);
-void XOverlay_core_InterruptGlobalDisable(XOverlay_core *InstancePtr);
-void XOverlay_core_InterruptEnable(XOverlay_core *InstancePtr, u32 Mask);
-void XOverlay_core_InterruptDisable(XOverlay_core *InstancePtr, u32 Mask);
-void XOverlay_core_InterruptClear(XOverlay_core *InstancePtr, u32 Mask);
-u32 XOverlay_core_InterruptGetEnabled(XOverlay_core *InstancePtr);
-u32 XOverlay_core_InterruptGetStatus(XOverlay_core *InstancePtr);
 
 #ifdef __cplusplus
 }

@@ -9869,76 +9869,65 @@ __attribute__((sdx_kernel("overlay_core", 0))) void overlay_core(
 #pragma HLS INTERFACE s_axilite port=height bundle=CTRL
 #pragma HLS INTERFACE s_axilite port=width bundle=CTRL
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
+#pragma HLS INTERFACE ap_ctrl_none port=return
 
-
- const char name1[] = "VICKI";
-    const char name2[] = "RATUL";
-    const int name1_len = 5;
-    const int name2_len = 3;
+ static ap_uint<16> row = 0;
+    static ap_uint<16> col = 0;
+    static ap_uint<1> enable_reg = 0;
 
     pixel_data pixel_in;
     pixel_data pixel_out;
 
-    ap_uint<16> x = 0;
-    ap_uint<16> y = 0;
-
-
-    LOOP_HEIGHT: for (ap_uint<16> row = 0; row < height; row++) {
-        LOOP_WIDTH: for (ap_uint<16> col = 0; col < width; col++) {
+    VITIS_LOOP_100_1: while (1) {
 #pragma HLS PIPELINE II=1
-
 
  stream_in >> pixel_in;
 
+        if (pixel_in.user == 1) {
+            row = 0;
+            col = 0;
+            enable_reg = enable;
+        }
 
-            ap_uint<8> r = pixel_in.data(23, 16);
-            ap_uint<8> g = pixel_in.data(15, 8);
-            ap_uint<8> b = pixel_in.data(7, 0);
-
-
-            bool draw_pixel = false;
-
-            if (enable) {
-
-                if (row >= y_pos && row < (y_pos + 20) &&
-                    col >= x_pos && col < (x_pos + 200)) {
-
-                    r = (r >> 1);
-                    g = (g >> 1);
-                    b = (b >> 1);
-                }
+        pixel_out = pixel_in;
 
 
-                if (row >= (y_pos + 3) && row < (y_pos + 10)) {
-                    if (draw_text(name1, name1_len, x_pos + 5, y_pos + 3, col, row)) {
-                        draw_pixel = true;
-                    }
-                }
+        if (enable_reg == 1) {
 
+            if (row >= 50 && row < 150 &&
+                col >= 50 && col < 550) {
 
-                if (row >= (y_pos + 11) && row < (y_pos + 18)) {
-                    if (draw_text(name2, name2_len, x_pos + 5, y_pos + 11, col, row)) {
-                        draw_pixel = true;
-                    }
-                }
-
-
-                if (draw_pixel) {
-                    r = 255;
-                    g = 255;
-                    b = 255;
-                }
+                ap_uint<8> r = pixel_in.data(23, 16) >> 1;
+                ap_uint<8> g = pixel_in.data(15, 8) >> 1;
+                ap_uint<8> b = pixel_in.data(7, 0) >> 1;
+                pixel_out.data = (r << 16) | (g << 8) | b;
             }
 
 
-            pixel_out.data(23, 16) = r;
-            pixel_out.data(15, 8) = g;
-            pixel_out.data(7, 0) = b;
-            pixel_out.user = pixel_in.user;
-            pixel_out.last = pixel_in.last;
-            pixel_out.keep = pixel_in.keep;
+            if ((row >= 50 && row < 55 && col >= 50 && col < 550) ||
+                (row >= 145 && row < 150 && col >= 50 && col < 550) ||
+                (col >= 50 && col < 55 && row >= 50 && row < 150) ||
+                (col >= 545 && col < 550 && row >= 50 && row < 150)) {
+                pixel_out.data = 0xFFFFFF;
+            }
 
-            stream_out << pixel_out;
+
+            if (row >= 70 && row < 90 && col >= 70 && col < 530) {
+                pixel_out.data = 0xFFFFFF;
+            }
+
+
+            if (row >= 110 && row < 130 && col >= 70 && col < 530) {
+                pixel_out.data = 0xFFFFFF;
+            }
+        }
+
+        stream_out << pixel_out;
+
+        col++;
+        if (pixel_in.last == 1) {
+            col = 0;
+            row++;
         }
     }
 }

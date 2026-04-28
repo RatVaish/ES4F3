@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'overlay_core'" level="0">
-<item name = "Date">Mon Apr 27 15:52:20 2026
+<item name = "Date">Tue Apr 28 01:32:06 2026
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">hls_overlay_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.67 ns, 6.547 ns, 1.80 ns</column>
+<column name="ap_clk">6.67 ns, 5.275 ns, 1.80 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">6, 4294836234, 40.002 ns, 28.634 sec, 7, 4294836235, no</column>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_100_1">?, ?, 6, 1, 1, inf, yes</column>
 </table>
 </item>
 </section>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1777308625" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/system_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1777334296" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/system_wrapper.dcp">
   <File Type="PA-TCL" Name="system_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
@@ -161,24 +161,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_rst_vid_clk_dyn_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_v_axi4s_vid_out_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_MIPI_D_PHY_RX_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_AXI_BayerToRGB_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_AXI_GammaCorrection_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_singlepix_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_DVIClocking_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_MIPI_CSI_2_RX_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_rst_clk_wiz_0_50M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_rgb2dvi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_vtg_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_video_dynclk_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_MIPI_D_PHY_RX_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_overlay_core_0_6"/>
   <BlockFileSet Type="BlockSrcs" Name="system_multipix_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_singlepix_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_overlay_core_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_smartconnect_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_rst_clk_wiz_0_150M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
 </GenRun>

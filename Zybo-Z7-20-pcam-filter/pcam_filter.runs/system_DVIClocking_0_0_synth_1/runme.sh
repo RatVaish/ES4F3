@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_DVIClocking_0_0_synth_1'
+HD_PWD='C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_DVIClocking_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

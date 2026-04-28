@@ -1,65 +1,19 @@
 {
   "0": {
-    "basicblocks": 43,
-    "calls": "4 4",
+    "basicblocks": 49,
+    "calls": "",
     "file": "overlay_core.cpp",
     "fileloc": 74,
-    "instructions": 372,
+    "instructions": 280,
     "loads": {
-      "L": 13
+      "G": 3,
+      "L": 8
     },
     "name": "overlay_core",
     "stores": {
-      "L": 18
-    },
-    "total_instructions": 3611
-  },
-  "1": {
-    "basicblocks": 1,
-    "calls": "3",
-    "file": "overlay_core.pp.0.cpp",
-    "fileloc": 0,
-    "instructions": 2,
-    "name": "",
-    "total_instructions": 2343
-  },
-  "2": {
-    "basicblocks": 12,
-    "calls": "",
-    "file": "overlay_core.cpp",
-    "fileloc": 35,
-    "instructions": 85,
-    "loads": {
-      "G": 1
-    },
-    "name": "draw_char",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 477
-  },
-  "3": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "overlay_core.cpp",
-    "fileloc": 5,
-    "instructions": 131,
-    "name": "__cxx_global_var_init",
-    "total_instructions": 2341
-  },
-  "4": {
-    "basicblocks": 14,
-    "calls": "2",
-    "file": "overlay_core.cpp",
-    "fileloc": 59,
-    "instructions": 53,
-    "loads": {
+      "G": 7,
       "L": 5
     },
-    "name": "draw_text",
-    "stores": {
-      "L": 4
-    },
-    "total_instructions": 657
+    "total_instructions": 2589
   }
 }

@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
 -- Date        : Sat Apr 25 14:55:23 2026
 -- Host        : DESKTOP-4LETMJQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Embedded/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_clk_wiz_0_0 -prefix
+--               system_clk_wiz_0_0_ system_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : system_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity system_clk_wiz_0_0_clk_wiz is
+entity system_clk_wiz_0_0_system_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
@@ -23,9 +23,9 @@ entity system_clk_wiz_0_0_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end system_clk_wiz_0_0_clk_wiz;
+end system_clk_wiz_0_0_system_clk_wiz_0_0_clk_wiz;
 
-architecture STRUCTURE of system_clk_wiz_0_0_clk_wiz is
+architecture STRUCTURE of system_clk_wiz_0_0_system_clk_wiz_0_0_clk_wiz is
   signal clk_in1_system_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out1_system_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out2_system_clk_wiz_0_0 : STD_LOGIC;
@@ -177,7 +177,7 @@ end system_clk_wiz_0_0;
 
 architecture STRUCTURE of system_clk_wiz_0_0 is
 begin
-inst: entity work.system_clk_wiz_0_0_clk_wiz
+inst: entity work.system_clk_wiz_0_0_system_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,
