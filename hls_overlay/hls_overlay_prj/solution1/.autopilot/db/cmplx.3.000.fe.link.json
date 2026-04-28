@@ -1,19 +1,31 @@
 {
   "0": {
-    "basicblocks": 18,
-    "calls": "",
+    "basicblocks": 67,
+    "calls": "1 1 1 1",
     "file": "overlay_core.cpp",
-    "fileloc": 3,
-    "instructions": 104,
+    "fileloc": 246,
+    "instructions": 523,
     "loads": {
-      "G": 2,
-      "L": 5
+      "G": 6,
+      "L": 14
     },
     "name": "overlay_core",
     "stores": {
       "G": 5,
-      "L": 3
+      "L": 12
     },
-    "total_instructions": 542
+    "total_instructions": 6229
+  },
+  "1": {
+    "basicblocks": 27,
+    "calls": "",
+    "file": "overlay_core.cpp",
+    "fileloc": 216,
+    "instructions": 180,
+    "loads": {
+      "G": 21
+    },
+    "name": "get_char_pixel",
+    "total_instructions": 442
   }
 }

@@ -21,23 +21,6 @@ int XOverlay_core_CfgInitialize(XOverlay_core *InstancePtr, XOverlay_core_Config
 }
 #endif
 
-void XOverlay_core_Set_enable(XOverlay_core *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XOverlay_core_WriteReg(InstancePtr->Ctrl_BaseAddress, XOVERLAY_CORE_CTRL_ADDR_ENABLE_DATA, Data);
-}
-
-u32 XOverlay_core_Get_enable(XOverlay_core *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XOverlay_core_ReadReg(InstancePtr->Ctrl_BaseAddress, XOVERLAY_CORE_CTRL_ADDR_ENABLE_DATA);
-    return Data;
-}
-
 void XOverlay_core_Set_x_pos(XOverlay_core *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

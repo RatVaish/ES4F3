@@ -167,6 +167,22 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
+      <string>overlay_core.cpp</string>
+      <key>line</key>
+      <integer>217</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_char_pixel_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
       <string>C:/Users/ratul/ES4F3/ES4F3/hls_overlay/script.tcl</string>
       <key>line</key>
       <integer>26</integer>
@@ -185,7 +201,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>12</integer>
+      <integer>255</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -201,7 +217,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>13</integer>
+      <integer>256</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -217,11 +233,11 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>14</integer>
+      <integer>257</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=overlay_core_XLX_SEP_ PragmaOptions=s_axilite port=enable bundle=CTRL_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=overlay_core_XLX_SEP_ PragmaOptions=ap_none port=enable_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -233,7 +249,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>15</integer>
+      <integer>258</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -249,7 +265,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>16</integer>
+      <integer>259</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -265,7 +281,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>17</integer>
+      <integer>260</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -281,7 +297,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>18</integer>
+      <integer>261</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -297,7 +313,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>19</integer>
+      <integer>262</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -313,7 +329,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>20</integer>
+      <integer>263</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -329,7 +345,7 @@
       <key>filename</key>
       <string>overlay_core.cpp</string>
       <key>line</key>
-      <integer>29</integer>
+      <integer>278</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

@@ -34,7 +34,6 @@ port (
     RRESP                 :out  STD_LOGIC_VECTOR(1 downto 0);
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
-    enable                :out  STD_LOGIC_VECTOR(0 downto 0);
     x_pos                 :out  STD_LOGIC_VECTOR(15 downto 0);
     y_pos                 :out  STD_LOGIC_VECTOR(15 downto 0);
     height                :out  STD_LOGIC_VECTOR(15 downto 0);
@@ -49,26 +48,22 @@ end entity overlay_core_CTRL_s_axi;
 -- 0x04 : reserved
 -- 0x08 : reserved
 -- 0x0c : reserved
--- 0x10 : Data signal of enable
---        bit 0  - enable[0] (Read/Write)
---        others - reserved
--- 0x14 : reserved
--- 0x18 : Data signal of x_pos
+-- 0x10 : Data signal of x_pos
 --        bit 15~0 - x_pos[15:0] (Read/Write)
 --        others   - reserved
--- 0x1c : reserved
--- 0x20 : Data signal of y_pos
+-- 0x14 : reserved
+-- 0x18 : Data signal of y_pos
 --        bit 15~0 - y_pos[15:0] (Read/Write)
 --        others   - reserved
--- 0x24 : reserved
--- 0x28 : Data signal of height
+-- 0x1c : reserved
+-- 0x20 : Data signal of height
 --        bit 15~0 - height[15:0] (Read/Write)
 --        others   - reserved
--- 0x2c : reserved
--- 0x30 : Data signal of width
+-- 0x24 : reserved
+-- 0x28 : Data signal of width
 --        bit 15~0 - width[15:0] (Read/Write)
 --        others   - reserved
--- 0x34 : reserved
+-- 0x2c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of overlay_core_CTRL_s_axi is
@@ -76,16 +71,14 @@ architecture behave of overlay_core_CTRL_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_ENABLE_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_ENABLE_CTRL   : INTEGER := 16#14#;
-    constant ADDR_X_POS_DATA_0  : INTEGER := 16#18#;
-    constant ADDR_X_POS_CTRL    : INTEGER := 16#1c#;
-    constant ADDR_Y_POS_DATA_0  : INTEGER := 16#20#;
-    constant ADDR_Y_POS_CTRL    : INTEGER := 16#24#;
-    constant ADDR_HEIGHT_DATA_0 : INTEGER := 16#28#;
-    constant ADDR_HEIGHT_CTRL   : INTEGER := 16#2c#;
-    constant ADDR_WIDTH_DATA_0  : INTEGER := 16#30#;
-    constant ADDR_WIDTH_CTRL    : INTEGER := 16#34#;
+    constant ADDR_X_POS_DATA_0  : INTEGER := 16#10#;
+    constant ADDR_X_POS_CTRL    : INTEGER := 16#14#;
+    constant ADDR_Y_POS_DATA_0  : INTEGER := 16#18#;
+    constant ADDR_Y_POS_CTRL    : INTEGER := 16#1c#;
+    constant ADDR_HEIGHT_DATA_0 : INTEGER := 16#20#;
+    constant ADDR_HEIGHT_CTRL   : INTEGER := 16#24#;
+    constant ADDR_WIDTH_DATA_0  : INTEGER := 16#28#;
+    constant ADDR_WIDTH_CTRL    : INTEGER := 16#2c#;
     constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -100,7 +93,6 @@ architecture behave of overlay_core_CTRL_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
-    signal int_enable          : UNSIGNED(0 downto 0) := (others => '0');
     signal int_x_pos           : UNSIGNED(15 downto 0) := (others => '0');
     signal int_y_pos           : UNSIGNED(15 downto 0) := (others => '0');
     signal int_height          : UNSIGNED(15 downto 0) := (others => '0');
@@ -220,8 +212,6 @@ begin
                 if (ar_hs = '1') then
                     rdata_data <= (others => '0');
                     case (TO_INTEGER(raddr)) is
-                    when ADDR_ENABLE_DATA_0 =>
-                        rdata_data <= RESIZE(int_enable(0 downto 0), 32);
                     when ADDR_X_POS_DATA_0 =>
                         rdata_data <= RESIZE(int_x_pos(15 downto 0), 32);
                     when ADDR_Y_POS_DATA_0 =>
@@ -239,24 +229,10 @@ begin
     end process;
 
 -- ----------------------- Register logic ----------------
-    enable               <= STD_LOGIC_VECTOR(int_enable);
     x_pos                <= STD_LOGIC_VECTOR(int_x_pos);
     y_pos                <= STD_LOGIC_VECTOR(int_y_pos);
     height               <= STD_LOGIC_VECTOR(int_height);
     width                <= STD_LOGIC_VECTOR(int_width);
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_enable(0 downto 0) <= (others => '0');
-            elsif (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_ENABLE_DATA_0) then
-                    int_enable(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_enable(0 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
 
     process (ACLK)
     begin

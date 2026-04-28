@@ -6,6 +6,9 @@
 
 #define OVERLAY_BASEADDR XPAR_OVERLAY_CORE_0_S_AXI_CTRL_BASEADDR
 
+// Enable is now controlled via GPIO
+#define ENABLE_GPIO_BASEADDR 0x40020000
+
 #define OVERLAY_CTRL_REG    0x00
 #define OVERLAY_GIE_REG     0x04
 #define OVERLAY_IER_REG     0x08
@@ -86,7 +89,9 @@ private:
     bool active_;
     
     void set_enable(uint32_t enable) {
-        Xil_Out32(OVERLAY_BASEADDR + OVERLAY_ENABLE_REG, enable);
+        // Write directly to GPIO to control hardware enable pin
+        Xil_Out32(ENABLE_GPIO_BASEADDR, enable);
+        xil_printf("Enable GPIO set to: %d\r\n", enable);
     }
 };
 

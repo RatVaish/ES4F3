@@ -2,15 +2,15 @@
 
 set axilite_register_dict [dict create]
 set port_CTRL {
-enable { 
+x_pos { 
 	dir I
-	width 1
+	width 16
 	depth 1
 	mode ap_none
 	offset 16
 	offset_end 23
 }
-x_pos { 
+y_pos { 
 	dir I
 	width 16
 	depth 1
@@ -18,7 +18,7 @@ x_pos {
 	offset 24
 	offset_end 31
 }
-y_pos { 
+height { 
 	dir I
 	width 16
 	depth 1
@@ -26,21 +26,13 @@ y_pos {
 	offset 32
 	offset_end 39
 }
-height { 
+width { 
 	dir I
 	width 16
 	depth 1
 	mode ap_none
 	offset 40
 	offset_end 47
-}
-width { 
-	dir I
-	width 16
-	depth 1
-	mode ap_none
-	offset 48
-	offset_end 55
 }
 interrupt {
 }

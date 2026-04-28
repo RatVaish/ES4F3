@@ -31,7 +31,6 @@ module overlay_core_CTRL_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [0:0]                    enable,
     output wire [15:0]                   x_pos,
     output wire [15:0]                   y_pos,
     output wire [15:0]                   height,
@@ -44,40 +43,34 @@ module overlay_core_CTRL_s_axi
 // 0x04 : reserved
 // 0x08 : reserved
 // 0x0c : reserved
-// 0x10 : Data signal of enable
-//        bit 0  - enable[0] (Read/Write)
-//        others - reserved
-// 0x14 : reserved
-// 0x18 : Data signal of x_pos
+// 0x10 : Data signal of x_pos
 //        bit 15~0 - x_pos[15:0] (Read/Write)
 //        others   - reserved
-// 0x1c : reserved
-// 0x20 : Data signal of y_pos
+// 0x14 : reserved
+// 0x18 : Data signal of y_pos
 //        bit 15~0 - y_pos[15:0] (Read/Write)
 //        others   - reserved
-// 0x24 : reserved
-// 0x28 : Data signal of height
+// 0x1c : reserved
+// 0x20 : Data signal of height
 //        bit 15~0 - height[15:0] (Read/Write)
 //        others   - reserved
-// 0x2c : reserved
-// 0x30 : Data signal of width
+// 0x24 : reserved
+// 0x28 : Data signal of width
 //        bit 15~0 - width[15:0] (Read/Write)
 //        others   - reserved
-// 0x34 : reserved
+// 0x2c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_ENABLE_DATA_0 = 6'h10,
-    ADDR_ENABLE_CTRL   = 6'h14,
-    ADDR_X_POS_DATA_0  = 6'h18,
-    ADDR_X_POS_CTRL    = 6'h1c,
-    ADDR_Y_POS_DATA_0  = 6'h20,
-    ADDR_Y_POS_CTRL    = 6'h24,
-    ADDR_HEIGHT_DATA_0 = 6'h28,
-    ADDR_HEIGHT_CTRL   = 6'h2c,
-    ADDR_WIDTH_DATA_0  = 6'h30,
-    ADDR_WIDTH_CTRL    = 6'h34,
+    ADDR_X_POS_DATA_0  = 6'h10,
+    ADDR_X_POS_CTRL    = 6'h14,
+    ADDR_Y_POS_DATA_0  = 6'h18,
+    ADDR_Y_POS_CTRL    = 6'h1c,
+    ADDR_HEIGHT_DATA_0 = 6'h20,
+    ADDR_HEIGHT_CTRL   = 6'h24,
+    ADDR_WIDTH_DATA_0  = 6'h28,
+    ADDR_WIDTH_CTRL    = 6'h2c,
     WRIDLE             = 2'd0,
     WRDATA             = 2'd1,
     WRRESP             = 2'd2,
@@ -100,7 +93,6 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [0:0]                    int_enable = 'b0;
     reg  [15:0]                   int_x_pos = 'b0;
     reg  [15:0]                   int_y_pos = 'b0;
     reg  [15:0]                   int_height = 'b0;
@@ -197,9 +189,6 @@ always @(posedge ACLK) begin
         if (ar_hs) begin
             rdata <= 'b0;
             case (raddr)
-                ADDR_ENABLE_DATA_0: begin
-                    rdata <= int_enable[0:0];
-                end
                 ADDR_X_POS_DATA_0: begin
                     rdata <= int_x_pos[15:0];
                 end
@@ -219,21 +208,10 @@ end
 
 
 //------------------------Register logic-----------------
-assign enable = int_enable;
 assign x_pos  = int_x_pos;
 assign y_pos  = int_y_pos;
 assign height = int_height;
 assign width  = int_width;
-// int_enable[0:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_enable[0:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_ENABLE_DATA_0)
-            int_enable[0:0] <= (WDATA[31:0] & wmask) | (int_enable[0:0] & ~wmask);
-    end
-end
-
 // int_x_pos[15:0]
 always @(posedge ACLK) begin
     if (ARESET)

@@ -47,8 +47,8 @@
       "srcType": "ap_uint<1>",
       "srcSize": "8",
       "hwRefs": [{
-          "type": "register",
-          "interface": "s_axi_CTRL",
+          "type": "port",
+          "interface": "enable",
           "name": "enable",
           "usage": "data",
           "direction": "in"
@@ -137,7 +137,7 @@
     "Name": "overlay_core",
     "Version": "1.0",
     "DisplayName": "Easter Egg Overlay",
-    "Revision": "2114584905",
+    "Revision": "2114584997",
     "Description": "AXI-Stream video overlay with configurable text display",
     "Taxonomy": "\/Video_Processing",
     "AutoFamilySupport": "",
@@ -151,14 +151,146 @@
     "TestBench": ["..\/..\/overlay_core_test.cpp"],
     "Vhdl": [
       "impl\/vhdl\/overlay_core_CTRL_s_axi.vhd",
+      "impl\/vhdl\/overlay_core_id1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_id2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_mul_16ns_18ns_33_2_1.vhd",
+      "impl\/vhdl\/overlay_core_name1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_name2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_0_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_0_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_0_4_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_1_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_1_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_2_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_2_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_2_5_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_2_6_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_3_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_4_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_4_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_4_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_9_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_A_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_C_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_C_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_G_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_I_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_I_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_K_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_K_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_K_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_N_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_N_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_N_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_R_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_S_4_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_U_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_U_6_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_V_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_V_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_V_5_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_W_3_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_W_5_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_Y_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_Y_2_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/overlay_core_p_ZL6font_Y_3_ROM_AUTO_1R.vhd",
       "impl\/vhdl\/overlay_core_regslice_both.vhd",
+      "impl\/vhdl\/overlay_core_sparsemux_15_3_1_1_1.vhd",
+      "impl\/vhdl\/overlay_core_urem_16ns_4ns_16_20_1.vhd",
       "impl\/vhdl\/overlay_core.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/overlay_core_CTRL_s_axi.v",
       "impl\/verilog\/overlay_core_hls_deadlock_idx0_monitor.v",
       "impl\/verilog\/overlay_core_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/overlay_core_id1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_id1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_id2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_id2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_mul_16ns_18ns_33_2_1.v",
+      "impl\/verilog\/overlay_core_name1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_name1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_name2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_name2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_0_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_0_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_0_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_0_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_0_4_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_0_4_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_1_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_1_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_1_1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_1_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_5_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_5_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_6_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_2_6_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_3_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_3_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_4_1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_4_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_4_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_4_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_4_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_4_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_9_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_9_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_A_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_A_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_C_1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_C_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_C_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_C_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_G_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_G_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_I_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_I_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_I_1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_I_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_K_1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_K_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_K_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_K_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_K_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_K_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_N_1_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_N_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_N_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_N_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_N_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_N_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_R_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_R_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_S_4_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_S_4_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_U_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_U_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_U_6_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_U_6_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_V_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_V_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_V_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_V_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_V_5_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_V_5_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_W_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_W_3_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_W_5_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_W_5_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_Y_0_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_Y_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_Y_2_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_Y_2_ROM_AUTO_1R.v",
+      "impl\/verilog\/overlay_core_p_ZL6font_Y_3_ROM_AUTO_1R.dat",
+      "impl\/verilog\/overlay_core_p_ZL6font_Y_3_ROM_AUTO_1R.v",
       "impl\/verilog\/overlay_core_regslice_both.v",
+      "impl\/verilog\/overlay_core_sparsemux_15_3_1_1_1.v",
+      "impl\/verilog\/overlay_core_urem_16ns_4ns_16_20_1.v",
       "impl\/verilog\/overlay_core.v"
     ],
     "SwDriver": [
@@ -217,29 +349,6 @@
       "registers": [
         {
           "offset": "0x10",
-          "name": "enable",
-          "access": "W",
-          "description": "Data signal of enable",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "enable",
-              "access": "W",
-              "description": "Bit 0 to 0 of enable"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x18",
           "name": "x_pos",
           "access": "W",
           "description": "Data signal of x_pos",
@@ -262,7 +371,7 @@
           ]
         },
         {
-          "offset": "0x20",
+          "offset": "0x18",
           "name": "y_pos",
           "access": "W",
           "description": "Data signal of y_pos",
@@ -285,7 +394,7 @@
           ]
         },
         {
-          "offset": "0x28",
+          "offset": "0x20",
           "name": "height",
           "access": "W",
           "description": "Data signal of height",
@@ -308,7 +417,7 @@
           ]
         },
         {
-          "offset": "0x30",
+          "offset": "0x28",
           "name": "width",
           "access": "W",
           "description": "Data signal of width",
@@ -337,34 +446,27 @@
           "mode": "s_axilite",
           "register_option": "0",
           "offset": "16",
-          "argName": "enable"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "24",
           "argName": "x_pos"
         },
         {
           "constraint_type": "pragma interface",
           "mode": "s_axilite",
           "register_option": "0",
-          "offset": "32",
+          "offset": "24",
           "argName": "y_pos"
         },
         {
           "constraint_type": "pragma interface",
           "mode": "s_axilite",
           "register_option": "0",
-          "offset": "40",
+          "offset": "32",
           "argName": "height"
         },
         {
           "constraint_type": "pragma interface",
           "mode": "s_axilite",
           "register_option": "0",
-          "offset": "48",
+          "offset": "40",
           "argName": "width"
         }
       ]
@@ -438,6 +540,21 @@
           "register_option": "1",
           "register_mode": "both",
           "argName": "stream_out"
+        }]
+    },
+    "enable": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "1",
+      "portMap": {"enable": "DATA"},
+      "ports": ["enable"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "enable"
         }]
     }
   },
@@ -597,12 +714,17 @@
       "dir": "out",
       "width": "1",
       "isVector": "true"
+    },
+    "enable": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
     }
   },
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "overlay_core",
-      "BindInstances": "icmp_ln42_fu_217_p2 icmp_ln42_1_fu_223_p2 and_ln42_1_fu_229_p2 or_ln42_fu_235_p2 pixel_out_data_2_fu_240_p3 add_ln49_fu_253_p2 select_ln33_fu_259_p3 add_ln52_fu_266_p2 select_ln50_2_fu_272_p3 or_ln50_fu_279_p2 select_ln50_fu_283_p3 select_ln50_1_fu_291_p3 CTRL_s_axi_U"
+      "BindInstances": "select_ln282_fu_6536_p3 icmp_ln293_fu_6589_p2 select_ln282_1_fu_6594_p3 icmp_ln293_1_fu_6601_p2 and_ln293_fu_6721_p2 icmp_ln301_fu_6607_p2 and_ln301_fu_6612_p2 add_ln302_fu_6618_p2 icmp_ln302_fu_6623_p2 icmp_ln303_fu_6725_p2 and_ln302_fu_6730_p2 and_ln302_1_fu_6734_p2 or_ln302_fu_6739_p2 add_ln304_fu_6745_p2 icmp_ln304_fu_6750_p2 and_ln304_fu_6841_p2 char_row_fu_6543_p2 icmp_ln309_fu_6629_p2 icmp_ln309_1_fu_6634_p2 and_ln309_fu_6640_p2 rel_col_fu_6646_p2 mul_16ns_18ns_33_2_1_U1 urem_16ns_4ns_16_20_1_U2 icmp_ln315_fu_6770_p2 icmp_ln315_1_fu_6916_p2 and_ln315_fu_6921_p2 sparsemux_15_3_1_1_1_U9 sparsemux_15_3_1_1_1_U10 sparsemux_15_3_1_1_1_U11 sparsemux_15_3_1_1_1_U12 sparsemux_15_3_1_1_1_U13 sparsemux_15_3_1_1_1_U14 sparsemux_15_3_1_1_1_U15 sparsemux_15_3_1_1_1_U16 sparsemux_15_3_1_1_1_U17 sparsemux_15_3_1_1_1_U18 sparsemux_15_3_1_1_1_U19 sparsemux_15_3_1_1_1_U20 sparsemux_15_3_1_1_1_U21 sparsemux_15_3_1_1_1_U22 sparsemux_15_3_1_1_1_U23 sparsemux_15_3_1_1_1_U24 sparsemux_15_3_1_1_1_U25 sparsemux_15_3_1_1_1_U26 sparsemux_15_3_1_1_1_U27 sparsemux_15_3_1_1_1_U28 sparsemux_15_3_1_1_1_U29 char_row_1_fu_6549_p2 icmp_ln323_fu_6652_p2 and_ln323_fu_6657_p2 rel_col_1_fu_6663_p2 mul_16ns_18ns_33_2_1_U3 urem_16ns_4ns_16_20_1_U4 icmp_ln329_fu_6789_p2 icmp_ln329_1_fu_6930_p2 and_ln329_fu_6935_p2 sparsemux_15_3_1_1_1_U30 sparsemux_15_3_1_1_1_U31 sparsemux_15_3_1_1_1_U32 sparsemux_15_3_1_1_1_U33 sparsemux_15_3_1_1_1_U34 sparsemux_15_3_1_1_1_U35 sparsemux_15_3_1_1_1_U36 sparsemux_15_3_1_1_1_U37 sparsemux_15_3_1_1_1_U38 sparsemux_15_3_1_1_1_U39 sparsemux_15_3_1_1_1_U40 sparsemux_15_3_1_1_1_U41 sparsemux_15_3_1_1_1_U42 sparsemux_15_3_1_1_1_U43 sparsemux_15_3_1_1_1_U44 sparsemux_15_3_1_1_1_U45 sparsemux_15_3_1_1_1_U46 sparsemux_15_3_1_1_1_U47 char_row_2_fu_6669_p2 icmp_ln337_fu_6794_p2 and_ln337_fu_6799_p2 rel_col_2_fu_6804_p2 mul_16ns_18ns_33_2_1_U7 urem_16ns_4ns_16_20_1_U8 icmp_ln343_fu_6879_p2 icmp_ln343_1_fu_7352_p2 and_ln343_fu_7357_p2 sparsemux_15_3_1_1_1_U55 sparsemux_15_3_1_1_1_U56 sparsemux_15_3_1_1_1_U57 sparsemux_15_3_1_1_1_U58 sparsemux_15_3_1_1_1_U59 sparsemux_15_3_1_1_1_U60 sparsemux_15_3_1_1_1_U61 sparsemux_15_3_1_1_1_U62 sparsemux_15_3_1_1_1_U63 sparsemux_15_3_1_1_1_U64 sparsemux_15_3_1_1_1_U65 sparsemux_15_3_1_1_1_U66 sparsemux_15_3_1_1_1_U67 sparsemux_15_3_1_1_1_U68 sparsemux_15_3_1_1_1_U69 sparsemux_15_3_1_1_1_U70 sparsemux_15_3_1_1_1_U71 sparsemux_15_3_1_1_1_U72 sparsemux_15_3_1_1_1_U73 char_row_3_fu_6555_p2 icmp_ln351_fu_6674_p2 and_ln351_fu_6679_p2 rel_col_3_fu_6685_p2 mul_16ns_18ns_33_2_1_U5 urem_16ns_4ns_16_20_1_U6 icmp_ln357_fu_6823_p2 icmp_ln357_1_fu_6948_p2 and_ln357_fu_6953_p2 sparsemux_15_3_1_1_1_U48 sparsemux_15_3_1_1_1_U49 sparsemux_15_3_1_1_1_U50 sparsemux_15_3_1_1_1_U51 sparsemux_15_3_1_1_1_U52 sparsemux_15_3_1_1_1_U53 sparsemux_15_3_1_1_1_U54 add_ln371_fu_6691_p2 select_ln282_2_fu_6561_p3 add_ln374_fu_6568_p2 select_ln372_2_fu_6697_p3 or_ln372_fu_6704_p2 select_ln372_fu_6708_p3 select_ln372_1_fu_6574_p3 name1_U p_ZL6font_V_0_U p_ZL6font_V_1_U p_ZL6font_V_2_U p_ZL6font_V_3_U p_ZL6font_V_4_U p_ZL6font_V_5_U p_ZL6font_V_6_U p_ZL6font_I_0_U p_ZL6font_I_1_U p_ZL6font_I_2_U p_ZL6font_I_3_U p_ZL6font_I_4_U p_ZL6font_I_5_U p_ZL6font_I_6_U p_ZL6font_C_0_U p_ZL6font_C_1_U p_ZL6font_C_2_U p_ZL6font_C_3_U p_ZL6font_C_4_U p_ZL6font_C_5_U p_ZL6font_C_6_U p_ZL6font_K_0_U p_ZL6font_K_1_U p_ZL6font_K_2_U p_ZL6font_K_3_U p_ZL6font_K_4_U p_ZL6font_K_5_U p_ZL6font_K_6_U p_ZL6font_Y_0_U p_ZL6font_Y_1_U p_ZL6font_Y_2_U p_ZL6font_Y_3_U p_ZL6font_Y_4_U p_ZL6font_Y_5_U p_ZL6font_Y_6_U p_ZL6font_N_0_U p_ZL6font_N_1_U p_ZL6font_N_2_U p_ZL6font_N_3_U p_ZL6font_N_4_U p_ZL6font_N_5_U p_ZL6font_N_6_U p_ZL6font_G_0_U p_ZL6font_G_1_U p_ZL6font_G_2_U p_ZL6font_G_3_U p_ZL6font_G_4_U p_ZL6font_G_5_U p_ZL6font_G_6_U p_ZL6font_W_0_U p_ZL6font_W_1_U p_ZL6font_W_2_U p_ZL6font_W_3_U p_ZL6font_W_4_U p_ZL6font_W_5_U p_ZL6font_W_6_U p_ZL6font_U_0_U p_ZL6font_U_1_U p_ZL6font_U_2_U p_ZL6font_U_3_U p_ZL6font_U_4_U p_ZL6font_U_5_U p_ZL6font_U_6_U p_ZL6font_R_0_U p_ZL6font_R_1_U p_ZL6font_R_2_U p_ZL6font_R_3_U p_ZL6font_R_4_U p_ZL6font_R_5_U p_ZL6font_R_6_U p_ZL6font_A_0_U p_ZL6font_A_1_U p_ZL6font_A_2_U p_ZL6font_A_3_U p_ZL6font_A_4_U p_ZL6font_A_5_U p_ZL6font_A_6_U p_ZL6font_T_0_U p_ZL6font_T_1_U p_ZL6font_T_2_U p_ZL6font_T_3_U p_ZL6font_T_4_U p_ZL6font_T_5_U p_ZL6font_T_6_U p_ZL6font_L_0_U p_ZL6font_L_1_U p_ZL6font_L_2_U p_ZL6font_L_3_U p_ZL6font_L_4_U p_ZL6font_L_5_U p_ZL6font_L_6_U p_ZL6font_S_0_U p_ZL6font_S_1_U p_ZL6font_S_2_U p_ZL6font_S_3_U p_ZL6font_S_4_U p_ZL6font_S_5_U p_ZL6font_S_6_U p_ZL6font_H_0_U p_ZL6font_H_1_U p_ZL6font_H_2_U p_ZL6font_H_3_U p_ZL6font_H_4_U p_ZL6font_H_5_U p_ZL6font_H_6_U p_ZL6font_0_0_U p_ZL6font_0_1_U p_ZL6font_0_2_U p_ZL6font_0_3_U p_ZL6font_0_4_U p_ZL6font_0_5_U p_ZL6font_0_6_U p_ZL6font_1_0_U p_ZL6font_1_1_U p_ZL6font_1_2_U p_ZL6font_1_3_U p_ZL6font_1_4_U p_ZL6font_1_5_U p_ZL6font_1_6_U p_ZL6font_2_0_U p_ZL6font_2_1_U p_ZL6font_2_2_U p_ZL6font_2_3_U p_ZL6font_2_4_U p_ZL6font_2_5_U p_ZL6font_2_6_U p_ZL6font_3_0_U p_ZL6font_3_1_U p_ZL6font_3_2_U p_ZL6font_3_3_U p_ZL6font_3_4_U p_ZL6font_3_5_U p_ZL6font_3_6_U p_ZL6font_4_0_U p_ZL6font_4_1_U p_ZL6font_4_2_U p_ZL6font_4_3_U p_ZL6font_4_4_U p_ZL6font_4_5_U p_ZL6font_4_6_U p_ZL6font_9_0_U p_ZL6font_9_1_U p_ZL6font_9_2_U p_ZL6font_9_3_U p_ZL6font_9_4_U p_ZL6font_9_5_U p_ZL6font_9_6_U id1_U name2_U id2_U CTRL_s_axi_U"
     },
     "Info": {"overlay_core": {
         "FunctionProtocol": "ap_ctrl_none",
@@ -626,25 +748,25 @@
           "Estimate": "5.275"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_28_1",
+            "Name": "VITIS_LOOP_277_1",
             "TripCount": "inf",
             "Latency": "",
             "PipelineII": "1",
-            "PipelineDepth": "4"
+            "PipelineDepth": "30"
           }],
         "Area": {
           "BRAM_18K": "0",
           "AVAIL_BRAM": "280",
           "UTIL_BRAM": "0",
-          "FF": "636",
-          "AVAIL_FF": "106400",
-          "UTIL_FF": "~0",
-          "LUT": "641",
-          "AVAIL_LUT": "53200",
-          "UTIL_LUT": "1",
-          "DSP": "0",
+          "DSP": "4",
           "AVAIL_DSP": "220",
-          "UTIL_DSP": "0",
+          "UTIL_DSP": "1",
+          "FF": "10440",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "9",
+          "LUT": "8421",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "15",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
@@ -654,7 +776,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2026-04-28 04:45:05 +0100",
+    "Time": "2026-04-28 06:17:23 +0100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.1"
   }

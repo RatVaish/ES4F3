@@ -1,0 +1,547 @@
+
+*** Running vivado
+    with args -log system_filter_top_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_filter_top_0_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Apr 28 06:22:56 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_filter_top_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 500.738 ; gain = 200.508
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+Command: synth_design -top system_filter_top_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26572
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1391.145 ; gain = 447.812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_filter_top_0_0' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_filter_top_0_0/synth/system_filter_top_0_0.vhd:73]
+	Parameter MAX_WIDTH bound to: 1920 - type: integer 
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'filter_top' declared at 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/filter_top.v:34' bound to instance 'U0' of component 'filter_top' [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_filter_top_0_0/synth/system_filter_top_0_0.vhd:111]
+INFO: [Synth 8-6157] synthesizing module 'filter_top' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/filter_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'multipix_ctrl' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/multipix_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'window_3x3' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/window_3x3.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'window_3x3' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/window_3x3.v:23]
+INFO: [Synth 8-6157] synthesizing module 'edge_detect' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/edge_detect.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detect' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/edge_detect.v:23]
+INFO: [Synth 8-6157] synthesizing module 'emboss' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/emboss.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'emboss' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/emboss.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sharpen' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/sharpen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sharpen' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/sharpen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'image_inv' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/image_inv.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'image_inv' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/image_inv.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'multipix_ctrl' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/multipix_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'singlepix_ctrl' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'singlepix_filter' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_filters.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'singlepix_filter' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_filters.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'singlepix_ctrl' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/singlepix_ctrl.v:23]
+WARNING: [Synth 8-689] width (3) of port connection 'btn' does not match port width (4) of module 'singlepix_ctrl' [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/filter_top.v:120]
+INFO: [Synth 8-6155] done synthesizing module 'filter_top' (0#1) [C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.srcs/sources_1/new/filter_top.v:34]
+INFO: [Synth 8-256] done synthesizing module 'system_filter_top_0_0' (0#1) [c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_filter_top_0_0/synth/system_filter_top_0_0.vhd:73]
+WARNING: [Synth 8-7129] Port sw[2] in module singlepix_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[1] in module singlepix_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[0] in module singlepix_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module singlepix_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[23] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[22] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[21] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[20] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[19] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[18] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[17] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[16] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[15] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[14] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[13] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[12] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[11] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[10] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[9] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[8] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[7] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[6] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[5] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[4] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[3] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[2] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[1] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p00[0] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[23] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[22] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[21] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[20] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[19] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[18] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[17] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[16] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[15] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[14] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[13] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[12] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[11] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[10] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[9] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[8] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[7] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[6] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[5] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[4] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[3] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[2] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[1] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p02[0] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[23] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[22] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[21] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[20] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[19] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[18] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[17] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[16] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[15] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[14] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[13] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[12] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[11] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[10] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[9] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[8] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[7] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[6] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[5] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[4] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[3] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[2] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[1] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p20[0] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[23] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[22] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[21] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[20] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[19] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[18] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[17] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[16] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[15] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[14] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[13] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[12] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[11] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[10] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[9] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[8] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[7] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[6] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[5] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[4] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[3] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[2] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[1] in module sharpen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port p22[0] in module sharpen is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1512.895 ; gain = 569.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1512.895 ; gain = 569.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1512.895 ; gain = 569.562
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1512.895 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1610.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 1610.984 ; gain = 0.492
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  10 Input   14 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 4     
+	   3 Input   11 Bit       Adders := 1     
+	   3 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 3     
++---Registers : 
+	               24 Bit    Registers := 17    
+	               11 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	              45K Bit	(1920 X 24 bit)          RAMs := 4     
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 7     
+	   2 Input    8 Bit        Muxes := 21    
+	   2 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP emboss_filter/b_conv, operation Mode is: C+(A:0x1ffe)*B''.
+DSP Report: register window/p01_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: register window/p00_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv5 is absorbed into DSP emboss_filter/b_conv.
+DSP Report: Generating DSP emboss_filter/b_conv, operation Mode is: PCIN+(A:0x1fff)*B''.
+DSP Report: register window/p11_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: register window/p10_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv4 is absorbed into DSP emboss_filter/b_conv.
+DSP Report: Generating DSP emboss_filter/b_conv, operation Mode is: PCIN+(A:0x1fff)*B''.
+DSP Report: register window/p02_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: register window/p01_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv5 is absorbed into DSP emboss_filter/b_conv.
+DSP Report: Generating DSP emboss_filter/b_conv, operation Mode is: PCIN+(A:0x0):B2+C'.
+DSP Report: register window/p12_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: register window/p21_reg is absorbed into DSP emboss_filter/b_conv.
+DSP Report: operator emboss_filter/b_conv is absorbed into DSP emboss_filter/b_conv.
+DSP Report: Generating DSP emboss_filter/g_conv, operation Mode is: C+(A:0x1ffe)*B''.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv5 is absorbed into DSP emboss_filter/g_conv.
+DSP Report: Generating DSP emboss_filter/g_conv, operation Mode is: PCIN+(A:0x1fff)*B''.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv4 is absorbed into DSP emboss_filter/g_conv.
+DSP Report: Generating DSP emboss_filter/g_conv, operation Mode is: PCIN+(A:0x1fff)*B''.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv5 is absorbed into DSP emboss_filter/g_conv.
+DSP Report: Generating DSP emboss_filter/g_conv, operation Mode is: PCIN+(A:0x0):B''+C'.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: register emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: operator emboss_filter/g_conv is absorbed into DSP emboss_filter/g_conv.
+DSP Report: Generating DSP emboss_filter/r_conv, operation Mode is: C+(A:0x1ffe)*B''.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv5 is absorbed into DSP emboss_filter/r_conv.
+DSP Report: Generating DSP emboss_filter/r_conv, operation Mode is: PCIN+(A:0x1fff)*B''.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv4 is absorbed into DSP emboss_filter/r_conv.
+DSP Report: Generating DSP emboss_filter/r_conv, operation Mode is: PCIN+(A:0x1fff)*B''.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv5 is absorbed into DSP emboss_filter/r_conv.
+DSP Report: Generating DSP emboss_filter/r_conv, operation Mode is: PCIN+(A:0x0):B''+C'.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: register emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+DSP Report: operator emboss_filter/r_conv is absorbed into DSP emboss_filter/r_conv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:59 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+ Sort Area is  emboss_filter/b_conv_5 : 0 0 : 230 826 : Used 1 time 0
+ Sort Area is  emboss_filter/b_conv_5 : 0 1 : 235 826 : Used 1 time 0
+ Sort Area is  emboss_filter/b_conv_5 : 0 2 : 235 826 : Used 1 time 0
+ Sort Area is  emboss_filter/b_conv_5 : 0 3 : 126 826 : Used 1 time 0
+ Sort Area is  emboss_filter/g_conv_4 : 0 0 : 230 802 : Used 1 time 0
+ Sort Area is  emboss_filter/g_conv_4 : 0 1 : 235 802 : Used 1 time 0
+ Sort Area is  emboss_filter/g_conv_4 : 0 2 : 235 802 : Used 1 time 0
+ Sort Area is  emboss_filter/g_conv_4 : 0 3 : 102 802 : Used 1 time 0
+ Sort Area is  emboss_filter/r_conv_0 : 0 0 : 230 802 : Used 1 time 0
+ Sort Area is  emboss_filter/r_conv_0 : 0 1 : 235 802 : Used 1 time 0
+ Sort Area is  emboss_filter/r_conv_0 : 0 2 : 235 802 : Used 1 time 0
+ Sort Area is  emboss_filter/r_conv_0 : 0 3 : 102 802 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|system_filter_top_0_0 | U0/multipix_filter_controller/window/line_buffer0_reg | 1 K x 24(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 1      | 
++----------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++----------------------+-------------------------------------------------------+-----------+----------------------+---------------------------------+
+|Module Name           | RTL Object                                            | Inference | Size (Depth x Width) | Primitives                      | 
++----------------------+-------------------------------------------------------+-----------+----------------------+---------------------------------+
+|system_filter_top_0_0 | U0/multipix_filter_controller/window/line_buffer1_reg | Implied   | 2 K x 24             | RAM128X1S x 24 RAM256X1S x 168  | 
+|system_filter_top_0_0 | U0/multipix_filter_controller/image_inv/line_inv0_reg | Implied   | 2 K x 24             | RAM64M x 240                    | 
+|system_filter_top_0_0 | U0/multipix_filter_controller/image_inv/line_inv1_reg | Implied   | 2 K x 24             | RAM64M x 240                    | 
++----------------------+-------------------------------------------------------+-----------+----------------------+---------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multipix_ctrl | C+(A:0x1ffe)*B''    | 8      | 13     | 10     | -      | 13     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x1fff)*B'' | 13     | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x1fff)*B'' | 13     | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x0):B2+C'  | 30     | 8      | 8      | -      | -1     | 0    | 1    | 1    | -    | -     | 0    | 0    | 
+|multipix_ctrl | C+(A:0x1ffe)*B''    | 8      | 13     | 10     | -      | 13     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x1fff)*B'' | 13     | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x1fff)*B'' | 13     | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x0):B''+C' | 30     | 8      | 8      | -      | -1     | 0    | 2    | 1    | -    | -     | 0    | 0    | 
+|multipix_ctrl | C+(A:0x1ffe)*B''    | 8      | 13     | 10     | -      | 13     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x1fff)*B'' | 13     | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x1fff)*B'' | 13     | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+(A:0x0):B''+C' | 30     | 8      | 8      | -      | -1     | 0    | 2    | 1    | -    | -     | 0    | 0    | 
++--------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|system_filter_top_0_0 | U0/multipix_filter_controller/window/line_buffer0_reg | 1 K x 24(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 1      | 
++----------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++----------------------+-------------------------------------------------------+-----------+----------------------+---------------------------------+
+|Module Name           | RTL Object                                            | Inference | Size (Depth x Width) | Primitives                      | 
++----------------------+-------------------------------------------------------+-----------+----------------------+---------------------------------+
+|system_filter_top_0_0 | U0/multipix_filter_controller/window/line_buffer1_reg | Implied   | 2 K x 24             | RAM128X1S x 24 RAM256X1S x 168  | 
+|system_filter_top_0_0 | U0/multipix_filter_controller/image_inv/line_inv0_reg | Implied   | 2 K x 24             | RAM64M x 240                    | 
+|system_filter_top_0_0 | U0/multipix_filter_controller/image_inv/line_inv1_reg | Implied   | 2 K x 24             | RAM64M x 240                    | 
++----------------------+-------------------------------------------------------+-----------+----------------------+---------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U0/multipix_filter_controller/window/line_buffer0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/multipix_filter_controller/window/line_buffer0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:24 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:36 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:36 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name           | RTL Name                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|system_filter_top_0_0 | U0/multipix_filter_controller/o_vid_VDE_reg   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|system_filter_top_0_0 | U0/multipix_filter_controller/o_vid_hsync_reg | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|system_filter_top_0_0 | U0/multipix_filter_controller/o_vid_vsync_reg | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++----------------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multipix_ctrl | C'+A''*B      | 8      | 13     | 9      | -      | 0      | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A*B''    | 13     | 8      | -      | -      | 0      | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A*B''    | 0      | 8      | -      | -      | 0      | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A:B'+C'  | 0      | 8      | -      | -      | 13     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | C'+A''*B      | 8      | 13     | 9      | -      | 0      | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A*B''    | 13     | 8      | -      | -      | 0      | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A*B''    | 0      | 8      | -      | -      | 0      | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A:B''+C' | 0      | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | C'+A''*B      | 8      | 13     | 9      | -      | 0      | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A*B''    | 13     | 8      | -      | -      | 0      | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A*B''    | 0      | 8      | -      | -      | 0      | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|multipix_ctrl | PCIN+A:B''+C' | 0      | 8      | -      | -      | 13     | 0    | 2    | -    | -    | -     | 0    | 0    | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   117|
+|2     |DSP48E1   |    12|
+|7     |LUT1      |    82|
+|8     |LUT2      |   172|
+|9     |LUT3      |   255|
+|10    |LUT4      |   126|
+|11    |LUT5      |   119|
+|12    |LUT6      |   678|
+|13    |MUXF7     |   192|
+|14    |MUXF8     |    96|
+|15    |RAM128X1S |    24|
+|16    |RAM256X1S |   168|
+|17    |RAM64M    |   480|
+|18    |RAMB18E1  |     1|
+|19    |RAMB36E1  |     1|
+|20    |SRL16E    |     3|
+|21    |FDRE      |   501|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 1610.984 ; gain = 667.652
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:32 . Memory (MB): peak = 1610.984 ; gain = 569.562
+Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:38 . Memory (MB): peak = 1610.984 ; gain = 667.652
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.205 . Memory (MB): peak = 1612.191 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1091 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1612.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 672 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 24 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 168 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 480 instances
+
+Synth Design complete | Checksum: 35f28fda
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:02:02 . Memory (MB): peak = 1612.191 ; gain = 1097.773
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1612.191 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_filter_top_0_0_synth_1/system_filter_top_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_filter_top_0_0_utilization_synth.rpt -pb system_filter_top_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 06:25:27 2026...

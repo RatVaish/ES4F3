@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'overlay_core'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 28 04:45:02 2026
+    * Date:           Tue Apr 28 06:17:12 2026
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        hls_overlay_prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,13 +15,13 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
-    |       Modules      |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |           |          |     |
-    |       & Loops      |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
-    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
-    |+ overlay_core      |  Timing|  -0.41|        -|       -|         -|        -|     -|        no|     -|   -|  636 (~0%)|  641 (1%)|    -|
-    | o VITIS_LOOP_28_1  |       -|   4.87|        -|       -|         4|        1|     -|       yes|     -|   -|          -|         -|    -|
-    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+--------+------------+------------+-----+
+    |       Modules       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |        |            |            |     |
+    |       & Loops       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF     |     LUT    | URAM|
+    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+--------+------------+------------+-----+
+    |+ overlay_core       |  Timing|  -0.41|        -|       -|         -|        -|     -|        no|     -|  4 (1%)|  10440 (9%)|  8421 (15%)|    -|
+    | o VITIS_LOOP_277_1  |       -|   4.87|        -|       -|        30|        1|     -|       yes|     -|       -|           -|           -|    -|
+    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+--------+------------+------------+-----+
 
 
 ================================================================
@@ -38,11 +38,10 @@
 +------------+----------+--------+-------+--------+-----------------------+
 | Interface  | Register | Offset | Width | Access | Description           |
 +------------+----------+--------+-------+--------+-----------------------+
-| s_axi_CTRL | enable   | 0x10   | 32    | W      | Data signal of enable |
-| s_axi_CTRL | x_pos    | 0x18   | 32    | W      | Data signal of x_pos  |
-| s_axi_CTRL | y_pos    | 0x20   | 32    | W      | Data signal of y_pos  |
-| s_axi_CTRL | height   | 0x28   | 32    | W      | Data signal of height |
-| s_axi_CTRL | width    | 0x30   | 32    | W      | Data signal of width  |
+| s_axi_CTRL | x_pos    | 0x10   | 32    | W      | Data signal of x_pos  |
+| s_axi_CTRL | y_pos    | 0x18   | 32    | W      | Data signal of y_pos  |
+| s_axi_CTRL | height   | 0x20   | 32    | W      | Data signal of height |
+| s_axi_CTRL | width    | 0x28   | 32    | W      | Data signal of width  |
 +------------+----------+--------+-------+--------+-----------------------+
 
 * AXIS
@@ -52,6 +51,13 @@
 | stream_in  | in        | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
 | stream_out | out       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
 +------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* Other Ports
++--------+---------+-----------+----------+
+| Port   | Mode    | Direction | Bitwidth |
++--------+---------+-----------+----------+
+| enable | ap_none | in        | 1        |
++--------+---------+-----------+----------+
 
 * TOP LEVEL CONTROL
 +-----------+--------------+----------+
@@ -85,65 +91,357 @@
 +------------+--------------+-----------+----------------------------------+
 | stream_in  | stream_in    | interface |                                  |
 | stream_out | stream_out   | interface |                                  |
-| enable     | s_axi_CTRL   | register  | name=enable offset=0x10 range=32 |
-| x_pos      | s_axi_CTRL   | register  | name=x_pos offset=0x18 range=32  |
-| y_pos      | s_axi_CTRL   | register  | name=y_pos offset=0x20 range=32  |
-| height     | s_axi_CTRL   | register  | name=height offset=0x28 range=32 |
-| width      | s_axi_CTRL   | register  | name=width offset=0x30 range=32  |
+| enable     | enable       | port      |                                  |
+| x_pos      | s_axi_CTRL   | register  | name=x_pos offset=0x10 range=32  |
+| y_pos      | s_axi_CTRL   | register  | name=y_pos offset=0x18 range=32  |
+| height     | s_axi_CTRL   | register  | name=height offset=0x20 range=32 |
+| width      | s_axi_CTRL   | register  | name=width offset=0x28 range=32  |
 +------------+--------------+-----------+----------------------------------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+------------------------------+-----+--------+------------------+--------+----------+---------+
-| Name                         | DSP | Pragma | Variable         | Op     | Impl     | Latency |
-+------------------------------+-----+--------+------------------+--------+----------+---------+
-| + overlay_core               | 0   |        |                  |        |          |         |
-|   icmp_ln42_fu_217_p2        |     |        | icmp_ln42        | setlt  | auto     | 0       |
-|   icmp_ln42_1_fu_223_p2      |     |        | icmp_ln42_1      | setlt  | auto     | 0       |
-|   and_ln42_1_fu_229_p2       |     |        | and_ln42_1       | and    | auto     | 0       |
-|   or_ln42_fu_235_p2          |     |        | or_ln42          | or     | auto     | 0       |
-|   pixel_out_data_2_fu_240_p3 |     |        | pixel_out_data_2 | select | auto_sel | 0       |
-|   add_ln49_fu_253_p2         |     |        | add_ln49         | add    | fabric   | 0       |
-|   select_ln33_fu_259_p3      |     |        | select_ln33      | select | auto_sel | 0       |
-|   add_ln52_fu_266_p2         |     |        | add_ln52         | add    | fabric   | 0       |
-|   select_ln50_2_fu_272_p3    |     |        | select_ln50_2    | select | auto_sel | 0       |
-|   or_ln50_fu_279_p2          |     |        | or_ln50          | or     | auto     | 0       |
-|   select_ln50_fu_283_p3      |     |        | select_ln50      | select | auto_sel | 0       |
-|   select_ln50_1_fu_291_p3    |     |        | select_ln50_1    | select | auto_sel | 0       |
-+------------------------------+-----+--------+------------------+--------+----------+---------+
++-----------------------------+-----+--------+----------------+-----------+----------+---------+
+| Name                        | DSP | Pragma | Variable       | Op        | Impl     | Latency |
++-----------------------------+-----+--------+----------------+-----------+----------+---------+
+| + overlay_core              | 4   |        |                |           |          |         |
+|   select_ln282_fu_6536_p3   |     |        | select_ln282   | select    | auto_sel | 0       |
+|   icmp_ln293_fu_6589_p2     |     |        | icmp_ln293     | setlt     | auto     | 0       |
+|   select_ln282_1_fu_6594_p3 |     |        | select_ln282_1 | select    | auto_sel | 0       |
+|   icmp_ln293_1_fu_6601_p2   |     |        | icmp_ln293_1   | setlt     | auto     | 0       |
+|   and_ln293_fu_6721_p2      |     |        | and_ln293      | and       | auto     | 0       |
+|   icmp_ln301_fu_6607_p2     |     |        | icmp_ln301     | setlt     | auto     | 0       |
+|   and_ln301_fu_6612_p2      |     |        | and_ln301      | and       | auto     | 0       |
+|   add_ln302_fu_6618_p2      |     |        | add_ln302      | add       | fabric   | 0       |
+|   icmp_ln302_fu_6623_p2     |     |        | icmp_ln302     | setlt     | auto     | 0       |
+|   icmp_ln303_fu_6725_p2     |     |        | icmp_ln303     | setlt     | auto     | 0       |
+|   and_ln302_fu_6730_p2      |     |        | and_ln302      | and       | auto     | 0       |
+|   and_ln302_1_fu_6734_p2    |     |        | and_ln302_1    | and       | auto     | 0       |
+|   or_ln302_fu_6739_p2       |     |        | or_ln302       | or        | auto     | 0       |
+|   add_ln304_fu_6745_p2      |     |        | add_ln304      | add       | fabric   | 0       |
+|   icmp_ln304_fu_6750_p2     |     |        | icmp_ln304     | setlt     | auto     | 0       |
+|   and_ln304_fu_6841_p2      |     |        | and_ln304      | and       | auto     | 0       |
+|   char_row_fu_6543_p2       |     |        | char_row       | add       | fabric   | 0       |
+|   icmp_ln309_fu_6629_p2     |     |        | icmp_ln309     | setlt     | auto     | 0       |
+|   icmp_ln309_1_fu_6634_p2   |     |        | icmp_ln309_1   | setgt     | auto     | 0       |
+|   and_ln309_fu_6640_p2      |     |        | and_ln309      | and       | auto     | 0       |
+|   rel_col_fu_6646_p2        |     |        | rel_col        | add       | fabric   | 0       |
+|   mul_16ns_18ns_33_2_1_U1   | 1   |        | mul_ln312      | mul       | auto     | 1       |
+|   urem_16ns_4ns_16_20_1_U2  |     |        | char_col       | urem      | auto     | 19      |
+|   icmp_ln315_fu_6770_p2     |     |        | icmp_ln315     | setlt     | auto     | 0       |
+|   icmp_ln315_1_fu_6916_p2   |     |        | icmp_ln315_1   | setlt     | auto     | 0       |
+|   and_ln315_fu_6921_p2      |     |        | and_ln315      | and       | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U9   |     |        | tmp_20         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U10  |     |        | tmp_19         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U11  |     |        | tmp_18         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U12  |     |        | tmp_17         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U13  |     |        | tmp_16         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U14  |     |        | tmp_15         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U15  |     |        | tmp_14         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U16  |     |        | tmp_13         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U17  |     |        | tmp_12         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U18  |     |        | tmp_11         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U19  |     |        | tmp_10         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U20  |     |        | tmp_s          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U21  |     |        | tmp_9          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U22  |     |        | tmp_8          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U23  |     |        | tmp_7          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U24  |     |        | tmp_6          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U25  |     |        | tmp_5          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U26  |     |        | tmp_4          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U27  |     |        | tmp_3          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U28  |     |        | tmp_2          | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U29  |     |        | tmp_1          | sparsemux | auto     | 0       |
+|   char_row_1_fu_6549_p2     |     |        | char_row_1     | add       | fabric   | 0       |
+|   icmp_ln323_fu_6652_p2     |     |        | icmp_ln323     | setlt     | auto     | 0       |
+|   and_ln323_fu_6657_p2      |     |        | and_ln323      | and       | auto     | 0       |
+|   rel_col_1_fu_6663_p2      |     |        | rel_col_1      | add       | fabric   | 0       |
+|   mul_16ns_18ns_33_2_1_U3   | 1   |        | mul_ln326      | mul       | auto     | 1       |
+|   urem_16ns_4ns_16_20_1_U4  |     |        | char_col_1     | urem      | auto     | 19      |
+|   icmp_ln329_fu_6789_p2     |     |        | icmp_ln329     | setlt     | auto     | 0       |
+|   icmp_ln329_1_fu_6930_p2   |     |        | icmp_ln329_1   | setlt     | auto     | 0       |
+|   and_ln329_fu_6935_p2      |     |        | and_ln329      | and       | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U30  |     |        | tmp_38         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U31  |     |        | tmp_37         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U32  |     |        | tmp_36         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U33  |     |        | tmp_35         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U34  |     |        | tmp_34         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U35  |     |        | tmp_33         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U36  |     |        | tmp_32         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U37  |     |        | tmp_31         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U38  |     |        | tmp_30         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U39  |     |        | tmp_29         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U40  |     |        | tmp_28         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U41  |     |        | tmp_27         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U42  |     |        | tmp_26         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U43  |     |        | tmp_25         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U44  |     |        | tmp_24         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U45  |     |        | tmp_23         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U46  |     |        | tmp_22         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U47  |     |        | tmp_21         | sparsemux | auto     | 0       |
+|   char_row_2_fu_6669_p2     |     |        | char_row_2     | add       | fabric   | 0       |
+|   icmp_ln337_fu_6794_p2     |     |        | icmp_ln337     | setlt     | auto     | 0       |
+|   and_ln337_fu_6799_p2      |     |        | and_ln337      | and       | auto     | 0       |
+|   rel_col_2_fu_6804_p2      |     |        | rel_col_2      | add       | fabric   | 0       |
+|   mul_16ns_18ns_33_2_1_U7   | 1   |        | mul_ln340      | mul       | auto     | 1       |
+|   urem_16ns_4ns_16_20_1_U8  |     |        | char_col_2     | urem      | auto     | 19      |
+|   icmp_ln343_fu_6879_p2     |     |        | icmp_ln343     | setlt     | auto     | 0       |
+|   icmp_ln343_1_fu_7352_p2   |     |        | icmp_ln343_1   | setlt     | auto     | 0       |
+|   and_ln343_fu_7357_p2      |     |        | and_ln343      | and       | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U55  |     |        | tmp_57         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U56  |     |        | tmp_56         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U57  |     |        | tmp_55         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U58  |     |        | tmp_54         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U59  |     |        | tmp_53         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U60  |     |        | tmp_52         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U61  |     |        | tmp_51         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U62  |     |        | tmp_50         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U63  |     |        | tmp_49         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U64  |     |        | tmp_48         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U65  |     |        | tmp_47         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U66  |     |        | tmp_46         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U67  |     |        | tmp_45         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U68  |     |        | tmp_44         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U69  |     |        | tmp_43         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U70  |     |        | tmp_42         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U71  |     |        | tmp_41         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U72  |     |        | tmp_40         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U73  |     |        | tmp_39         | sparsemux | auto     | 0       |
+|   char_row_3_fu_6555_p2     |     |        | char_row_3     | add       | fabric   | 0       |
+|   icmp_ln351_fu_6674_p2     |     |        | icmp_ln351     | setlt     | auto     | 0       |
+|   and_ln351_fu_6679_p2      |     |        | and_ln351      | and       | auto     | 0       |
+|   rel_col_3_fu_6685_p2      |     |        | rel_col_3      | add       | fabric   | 0       |
+|   mul_16ns_18ns_33_2_1_U5   | 1   |        | mul_ln354      | mul       | auto     | 1       |
+|   urem_16ns_4ns_16_20_1_U6  |     |        | char_col_3     | urem      | auto     | 19      |
+|   icmp_ln357_fu_6823_p2     |     |        | icmp_ln357     | setlt     | auto     | 0       |
+|   icmp_ln357_1_fu_6948_p2   |     |        | icmp_ln357_1   | setlt     | auto     | 0       |
+|   and_ln357_fu_6953_p2      |     |        | and_ln357      | and       | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U48  |     |        | tmp_64         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U49  |     |        | tmp_63         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U50  |     |        | tmp_62         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U51  |     |        | tmp_61         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U52  |     |        | tmp_60         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U53  |     |        | tmp_59         | sparsemux | auto     | 0       |
+|   sparsemux_15_3_1_1_1_U54  |     |        | tmp_58         | sparsemux | auto     | 0       |
+|   add_ln371_fu_6691_p2      |     |        | add_ln371      | add       | fabric   | 0       |
+|   select_ln282_2_fu_6561_p3 |     |        | select_ln282_2 | select    | auto_sel | 0       |
+|   add_ln374_fu_6568_p2      |     |        | add_ln374      | add       | fabric   | 0       |
+|   select_ln372_2_fu_6697_p3 |     |        | select_ln372_2 | select    | auto_sel | 0       |
+|   or_ln372_fu_6704_p2       |     |        | or_ln372       | or        | auto     | 0       |
+|   select_ln372_fu_6708_p3   |     |        | select_ln372   | select    | auto_sel | 0       |
+|   select_ln372_1_fu_6574_p3 |     |        | select_ln372_1 | select    | auto_sel | 0       |
++-----------------------------+-----+--------+----------------+-----------+----------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| Name           | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
-|                |           |           |      |      |        |          |      |         | Banks            |
-+----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| + overlay_core |           |           | 0    | 0    |        |          |      |         |                  |
-|   CTRL_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
-+----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
++-------------------+-----------+-----------+------+------+--------+---------------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable      | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |               |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+---------------+------+---------+------------------+
+| + overlay_core    |           |           | 0    | 0    |        |               |      |         |                  |
+|   CTRL_s_axi_U    | interface | s_axilite |      |      |        |               |      |         |                  |
+|   name1_U         | rom_1p    |           |      |      |        | name1         | auto | 1       | 7, 19, 1         |
+|   p_ZL6font_V_0_U | rom_2p    |           |      |      |        | p_ZL6font_V_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_V_1_U | rom_2p    |           |      |      |        | p_ZL6font_V_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_V_2_U | rom_2p    |           |      |      |        | p_ZL6font_V_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_V_3_U | rom_2p    |           |      |      |        | p_ZL6font_V_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_V_4_U | rom_2p    |           |      |      |        | p_ZL6font_V_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_V_5_U | rom_2p    |           |      |      |        | p_ZL6font_V_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_V_6_U | rom_2p    |           |      |      |        | p_ZL6font_V_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_0_U | rom_np    |           |      |      |        | p_ZL6font_I_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_1_U | rom_np    |           |      |      |        | p_ZL6font_I_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_2_U | rom_np    |           |      |      |        | p_ZL6font_I_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_3_U | rom_np    |           |      |      |        | p_ZL6font_I_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_4_U | rom_np    |           |      |      |        | p_ZL6font_I_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_5_U | rom_np    |           |      |      |        | p_ZL6font_I_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_I_6_U | rom_np    |           |      |      |        | p_ZL6font_I_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_0_U | rom_np    |           |      |      |        | p_ZL6font_C_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_1_U | rom_np    |           |      |      |        | p_ZL6font_C_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_2_U | rom_np    |           |      |      |        | p_ZL6font_C_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_3_U | rom_np    |           |      |      |        | p_ZL6font_C_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_4_U | rom_np    |           |      |      |        | p_ZL6font_C_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_5_U | rom_np    |           |      |      |        | p_ZL6font_C_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_C_6_U | rom_np    |           |      |      |        | p_ZL6font_C_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_0_U | rom_np    |           |      |      |        | p_ZL6font_K_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_1_U | rom_np    |           |      |      |        | p_ZL6font_K_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_2_U | rom_np    |           |      |      |        | p_ZL6font_K_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_3_U | rom_np    |           |      |      |        | p_ZL6font_K_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_4_U | rom_np    |           |      |      |        | p_ZL6font_K_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_5_U | rom_np    |           |      |      |        | p_ZL6font_K_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_K_6_U | rom_np    |           |      |      |        | p_ZL6font_K_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_0_U | rom_1p    |           |      |      |        | p_ZL6font_Y_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_1_U | rom_1p    |           |      |      |        | p_ZL6font_Y_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_2_U | rom_1p    |           |      |      |        | p_ZL6font_Y_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_3_U | rom_1p    |           |      |      |        | p_ZL6font_Y_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_4_U | rom_1p    |           |      |      |        | p_ZL6font_Y_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_5_U | rom_1p    |           |      |      |        | p_ZL6font_Y_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_Y_6_U | rom_1p    |           |      |      |        | p_ZL6font_Y_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_0_U | rom_np    |           |      |      |        | p_ZL6font_N_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_1_U | rom_np    |           |      |      |        | p_ZL6font_N_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_2_U | rom_np    |           |      |      |        | p_ZL6font_N_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_3_U | rom_np    |           |      |      |        | p_ZL6font_N_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_4_U | rom_np    |           |      |      |        | p_ZL6font_N_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_5_U | rom_np    |           |      |      |        | p_ZL6font_N_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_N_6_U | rom_np    |           |      |      |        | p_ZL6font_N_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_0_U | rom_np    |           |      |      |        | p_ZL6font_G_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_1_U | rom_np    |           |      |      |        | p_ZL6font_G_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_2_U | rom_np    |           |      |      |        | p_ZL6font_G_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_3_U | rom_np    |           |      |      |        | p_ZL6font_G_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_4_U | rom_np    |           |      |      |        | p_ZL6font_G_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_5_U | rom_np    |           |      |      |        | p_ZL6font_G_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_G_6_U | rom_np    |           |      |      |        | p_ZL6font_G_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_0_U | rom_1p    |           |      |      |        | p_ZL6font_W_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_1_U | rom_1p    |           |      |      |        | p_ZL6font_W_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_2_U | rom_1p    |           |      |      |        | p_ZL6font_W_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_3_U | rom_1p    |           |      |      |        | p_ZL6font_W_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_4_U | rom_1p    |           |      |      |        | p_ZL6font_W_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_5_U | rom_1p    |           |      |      |        | p_ZL6font_W_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_W_6_U | rom_1p    |           |      |      |        | p_ZL6font_W_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_0_U | rom_np    |           |      |      |        | p_ZL6font_U_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_1_U | rom_np    |           |      |      |        | p_ZL6font_U_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_2_U | rom_np    |           |      |      |        | p_ZL6font_U_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_3_U | rom_np    |           |      |      |        | p_ZL6font_U_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_4_U | rom_np    |           |      |      |        | p_ZL6font_U_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_5_U | rom_np    |           |      |      |        | p_ZL6font_U_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_U_6_U | rom_np    |           |      |      |        | p_ZL6font_U_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_0_U | rom_np    |           |      |      |        | p_ZL6font_R_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_1_U | rom_np    |           |      |      |        | p_ZL6font_R_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_2_U | rom_np    |           |      |      |        | p_ZL6font_R_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_3_U | rom_np    |           |      |      |        | p_ZL6font_R_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_4_U | rom_np    |           |      |      |        | p_ZL6font_R_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_5_U | rom_np    |           |      |      |        | p_ZL6font_R_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_R_6_U | rom_np    |           |      |      |        | p_ZL6font_R_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_0_U | rom_np    |           |      |      |        | p_ZL6font_A_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_1_U | rom_np    |           |      |      |        | p_ZL6font_A_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_2_U | rom_np    |           |      |      |        | p_ZL6font_A_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_3_U | rom_np    |           |      |      |        | p_ZL6font_A_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_4_U | rom_np    |           |      |      |        | p_ZL6font_A_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_5_U | rom_np    |           |      |      |        | p_ZL6font_A_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_A_6_U | rom_np    |           |      |      |        | p_ZL6font_A_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_0_U | rom_np    |           |      |      |        | p_ZL6font_T_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_1_U | rom_np    |           |      |      |        | p_ZL6font_T_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_2_U | rom_np    |           |      |      |        | p_ZL6font_T_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_3_U | rom_np    |           |      |      |        | p_ZL6font_T_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_4_U | rom_np    |           |      |      |        | p_ZL6font_T_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_5_U | rom_np    |           |      |      |        | p_ZL6font_T_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_T_6_U | rom_np    |           |      |      |        | p_ZL6font_T_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_0_U | rom_np    |           |      |      |        | p_ZL6font_L_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_1_U | rom_np    |           |      |      |        | p_ZL6font_L_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_2_U | rom_np    |           |      |      |        | p_ZL6font_L_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_3_U | rom_np    |           |      |      |        | p_ZL6font_L_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_4_U | rom_np    |           |      |      |        | p_ZL6font_L_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_5_U | rom_np    |           |      |      |        | p_ZL6font_L_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_L_6_U | rom_np    |           |      |      |        | p_ZL6font_L_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_0_U | rom_np    |           |      |      |        | p_ZL6font_S_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_1_U | rom_np    |           |      |      |        | p_ZL6font_S_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_2_U | rom_np    |           |      |      |        | p_ZL6font_S_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_3_U | rom_np    |           |      |      |        | p_ZL6font_S_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_4_U | rom_np    |           |      |      |        | p_ZL6font_S_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_5_U | rom_np    |           |      |      |        | p_ZL6font_S_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_S_6_U | rom_np    |           |      |      |        | p_ZL6font_S_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_0_U | rom_np    |           |      |      |        | p_ZL6font_H_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_1_U | rom_np    |           |      |      |        | p_ZL6font_H_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_2_U | rom_np    |           |      |      |        | p_ZL6font_H_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_3_U | rom_np    |           |      |      |        | p_ZL6font_H_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_4_U | rom_np    |           |      |      |        | p_ZL6font_H_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_5_U | rom_np    |           |      |      |        | p_ZL6font_H_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_H_6_U | rom_np    |           |      |      |        | p_ZL6font_H_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_0_U | rom_np    |           |      |      |        | p_ZL6font_0_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_1_U | rom_np    |           |      |      |        | p_ZL6font_0_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_2_U | rom_np    |           |      |      |        | p_ZL6font_0_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_3_U | rom_np    |           |      |      |        | p_ZL6font_0_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_4_U | rom_np    |           |      |      |        | p_ZL6font_0_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_5_U | rom_np    |           |      |      |        | p_ZL6font_0_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_0_6_U | rom_np    |           |      |      |        | p_ZL6font_0_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_0_U | rom_np    |           |      |      |        | p_ZL6font_1_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_1_U | rom_np    |           |      |      |        | p_ZL6font_1_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_2_U | rom_np    |           |      |      |        | p_ZL6font_1_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_3_U | rom_np    |           |      |      |        | p_ZL6font_1_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_4_U | rom_np    |           |      |      |        | p_ZL6font_1_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_5_U | rom_np    |           |      |      |        | p_ZL6font_1_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_1_6_U | rom_np    |           |      |      |        | p_ZL6font_1_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_0_U | rom_np    |           |      |      |        | p_ZL6font_2_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_1_U | rom_np    |           |      |      |        | p_ZL6font_2_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_2_U | rom_np    |           |      |      |        | p_ZL6font_2_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_3_U | rom_np    |           |      |      |        | p_ZL6font_2_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_4_U | rom_np    |           |      |      |        | p_ZL6font_2_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_5_U | rom_np    |           |      |      |        | p_ZL6font_2_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_2_6_U | rom_np    |           |      |      |        | p_ZL6font_2_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_0_U | rom_np    |           |      |      |        | p_ZL6font_3_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_1_U | rom_np    |           |      |      |        | p_ZL6font_3_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_2_U | rom_np    |           |      |      |        | p_ZL6font_3_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_3_U | rom_np    |           |      |      |        | p_ZL6font_3_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_4_U | rom_np    |           |      |      |        | p_ZL6font_3_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_5_U | rom_np    |           |      |      |        | p_ZL6font_3_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_3_6_U | rom_np    |           |      |      |        | p_ZL6font_3_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_0_U | rom_np    |           |      |      |        | p_ZL6font_4_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_1_U | rom_np    |           |      |      |        | p_ZL6font_4_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_2_U | rom_np    |           |      |      |        | p_ZL6font_4_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_3_U | rom_np    |           |      |      |        | p_ZL6font_4_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_4_U | rom_np    |           |      |      |        | p_ZL6font_4_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_5_U | rom_np    |           |      |      |        | p_ZL6font_4_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_4_6_U | rom_np    |           |      |      |        | p_ZL6font_4_6 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_0_U | rom_np    |           |      |      |        | p_ZL6font_9_0 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_1_U | rom_np    |           |      |      |        | p_ZL6font_9_1 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_2_U | rom_np    |           |      |      |        | p_ZL6font_9_2 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_3_U | rom_np    |           |      |      |        | p_ZL6font_9_3 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_4_U | rom_np    |           |      |      |        | p_ZL6font_9_4 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_5_U | rom_np    |           |      |      |        | p_ZL6font_9_5 | auto | 1       | 1, 5, 1          |
+|   p_ZL6font_9_6_U | rom_np    |           |      |      |        | p_ZL6font_9_6 | auto | 1       | 1, 5, 1          |
+|   id1_U           | rom_1p    |           |      |      |        | id1           | auto | 1       | 7, 9, 1          |
+|   name2_U         | rom_1p    |           |      |      |        | name2         | auto | 1       | 7, 12, 1         |
+|   id2_U           | rom_1p    |           |      |      |        | id2           | auto | 1       | 7, 9, 1          |
++-------------------+-----------+-----------+------+------+--------+---------------+------+---------+------------------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-----------------------------------+-------------------------------------------------+
-| Type      | Options                           | Location                                        |
-+-----------+-----------------------------------+-------------------------------------------------+
-| interface | axis port=stream_in               | overlay_core.cpp:12 in overlay_core, stream_in  |
-| interface | axis port=stream_out              | overlay_core.cpp:13 in overlay_core, stream_out |
-| interface | s_axilite port=enable bundle=CTRL | overlay_core.cpp:14 in overlay_core, enable     |
-| interface | s_axilite port=x_pos bundle=CTRL  | overlay_core.cpp:15 in overlay_core, x_pos      |
-| interface | s_axilite port=y_pos bundle=CTRL  | overlay_core.cpp:16 in overlay_core, y_pos      |
-| interface | s_axilite port=height bundle=CTRL | overlay_core.cpp:17 in overlay_core, height     |
-| interface | s_axilite port=width bundle=CTRL  | overlay_core.cpp:18 in overlay_core, width      |
-| interface | s_axilite port=return bundle=CTRL | overlay_core.cpp:19 in overlay_core, return     |
-| interface | ap_ctrl_none port=return          | overlay_core.cpp:20 in overlay_core, return     |
-| pipeline  | II=1                              | overlay_core.cpp:29 in overlay_core             |
-+-----------+-----------------------------------+-------------------------------------------------+
++-----------+-----------------------------------+--------------------------------------------------+
+| Type      | Options                           | Location                                         |
++-----------+-----------------------------------+--------------------------------------------------+
+| inline    |                                   | overlay_core.cpp:217 in get_char_pixel           |
+| interface | axis port=stream_in               | overlay_core.cpp:255 in overlay_core, stream_in  |
+| interface | axis port=stream_out              | overlay_core.cpp:256 in overlay_core, stream_out |
+| interface | ap_none port=enable               | overlay_core.cpp:257 in overlay_core, enable     |
+| interface | s_axilite port=x_pos bundle=CTRL  | overlay_core.cpp:258 in overlay_core, x_pos      |
+| interface | s_axilite port=y_pos bundle=CTRL  | overlay_core.cpp:259 in overlay_core, y_pos      |
+| interface | s_axilite port=height bundle=CTRL | overlay_core.cpp:260 in overlay_core, height     |
+| interface | s_axilite port=width bundle=CTRL  | overlay_core.cpp:261 in overlay_core, width      |
+| interface | s_axilite port=return bundle=CTRL | overlay_core.cpp:262 in overlay_core, return     |
+| interface | ap_ctrl_none port=return          | overlay_core.cpp:263 in overlay_core, return     |
+| pipeline  | II=1                              | overlay_core.cpp:278 in overlay_core             |
++-----------+-----------------------------------+--------------------------------------------------+
+
+* Inferred Pragmas
++-------------------------------+-----------------+------------------------------------------+---------------------------------+
+| Source Pragma                 | Inferred Pragma | Options                                  | Location                        |
++-------------------------------+-----------------+------------------------------------------+---------------------------------+
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_0 | variable font_0 in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_1 | variable font_1 in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_2 | variable font_2 in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_3 | variable font_3 in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_4 | variable font_4 in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_9 | variable font_9 in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_A | variable font_A in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_C | variable font_C in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_G | variable font_G in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_H | variable font_H in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_I | variable font_I in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_K | variable font_K in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_L | variable font_L in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_N | variable font_N in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_R | variable font_R in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_S | variable font_S in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_T | variable font_T in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_U | variable font_U in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_V | variable font_V in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_W | variable font_W in overlay_core |
+| pipeline overlay_core.cpp:278 | array_partition | dim=1 type=complete  variable=_ZL6font_Y | variable font_Y in overlay_core |
++-------------------------------+-----------------+------------------------------------------+---------------------------------+
 
 

@@ -67,12 +67,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_vide
 # IP: bd/system/ip/system_vtg_0/system_vtg_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_vtg_0 || ORIG_REF_NAME==system_vtg_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_multipix_ctrl_0_0/system_multipix_ctrl_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_multipix_ctrl_0_0 || ORIG_REF_NAME==system_multipix_ctrl_0_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_singlepix_ctrl_0_0/system_singlepix_ctrl_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_singlepix_ctrl_0_0 || ORIG_REF_NAME==system_singlepix_ctrl_0_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_rst_clk_wiz_0_150M_0/system_rst_clk_wiz_0_150M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_rst_clk_wiz_0_150M_0 || ORIG_REF_NAME==system_rst_clk_wiz_0_150M_0} -quiet] -quiet
 
@@ -81,6 +75,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_
 
 # IP: bd/system/ip/system_smartconnect_0_0/system_smartconnect_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_smartconnect_0_0 || ORIG_REF_NAME==system_smartconnect_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_gpio_1_0 || ORIG_REF_NAME==system_axi_gpio_1_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_filter_top_0_0/system_filter_top_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_filter_top_0_0 || ORIG_REF_NAME==system_filter_top_0_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
@@ -91,7 +91,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto
 # IP: bd/system/ip/system_auto_pc_2/system_auto_pc_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_2 || ORIG_REF_NAME==system_auto_pc_2} -quiet] -quiet
 
-# IP: bd/system/ip/system_overlay_core_0_13/system_overlay_core_0_13.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_overlay_core_0_13 || ORIG_REF_NAME==system_overlay_core_0_13} -quiet] -quiet
+# IP: bd/system/ip/system_auto_cc_0/system_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_cc_0 || ORIG_REF_NAME==system_auto_cc_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_overlay_core_0_16/system_overlay_core_0_16.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_overlay_core_0_16 || ORIG_REF_NAME==system_overlay_core_0_16} -quiet] -quiet
 
 # XDC: c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/system_ooc.xdc

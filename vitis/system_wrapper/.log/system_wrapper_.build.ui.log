@@ -1,4 +1,4 @@
-2026-04-28T04:40:48.244393900255-04:40:48 **** Incremental Build of project system_wrapper ****
+2026-04-28T06:41:49.513814700255-06:41:49 **** Incremental Build of project system_wrapper ****
 000-buildplatform.bat 63629 system_wrapper no_domain_build 
 000-'\gnu\microblaze\lin\bin\' is not recognized as an internal or external command,
 000-operable program or batch file.
@@ -6,7 +6,7 @@
 000-operable program or batch file.
 000-'\gnuwin\bin\' is not recognized as an internal or external command,
 000-operable program or batch file.
-000-XSDB Server Channel: tcfchan#22
+000-XSDB Server Channel: tcfchan#34
 000-Building the BSP Library for domain  - standalone_ps7_cortexa9_0 on processor ps7_cortexa9_0
 000-make --no-print-directory seq_libs
 000-
@@ -456,6 +456,12 @@
 000/system_wrapper424-1-1this is the location of the previous definition0-xuartps_hw.h:424: note: this is the location of the previous definition
 000-  424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
 000-      | 
+000-"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v8_6/src"
+000-
+000-make -C ps7_cortexa9_0/libsrc/vtc_v8_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+000-IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+000-es -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
 000-In file included from xuartps_options.c:33:
 000/system_wrapper450-1-1"XUartPs_IsTransmitEmpty" redefined1-xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
 000-  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
@@ -464,21 +470,7 @@
 000/system_wrapper424-1-1this is the location of the previous definition0-xuartps_hw.h:424: note: this is the location of the previous definition
 000-  424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
 000-      | 
-000-"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v8_6/src"
-000-
-000-make -C ps7_cortexa9_0/libsrc/vtc_v8_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
-000-IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
-000-es -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
-000-
 000-In file included from xuartps_sinit.c:34:
-000/system_wrapper450-1-1"XUartPs_IsTransmitEmpty" redefined1-xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
-000-  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
-000-      | 
-000-In file included from xuartps.h:170:
-000/system_wrapper424-1-1this is the location of the previous definition0-xuartps_hw.h:424: note: this is the location of the previous definition
-000-  424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
-000-      | 
-000-In file included from xuartps.c:37:
 000/system_wrapper450-1-1"XUartPs_IsTransmitEmpty" redefined1-xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
 000-  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
 000-      | 
@@ -492,6 +484,14 @@
 000-RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
 000-files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
 000-
+000-In file included from xuartps.c:37:
+000/system_wrapper450-1-1"XUartPs_IsTransmitEmpty" redefined1-xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
+000-  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
+000-      | 
+000-In file included from xuartps.h:170:
+000/system_wrapper424-1-1this is the location of the previous definition0-xuartps_hw.h:424: note: this is the location of the previous definition
+000-  424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
+000-      | 
 000-In file included from xuartps_selftest.c:32:
 000/system_wrapper450-1-1"XUartPs_IsTransmitEmpty" redefined1-xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
 000-  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
@@ -560,5 +560,5 @@
 000-'Finished building libraries'
 000-
 00255-
-04:41:22 Build Finished (took 34s.350ms)
+06:42:22 Build Finished (took 32s.649ms)
 

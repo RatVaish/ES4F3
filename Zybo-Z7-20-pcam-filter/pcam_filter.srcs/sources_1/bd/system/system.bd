@@ -46,16 +46,18 @@
         "m05_couplers": {},
         "m06_couplers": {},
         "m07_couplers": {},
-        "m08_couplers": {}
+        "m08_couplers": {
+          "auto_cc": ""
+        }
       },
       "v_axi4s_vid_out_0": "",
       "video_dynclk": "",
       "vtg": "",
-      "multipix_ctrl_0": "",
-      "singlepix_ctrl_0": "",
       "rst_clk_wiz_0_150M": "",
       "axi_gpio_0": "",
       "smartconnect_0": "",
+      "axi_gpio_1": "",
+      "filter_top_0": "",
       "overlay_core_0": ""
     },
     "interface_ports": {
@@ -3824,11 +3826,61 @@
                 "direction": "I"
               }
             },
+            "components": {
+              "auto_cc": {
+                "vlnv": "xilinx.com:ip:axi_clock_converter:2.1",
+                "ip_revision": "30",
+                "xci_name": "system_auto_cc_0",
+                "xci_path": "ip\\system_auto_cc_0\\system_auto_cc_0.xci",
+                "inst_hier_path": "ps7_0_axi_periph/m08_couplers/auto_cc",
+                "interface_ports": {
+                  "S_AXI": {
+                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                    "mode": "Slave",
+                    "bridges": [
+                      "M_AXI"
+                    ]
+                  }
+                }
+              }
+            },
             "interface_nets": {
-              "m08_couplers_to_m08_couplers": {
+              "auto_cc_to_m08_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_cc/M_AXI"
+                ]
+              },
+              "m08_couplers_to_auto_cc": {
                 "interface_ports": [
                   "S_AXI",
-                  "M_AXI"
+                  "auto_cc/S_AXI"
+                ]
+              }
+            },
+            "nets": {
+              "M_ACLK_1": {
+                "ports": [
+                  "M_ACLK",
+                  "auto_cc/m_axi_aclk"
+                ]
+              },
+              "M_ARESETN_1": {
+                "ports": [
+                  "M_ARESETN",
+                  "auto_cc/m_axi_aresetn"
+                ]
+              },
+              "S_ACLK_1": {
+                "ports": [
+                  "S_ACLK",
+                  "auto_cc/s_axi_aclk"
+                ]
+              },
+              "S_ARESETN_1": {
+                "ports": [
+                  "S_ARESETN",
+                  "auto_cc/s_axi_aresetn"
                 ]
               }
             }
@@ -4237,126 +4289,6 @@
           }
         }
       },
-      "multipix_ctrl_0": {
-        "vlnv": "xilinx.com:module_ref:multipix_ctrl:1.0",
-        "ip_revision": "1",
-        "xci_name": "system_multipix_ctrl_0_0",
-        "xci_path": "ip\\system_multipix_ctrl_0_0\\system_multipix_ctrl_0_0.xci",
-        "inst_hier_path": "multipix_ctrl_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "multipix_ctrl",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "n_rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "sw": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "i_vid_VDE": {
-            "direction": "I"
-          },
-          "i_vid_hsync": {
-            "direction": "I"
-          },
-          "i_vid_vsync": {
-            "direction": "I"
-          },
-          "i_vid_data": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "o_vid_data": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          },
-          "o_vid_VDE": {
-            "direction": "O"
-          },
-          "o_vid_hsync": {
-            "direction": "O"
-          },
-          "o_vid_vsync": {
-            "direction": "O"
-          }
-        }
-      },
-      "singlepix_ctrl_0": {
-        "vlnv": "xilinx.com:module_ref:singlepix_ctrl:1.0",
-        "ip_revision": "1",
-        "xci_name": "system_singlepix_ctrl_0_0",
-        "xci_path": "ip\\system_singlepix_ctrl_0_0\\system_singlepix_ctrl_0_0.xci",
-        "inst_hier_path": "singlepix_ctrl_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "singlepix_ctrl",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "n_rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "sw": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "btn": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "i_vid_VDE": {
-            "direction": "I"
-          },
-          "i_vid_hsync": {
-            "direction": "I"
-          },
-          "i_vid_vsync": {
-            "direction": "I"
-          },
-          "i_vid_data": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "o_vid_data": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          },
-          "o_vid_VDE": {
-            "direction": "O"
-          },
-          "o_vid_hsync": {
-            "direction": "O"
-          },
-          "o_vid_vsync": {
-            "direction": "O"
-          },
-          "o_filter_data": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          }
-        }
-      },
       "rst_clk_wiz_0_150M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "ip_revision": "15",
@@ -4455,11 +4387,86 @@
           }
         }
       },
+      "axi_gpio_1": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "33",
+        "xci_name": "system_axi_gpio_1_0",
+        "xci_path": "ip\\system_axi_gpio_1_0\\system_axi_gpio_1_0.xci",
+        "inst_hier_path": "axi_gpio_1",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "filter_top_0": {
+        "vlnv": "xilinx.com:module_ref:filter_top:1.0",
+        "ip_revision": "1",
+        "xci_name": "system_filter_top_0_0",
+        "xci_path": "ip\\system_filter_top_0_0\\system_filter_top_0_0.xci",
+        "inst_hier_path": "filter_top_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "filter_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "n_rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sw": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "btn": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_vid_VDE": {
+            "direction": "I"
+          },
+          "i_vid_hsync": {
+            "direction": "I"
+          },
+          "i_vid_vsync": {
+            "direction": "I"
+          },
+          "i_vid_data": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "o_vid_data": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "o_vid_VDE": {
+            "direction": "O"
+          },
+          "o_vid_hsync": {
+            "direction": "O"
+          },
+          "o_vid_vsync": {
+            "direction": "O"
+          }
+        }
+      },
       "overlay_core_0": {
         "vlnv": "user.org:user:overlay_core:1.0",
-        "ip_revision": "2114584905",
-        "xci_name": "system_overlay_core_0_13",
-        "xci_path": "ip\\system_overlay_core_0_13\\system_overlay_core_0_13.xci",
+        "ip_revision": "2114584997",
+        "xci_name": "system_overlay_core_0_16",
+        "xci_path": "ip\\system_overlay_core_0_16\\system_overlay_core_0_16.xci",
         "inst_hier_path": "overlay_core_0"
       }
     },
@@ -4608,6 +4615,12 @@
           "axi_gpio_0/S_AXI"
         ]
       },
+      "ps7_0_axi_periph_M08_AXI": {
+        "interface_ports": [
+          "axi_gpio_1/S_AXI",
+          "ps7_0_axi_periph/M08_AXI"
+        ]
+      },
       "rgb2dvi_0_TMDS": {
         "interface_ports": [
           "hdmi_tx",
@@ -4659,8 +4672,13 @@
           "rst_vid_clk_dyn/slowest_sync_clk",
           "v_axi4s_vid_out_0/vid_io_out_clk",
           "vtg/clk",
-          "multipix_ctrl_0/clk",
-          "singlepix_ctrl_0/clk"
+          "filter_top_0/clk"
+        ]
+      },
+      "axi_gpio_1_gpio_io_o": {
+        "ports": [
+          "axi_gpio_1/gpio_io_o",
+          "overlay_core_0/enable"
         ]
       },
       "axi_vdma_0_mm2s_introut": {
@@ -4678,8 +4696,8 @@
       "btn_0_1": {
         "ports": [
           "btn",
-          "singlepix_ctrl_0/btn",
-          "axi_gpio_0/gpio2_io_i"
+          "axi_gpio_0/gpio2_io_i",
+          "filter_top_0/btn"
         ]
       },
       "clk_wiz_0_locked": {
@@ -4737,6 +4755,30 @@
           "MIPI_D_PHY_RX_0/dphy_data_lp_p"
         ]
       },
+      "filter_top_0_o_vid_VDE": {
+        "ports": [
+          "filter_top_0/o_vid_VDE",
+          "rgb2dvi_0/vid_pVDE"
+        ]
+      },
+      "filter_top_0_o_vid_data": {
+        "ports": [
+          "filter_top_0/o_vid_data",
+          "rgb2dvi_0/vid_pData"
+        ]
+      },
+      "filter_top_0_o_vid_hsync": {
+        "ports": [
+          "filter_top_0/o_vid_hsync",
+          "rgb2dvi_0/vid_pHSync"
+        ]
+      },
+      "filter_top_0_o_vid_vsync": {
+        "ports": [
+          "filter_top_0/o_vid_vsync",
+          "rgb2dvi_0/vid_pVSync"
+        ]
+      },
       "mm_clk_150": {
         "ports": [
           "clk_wiz_0/clk_out2",
@@ -4759,31 +4801,8 @@
           "rst_clk_wiz_0_150M/slowest_sync_clk",
           "ps7_0_axi_periph/M08_ACLK",
           "smartconnect_0/aclk1",
+          "axi_gpio_1/s_axi_aclk",
           "overlay_core_0/ap_clk"
-        ]
-      },
-      "multipix_ctrl_0_o_vid_VDE": {
-        "ports": [
-          "multipix_ctrl_0/o_vid_VDE",
-          "rgb2dvi_0/vid_pVDE"
-        ]
-      },
-      "multipix_ctrl_0_o_vid_data": {
-        "ports": [
-          "multipix_ctrl_0/o_vid_data",
-          "rgb2dvi_0/vid_pData"
-        ]
-      },
-      "multipix_ctrl_0_o_vid_hsync": {
-        "ports": [
-          "multipix_ctrl_0/o_vid_hsync",
-          "rgb2dvi_0/vid_pHSync"
-        ]
-      },
-      "multipix_ctrl_0_o_vid_vsync": {
-        "ports": [
-          "multipix_ctrl_0/o_vid_vsync",
-          "rgb2dvi_0/vid_pVSync"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -4847,6 +4866,7 @@
           "ps7_0_axi_periph/M06_ARESETN",
           "axi_gpio_0/s_axi_aresetn",
           "ps7_0_axi_periph/M07_ARESETN",
+          "axi_gpio_1/s_axi_aresetn",
           "overlay_core_0/ap_rst_n"
         ]
       },
@@ -4893,68 +4913,42 @@
           "smartconnect_0/aclk"
         ]
       },
-      "singlepix_ctrl_0_o_vid_VDE": {
-        "ports": [
-          "singlepix_ctrl_0/o_vid_VDE",
-          "multipix_ctrl_0/i_vid_VDE"
-        ]
-      },
-      "singlepix_ctrl_0_o_vid_data": {
-        "ports": [
-          "singlepix_ctrl_0/o_vid_data",
-          "multipix_ctrl_0/i_vid_data"
-        ]
-      },
-      "singlepix_ctrl_0_o_vid_hsync": {
-        "ports": [
-          "singlepix_ctrl_0/o_vid_hsync",
-          "multipix_ctrl_0/i_vid_hsync"
-        ]
-      },
-      "singlepix_ctrl_0_o_vid_vsync": {
-        "ports": [
-          "singlepix_ctrl_0/o_vid_vsync",
-          "multipix_ctrl_0/i_vid_vsync"
-        ]
-      },
       "sw_0_1": {
         "ports": [
           "sw",
-          "multipix_ctrl_0/sw",
-          "singlepix_ctrl_0/sw",
-          "axi_gpio_0/gpio_io_i"
+          "axi_gpio_0/gpio_io_i",
+          "filter_top_0/sw"
         ]
       },
       "v_axi4s_vid_out_0_locked": {
         "ports": [
           "v_axi4s_vid_out_0/locked",
           "rgb2dvi_0/aRst_n",
-          "multipix_ctrl_0/n_rst",
-          "singlepix_ctrl_0/n_rst"
+          "filter_top_0/n_rst"
         ]
       },
       "v_axi4s_vid_out_0_vid_active_video": {
         "ports": [
           "v_axi4s_vid_out_0/vid_active_video",
-          "singlepix_ctrl_0/i_vid_VDE"
+          "filter_top_0/i_vid_VDE"
         ]
       },
       "v_axi4s_vid_out_0_vid_data": {
         "ports": [
           "v_axi4s_vid_out_0/vid_data",
-          "singlepix_ctrl_0/i_vid_data"
+          "filter_top_0/i_vid_data"
         ]
       },
       "v_axi4s_vid_out_0_vid_hsync": {
         "ports": [
           "v_axi4s_vid_out_0/vid_hsync",
-          "singlepix_ctrl_0/i_vid_hsync"
+          "filter_top_0/i_vid_hsync"
         ]
       },
       "v_axi4s_vid_out_0_vid_vsync": {
         "ports": [
           "v_axi4s_vid_out_0/vid_vsync",
-          "singlepix_ctrl_0/i_vid_vsync"
+          "filter_top_0/i_vid_vsync"
         ]
       },
       "v_axi4s_vid_out_0_vtg_ce": {
@@ -5003,6 +4997,11 @@
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x40010000",
+                "range": "64K"
+              },
+              "SEG_axi_gpio_1_Reg": {
+                "address_block": "/axi_gpio_1/S_AXI/Reg",
+                "offset": "0x40020000",
                 "range": "64K"
               },
               "SEG_axi_vdma_0_Reg": {

@@ -20,6 +20,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("stream_out_TLAST", 1, hls_out, 11, "axis", "out_data", 1),
 	Port_Property("stream_out_TID", 1, hls_out, 12, "axis", "out_data", 1),
 	Port_Property("stream_out_TDEST", 1, hls_out, 13, "axis", "out_data", 1),
+	Port_Property("enable", 1, hls_in, 14, "ap_none", "in_data", 1),
 	Port_Property("s_axi_CTRL_AWVALID", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_CTRL_AWREADY", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_CTRL_AWADDR", 6, hls_in, -1, "", "", 1),

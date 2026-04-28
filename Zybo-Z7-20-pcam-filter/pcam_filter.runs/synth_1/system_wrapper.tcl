@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
 set_param bd.open.in_stealth_mode 1
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -147,10 +148,16 @@ set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/E
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_9/bd_919a_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_smartconnect_0_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_13/constraints/overlay_core_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_16/constraints/overlay_core_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

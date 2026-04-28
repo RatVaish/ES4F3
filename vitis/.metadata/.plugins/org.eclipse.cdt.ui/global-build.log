@@ -1,4 +1,4 @@
-04:40:48 **** Incremental Build of project system_wrapper ****
+06:41:49 **** Incremental Build of project system_wrapper ****
 buildplatform.bat 63629 system_wrapper no_domain_build 
 '\gnu\microblaze\lin\bin\' is not recognized as an internal or external command,
 operable program or batch file.
@@ -6,7 +6,7 @@ operable program or batch file.
 operable program or batch file.
 '\gnuwin\bin\' is not recognized as an internal or external command,
 operable program or batch file.
-XSDB Server Channel: tcfchan#22
+XSDB Server Channel: tcfchan#34
 Building the BSP Library for domain  - standalone_ps7_cortexa9_0 on processor ps7_cortexa9_0
 make --no-print-directory seq_libs
 
@@ -456,6 +456,12 @@ In file included from xuartps.h:170:
 xuartps_hw.h:424: note: this is the location of the previous definition
   424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
       | 
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v8_6/src"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+es -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
 In file included from xuartps_options.c:33:
 xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
   450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
@@ -464,21 +470,7 @@ In file included from xuartps.h:170:
 xuartps_hw.h:424: note: this is the location of the previous definition
   424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
       | 
-"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v8_6/src"
-
-make -C ps7_cortexa9_0/libsrc/vtc_v8_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
-IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
-es -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
 In file included from xuartps_sinit.c:34:
-xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
-  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
-      | 
-In file included from xuartps.h:170:
-xuartps_hw.h:424: note: this is the location of the previous definition
-  424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
-      | 
-In file included from xuartps.c:37:
 xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
   450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
       | 
@@ -492,6 +484,14 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm
 RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
 files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
 
+In file included from xuartps.c:37:
+xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
+  450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
+      | 
+In file included from xuartps.h:170:
+xuartps_hw.h:424: note: this is the location of the previous definition
+  424 | #define XUartPs_IsTransmitEmpty(BaseAddress)                     \
+      | 
 In file included from xuartps_selftest.c:32:
 xuartps.h:450: warning: "XUartPs_IsTransmitEmpty" redefined
   450 | #define XUartPs_IsTransmitEmpty(InstancePtr)                            \
@@ -559,7 +559,7 @@ cortexa9_0/lib/xvtc_sinit.o
 
 'Finished building libraries'
 
-04:41:29 **** Incremental Build of configuration Debug for project camera ****
+06:42:28 **** Incremental Build of configuration Debug for project camera ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -583,10 +583,10 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size camera.elf  |tee "camera.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 644464	   3896	  29152	 677512	  a5688	camera.elf
+ 644596	   3912	  29144	 677652	  a5714	camera.elf
 'Finished building: camera.elf.size'
 ' '
-04:41:50 **** Incremental Build of configuration Debug for project camera_system ****
+06:42:47 **** Incremental Build of configuration Debug for project camera_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 63629 C:/Users/ratul/ES4F3/ES4F3/vitis/system_wrapper/export/system_wrapper/system_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/ratul/ES4F3/ES4F3/vitis/camera_system/Debug/system.bif

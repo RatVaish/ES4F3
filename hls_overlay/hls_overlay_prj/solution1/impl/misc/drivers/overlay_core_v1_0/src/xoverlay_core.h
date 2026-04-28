@@ -93,8 +93,6 @@ int XOverlay_core_Release(XOverlay_core *InstancePtr);
 #endif
 
 
-void XOverlay_core_Set_enable(XOverlay_core *InstancePtr, u32 Data);
-u32 XOverlay_core_Get_enable(XOverlay_core *InstancePtr);
 void XOverlay_core_Set_x_pos(XOverlay_core *InstancePtr, u32 Data);
 u32 XOverlay_core_Get_x_pos(XOverlay_core *InstancePtr);
 void XOverlay_core_Set_y_pos(XOverlay_core *InstancePtr, u32 Data);

@@ -29,38 +29,263 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\ap_axi_sdata.h:398:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_char_pixel" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/ratul/ES4F3/ES4F3/hls_overlay/script.tcl:26:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=overlay_core" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:12:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:255:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=stream_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:13:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:256:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=stream_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:14:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=enable bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:257:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=enable" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:15:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:258:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_pos bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:16:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:259:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=y_pos bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:17:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:260:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=height bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:18:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:261:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=width bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:19:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:262:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:20:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:263:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:29:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="overlay_core.cpp:278:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="overlay_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="overlay_core.cpp:358:25" msg_body="Inlining function 'get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)' into 'overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)'">
+        <args Callee="get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Callee-DebugLoc="File overlay_core.cpp Line 216 Column 0" Caller="overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File overlay_core.cpp Line 254 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="overlay_core.cpp:344:25" msg_body="Inlining function 'get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)' into 'overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)'">
+        <args Callee="get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Callee-DebugLoc="File overlay_core.cpp Line 216 Column 0" Caller="overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File overlay_core.cpp Line 254 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="overlay_core.cpp:330:25" msg_body="Inlining function 'get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)' into 'overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)'">
+        <args Callee="get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Callee-DebugLoc="File overlay_core.cpp Line 216 Column 0" Caller="overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File overlay_core.cpp Line 254 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="overlay_core.cpp:316:25" msg_body="Inlining function 'get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)' into 'overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)'">
+        <args Callee="get_char_pixel(char, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Callee-DebugLoc="File overlay_core.cpp Line 216 Column 0" Caller="overlay_core(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File overlay_core.cpp Line 254 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:155:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_0 1 overlay_core overlay_core.cpp:155:0 overlay_core.cpp:278:9font_0">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_0" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_0" varLoc="overlay_core.cpp:155:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_0' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_0" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:165:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_1 1 overlay_core overlay_core.cpp:165:0 overlay_core.cpp:278:9font_1">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_1" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_1" varLoc="overlay_core.cpp:165:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_1' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:175:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_2 1 overlay_core overlay_core.cpp:175:0 overlay_core.cpp:278:9font_2">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_2" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_2" varLoc="overlay_core.cpp:175:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_2' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:185:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_3 1 overlay_core overlay_core.cpp:185:0 overlay_core.cpp:278:9font_3">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_3" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_3" varLoc="overlay_core.cpp:185:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_3' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_3" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:195:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_4 1 overlay_core overlay_core.cpp:195:0 overlay_core.cpp:278:9font_4">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_4" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_4" varLoc="overlay_core.cpp:195:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_4' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_4" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:205:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_9 1 overlay_core overlay_core.cpp:205:0 overlay_core.cpp:278:9font_9">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_9" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_9" varLoc="overlay_core.cpp:205:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_9' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_9" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:105:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_A 1 overlay_core overlay_core.cpp:105:0 overlay_core.cpp:278:9font_A">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_A" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_A" varLoc="overlay_core.cpp:105:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_A' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_A" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:25:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_C 1 overlay_core overlay_core.cpp:25:0 overlay_core.cpp:278:9font_C">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_C" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_C" varLoc="overlay_core.cpp:25:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_C' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_C" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:65:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_G 1 overlay_core overlay_core.cpp:65:0 overlay_core.cpp:278:9font_G">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_G" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_G" varLoc="overlay_core.cpp:65:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_G' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_G" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:145:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_H 1 overlay_core overlay_core.cpp:145:0 overlay_core.cpp:278:9font_H">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_H" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_H" varLoc="overlay_core.cpp:145:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_H' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_H" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:15:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_I 1 overlay_core overlay_core.cpp:15:0 overlay_core.cpp:278:9font_I">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_I" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_I" varLoc="overlay_core.cpp:15:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_I' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_I" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:35:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_K 1 overlay_core overlay_core.cpp:35:0 overlay_core.cpp:278:9font_K">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_K" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_K" varLoc="overlay_core.cpp:35:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_K' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_K" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:125:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_L 1 overlay_core overlay_core.cpp:125:0 overlay_core.cpp:278:9font_L">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_L" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_L" varLoc="overlay_core.cpp:125:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_L' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_L" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:55:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_N 1 overlay_core overlay_core.cpp:55:0 overlay_core.cpp:278:9font_N">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_N" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_N" varLoc="overlay_core.cpp:55:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_N' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_N" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:95:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_R 1 overlay_core overlay_core.cpp:95:0 overlay_core.cpp:278:9font_R">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_R" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_R" varLoc="overlay_core.cpp:95:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_R' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_R" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:135:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_S 1 overlay_core overlay_core.cpp:135:0 overlay_core.cpp:278:9font_S">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_S" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_S" varLoc="overlay_core.cpp:135:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_S' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_S" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:115:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_T 1 overlay_core overlay_core.cpp:115:0 overlay_core.cpp:278:9font_T">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_T" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_T" varLoc="overlay_core.cpp:115:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_T' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_T" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:85:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_U 1 overlay_core overlay_core.cpp:85:0 overlay_core.cpp:278:9font_U">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_U" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_U" varLoc="overlay_core.cpp:85:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_U' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_U" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:5:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_V 1 overlay_core overlay_core.cpp:5:0 overlay_core.cpp:278:9font_V">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_V" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_V" varLoc="overlay_core.cpp:5:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_V' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_V" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:75:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_W 1 overlay_core overlay_core.cpp:75:0 overlay_core.cpp:278:9font_W">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_W" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_W" varLoc="overlay_core.cpp:75:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_W' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_W" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="overlay_core.cpp:45:0" msg_body="array_partition dim=1 type=complete  variable=_ZL6font_Y 1 overlay_core overlay_core.cpp:45:0 overlay_core.cpp:278:9font_Y">
+        <args PragmaFunction="overlay_core" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL6font_Y" PragmaSrcLoc="overlay_core.cpp:278:9" PragmaSrcLoc-DebugLoc="File overlay_core.cpp Line 278 Column 9" PragmaType="array_partition" VarName="font_Y" varLoc="overlay_core.cpp:45:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="overlay_core.cpp:278:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'font_Y' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="font_Y" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:45:0" msg_body="Applying array_partition to '_ZL6font_Y': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_Y"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:75:0" msg_body="Applying array_partition to '_ZL6font_W': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_W"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:5:0" msg_body="Applying array_partition to '_ZL6font_V': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_V"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:85:0" msg_body="Applying array_partition to '_ZL6font_U': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_U"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:115:0" msg_body="Applying array_partition to '_ZL6font_T': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_T"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:135:0" msg_body="Applying array_partition to '_ZL6font_S': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_S"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:95:0" msg_body="Applying array_partition to '_ZL6font_R': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_R"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:55:0" msg_body="Applying array_partition to '_ZL6font_N': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_N"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:125:0" msg_body="Applying array_partition to '_ZL6font_L': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_L"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:35:0" msg_body="Applying array_partition to '_ZL6font_K': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_K"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:15:0" msg_body="Applying array_partition to '_ZL6font_I': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_I"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:145:0" msg_body="Applying array_partition to '_ZL6font_H': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_H"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:65:0" msg_body="Applying array_partition to '_ZL6font_G': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_G"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:25:0" msg_body="Applying array_partition to '_ZL6font_C': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:105:0" msg_body="Applying array_partition to '_ZL6font_A': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_A"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:205:0" msg_body="Applying array_partition to '_ZL6font_9': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:195:0" msg_body="Applying array_partition to '_ZL6font_4': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:185:0" msg_body="Applying array_partition to '_ZL6font_3': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:175:0" msg_body="Applying array_partition to '_ZL6font_2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:165:0" msg_body="Applying array_partition to '_ZL6font_1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="overlay_core.cpp:155:0" msg_body="Applying array_partition to '_ZL6font_0': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL6font_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:225:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:228:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:221:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:229:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:232:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:234:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:230:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:226:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:233:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:224:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:222:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:235:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:227:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:223:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:231:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:241:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:240:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:239:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:238:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:237:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="overlay_core.cpp:236:43" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
 </xilinx:hls_fe_msgs>
 

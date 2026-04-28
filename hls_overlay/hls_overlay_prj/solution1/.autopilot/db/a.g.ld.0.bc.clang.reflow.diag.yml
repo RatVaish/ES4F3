@@ -1,12 +1,1958 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 358, Column: 25 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'get_char_pixel(char, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 216, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'overlay_core(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, ap_uint<1>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 254, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 344, Column: 25 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'get_char_pixel(char, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 216, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'overlay_core(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, ap_uint<1>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 254, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 330, Column: 25 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'get_char_pixel(char, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 216, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'overlay_core(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, ap_uint<1>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 254, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: overlay_core.cpp, Line: 316, Column: 25 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'get_char_pixel(char, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 216, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'overlay_core(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, ap_uint<1>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: overlay_core.cpp, Line: 254, Column: 0 }
+  - String:          ''''
+...
 --- !Failure
 Pass:            reflow-occurrence-inference
 Name:            NonComputableLoopForm
-DebugLoc:        { File: overlay_core.cpp, Line: 28, Column: 22 }
+DebugLoc:        { File: overlay_core.cpp, Line: 277, Column: 23 }
 Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
 Args:            
   - String:          'Could not analyze occurrence information within '''
-  - LoopName:        VITIS_LOOP_28_1
+  - LoopName:        VITIS_LOOP_277_1
   - String:          '''('
-  - LoopLoc:         'overlay_core.cpp:28:22'
+  - LoopLoc:         'overlay_core.cpp:277:23'
   - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 155, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:155:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 165, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:165:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 175, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:175:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 185, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_3'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:185:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_3
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_3
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 195, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_4'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:195:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_4
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_4
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 205, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_9'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:205:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_9
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_9
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 105, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_A'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:105:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_A
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_A
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 25, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_C'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:25:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_C
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_C
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 65, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_G'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:65:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_G
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_G
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 145, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_H'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:145:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_H
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_H
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 15, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_I'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:15:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_I
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_I
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 35, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_K'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:35:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_K
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_K
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 125, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_L'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:125:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_L
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_L
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 55, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_N'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:55:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_N
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_N
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 95, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_R'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:95:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_R
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_R
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 135, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_S'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:135:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_S
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_S
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 115, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_T'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:115:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_T
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_T
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 85, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_U'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:85:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_U
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_U
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 5, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_V'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:5:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_V
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_V
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 75, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_W'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:75:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_W
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_W
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: overlay_core.cpp, Line: 45, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL6font_Y'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  overlay_core
+  - String:          ' '
+  - varLoc:          'overlay_core.cpp:45:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'overlay_core.cpp:278:9'
+    DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+  - VarName:         font_Y
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 278, Column: 9 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            font_Y
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 45, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_Y
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 75, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_W
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 5, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_V
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 85, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_U
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 115, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_T
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 135, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_S
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 95, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_R
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 55, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_N
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 125, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_L
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 35, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_K
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 15, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_I
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 145, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_H
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 65, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_G
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 25, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_C
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 105, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 205, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_9
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 195, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_4
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 185, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 175, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 165, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: overlay_core.cpp, Line: 155, Column: 0 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL6font_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 225, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 225, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 225, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 225, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 228, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 228, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 228, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 228, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 221, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 221, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 221, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 221, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 229, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 229, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 229, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 229, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 232, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 232, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 232, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 232, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 234, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 234, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 234, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 234, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 230, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 230, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 230, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 230, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 226, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 226, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 226, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 226, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 233, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 233, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 233, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 233, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 224, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 224, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 224, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 224, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 222, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 222, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 222, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 222, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 235, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 235, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 235, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 235, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 227, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 227, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 227, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 227, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 223, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 223, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 223, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 223, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 231, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 231, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 231, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 231, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 241, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 241, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 241, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 241, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 240, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 240, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 240, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 240, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 239, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 239, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 239, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 239, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 238, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 238, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 238, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 238, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 237, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 237, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 237, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 237, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 236, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 236, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 236, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: overlay_core.cpp, Line: 236, Column: 43 }
+Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
 ...
