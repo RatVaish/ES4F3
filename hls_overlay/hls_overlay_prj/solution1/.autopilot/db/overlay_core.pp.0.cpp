@@ -9777,77 +9777,6 @@ __attribute__((sdx_kernel("overlay_core", 0))) void overlay_core(
 );
 # 2 "overlay_core.cpp" 2
 
-
-
-const ap_uint<8> font_5x7[26][5] = {
-    {0x7C, 0x12, 0x11, 0x12, 0x7C},
-    {0x7F, 0x49, 0x49, 0x49, 0x36},
-    {0x3E, 0x41, 0x41, 0x41, 0x22},
-    {0x7F, 0x41, 0x41, 0x22, 0x1C},
-    {0x7F, 0x49, 0x49, 0x49, 0x41},
-    {0x7F, 0x09, 0x09, 0x09, 0x01},
-    {0x3E, 0x41, 0x49, 0x49, 0x7A},
-    {0x7F, 0x08, 0x08, 0x08, 0x7F},
-    {0x41, 0x41, 0x7F, 0x41, 0x41},
-    {0x20, 0x40, 0x41, 0x3F, 0x01},
-    {0x7F, 0x08, 0x14, 0x22, 0x41},
-    {0x7F, 0x40, 0x40, 0x40, 0x40},
-    {0x7F, 0x02, 0x0C, 0x02, 0x7F},
-    {0x7F, 0x04, 0x08, 0x10, 0x7F},
-    {0x3E, 0x41, 0x41, 0x41, 0x3E},
-    {0x7F, 0x09, 0x09, 0x09, 0x06},
-    {0x3E, 0x41, 0x51, 0x21, 0x5E},
-    {0x7F, 0x09, 0x19, 0x29, 0x46},
-    {0x46, 0x49, 0x49, 0x49, 0x31},
-    {0x01, 0x01, 0x7F, 0x01, 0x01},
-    {0x3F, 0x40, 0x40, 0x40, 0x3F},
-    {0x1F, 0x20, 0x40, 0x20, 0x1F},
-    {0x3F, 0x40, 0x30, 0x40, 0x3F},
-    {0x63, 0x14, 0x08, 0x14, 0x63},
-    {0x07, 0x08, 0x70, 0x08, 0x07},
-    {0x61, 0x51, 0x49, 0x45, 0x43}
-};
-
-
-bool draw_char(char c, ap_uint<16> x, ap_uint<16> y,
-               ap_uint<16> pixel_x, ap_uint<16> pixel_y) {
-#pragma HLS INLINE
-
-
- if (c >= 'a' && c <= 'z') c -= 32;
-    if (c < 'A' || c > 'Z') return false;
-
-    int char_idx = c - 'A';
-
-
-    ap_uint<16> rel_x = pixel_x - x;
-    ap_uint<16> rel_y = pixel_y - y;
-
-    if (rel_x < 5 && rel_y < 7) {
-
-        ap_uint<8> col = font_5x7[char_idx][rel_x];
-        return (col & (1 << rel_y)) != 0;
-    }
-
-    return false;
-}
-
-
-bool draw_text(const char* text, int text_len,
-               ap_uint<16> start_x, ap_uint<16> start_y,
-               ap_uint<16> pixel_x, ap_uint<16> pixel_y) {
-#pragma HLS INLINE
-
- VITIS_LOOP_64_1: for (int i = 0; i < text_len; i++) {
-#pragma HLS UNROLL factor=2
- ap_uint<16> char_x = start_x + (i * 6);
-        if (draw_char(text[i], char_x, start_y, pixel_x, pixel_y)) {
-            return true;
-        }
-    }
-    return false;
-}
-
 __attribute__((sdx_kernel("overlay_core", 0))) void overlay_core(
     hls::stream<pixel_data>& stream_in,
     hls::stream<pixel_data>& stream_out,
@@ -9859,7 +9788,7 @@ __attribute__((sdx_kernel("overlay_core", 0))) void overlay_core(
 ) {
 #line 26 "C:/Users/ratul/ES4F3/ES4F3/hls_overlay/script.tcl"
 #pragma HLSDIRECTIVE TOP name=overlay_core
-# 82 "overlay_core.cpp"
+# 11 "overlay_core.cpp"
 
 #pragma HLS INTERFACE axis port=stream_in
 #pragma HLS INTERFACE axis port=stream_out
@@ -9873,12 +9802,11 @@ __attribute__((sdx_kernel("overlay_core", 0))) void overlay_core(
 
  static ap_uint<16> row = 0;
     static ap_uint<16> col = 0;
-    static ap_uint<1> enable_reg = 0;
 
     pixel_data pixel_in;
     pixel_data pixel_out;
 
-    VITIS_LOOP_100_1: while (1) {
+    VITIS_LOOP_28_1: while (1) {
 #pragma HLS PIPELINE II=1
 
  stream_in >> pixel_in;
@@ -9886,39 +9814,14 @@ __attribute__((sdx_kernel("overlay_core", 0))) void overlay_core(
         if (pixel_in.user == 1) {
             row = 0;
             col = 0;
-            enable_reg = enable;
         }
 
         pixel_out = pixel_in;
 
 
-        if (enable_reg == 1) {
-
-            if (row >= 50 && row < 150 &&
-                col >= 50 && col < 550) {
-
-                ap_uint<8> r = pixel_in.data(23, 16) >> 1;
-                ap_uint<8> g = pixel_in.data(15, 8) >> 1;
-                ap_uint<8> b = pixel_in.data(7, 0) >> 1;
-                pixel_out.data = (r << 16) | (g << 8) | b;
-            }
-
-
-            if ((row >= 50 && row < 55 && col >= 50 && col < 550) ||
-                (row >= 145 && row < 150 && col >= 50 && col < 550) ||
-                (col >= 50 && col < 55 && row >= 50 && row < 150) ||
-                (col >= 545 && col < 550 && row >= 50 && row < 150)) {
-                pixel_out.data = 0xFFFFFF;
-            }
-
-
-            if (row >= 70 && row < 90 && col >= 70 && col < 530) {
-                pixel_out.data = 0xFFFFFF;
-            }
-
-
-            if (row >= 110 && row < 130 && col >= 70 && col < 530) {
-                pixel_out.data = 0xFFFFFF;
+        if (enable == 1) {
+            if (row < 100 && col < 500) {
+                pixel_out.data = 0xFF0000;
             }
         }
 

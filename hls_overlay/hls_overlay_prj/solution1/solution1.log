@@ -11,59 +11,59 @@ INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1510] Running: create_clock -period 6.667 -name default 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.24 seconds; current allocated memory: 143.418 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.227 seconds; current allocated memory: 139.031 MB.
 INFO: [HLS 200-10] Analyzing design file 'overlay_core.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.55 seconds; current allocated memory: 146.523 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.617 seconds; current allocated memory: 142.020 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 2,589 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 223 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 183 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 280 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 294 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 280 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 137 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 120 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.307 seconds; current allocated memory: 148.027 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 148.031 MB.
+INFO: [HLS 200-1995] There were 542 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 152 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 127 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 127 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 127 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 127 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 239 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 253 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 239 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 141 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 141 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 96 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 85 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.212 seconds; current allocated memory: 143.754 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 143.758 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.202 seconds; current allocated memory: 152.562 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.196 seconds; current allocated memory: 148.059 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 154.613 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 176.320 MB.
-WARNING: [XFORM 203-561] 'VITIS_LOOP_100_1' (overlay_core.cpp:100:23) in function 'overlay_core' is an infinite loop.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 176.332 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 149.434 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 170.738 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_28_1' (overlay_core.cpp:28:22) in function 'overlay_core' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 170.750 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'overlay_core' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'overlay_core' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_100_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_100_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_28_1'
 WARNING: [HLS 200-871] Estimated clock period (5.275 ns) exceeds the target (target clock period: 6.667 ns, clock uncertainty: 1.800 ns, effective delay budget: 4.867 ns).
 WARNING: [HLS 200-1016] The critical path in module 'overlay_core' consists of the following:
-	'load' operation 16 bit ('p_load25', overlay_core.cpp:105) on local variable 'empty' [64]  (0.000 ns)
-	'select' operation 16 bit ('select_ln105_3', overlay_core.cpp:105) [127]  (0.805 ns)
-	'add' operation 16 bit ('add_ln149', overlay_core.cpp:149) [128]  (2.077 ns)
-	'select' operation 16 bit ('select_ln147_1', overlay_core.cpp:147) [132]  (0.805 ns)
-	'store' operation 0 bit ('empty_write_ln147', overlay_core.cpp:147) of variable 'select_ln147_1', overlay_core.cpp:147 on local variable 'empty' [134]  (1.588 ns)
+	'load' operation 16 bit ('p_load25', overlay_core.cpp:33) on local variable 'empty' [85]  (0.000 ns)
+	'select' operation 16 bit ('select_ln33', overlay_core.cpp:33) [89]  (0.805 ns)
+	'add' operation 16 bit ('add_ln52', overlay_core.cpp:52) [90]  (2.077 ns)
+	'select' operation 16 bit ('select_ln50_1', overlay_core.cpp:50) [94]  (0.805 ns)
+	'store' operation 0 bit ('empty_write_ln50', overlay_core.cpp:50) of variable 'select_ln50_1', overlay_core.cpp:50 on local variable 'empty' [96]  (1.588 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 176.332 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.693 seconds; current allocated memory: 170.750 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 176.332 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 170.750 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'overlay_core' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -90,15 +90,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'overlay_core/width' to 's_
 INFO: [RTGEN 206-500] Setting interface mode on function 'overlay_core' to 's_axilite & ap_ctrl_none'.
 INFO: [RTGEN 206-100] Bundling port 'enable', 'x_pos', 'y_pos', 'height', 'width' and 'return' to AXI-Lite port CTRL.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'overlay_core'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.639 seconds; current allocated memory: 178.719 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.009 seconds; current allocated memory: 184.379 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.305 seconds; current allocated memory: 187.438 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.629 seconds; current allocated memory: 171.762 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.868 seconds; current allocated memory: 176.516 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.33 seconds; current allocated memory: 179.391 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for overlay_core.
 INFO: [VLOG 209-307] Generating Verilog RTL for overlay_core.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 189.57 MHz
-INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:24; Allocated memory: 44.355 MB.
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:24; Allocated memory: 40.645 MB.
 INFO: [HLS 200-1510] Running: export_design -format ip_catalog -display_name Easter Egg Overlay -description AXI-Stream video overlay with configurable text display -vendor user.org -library user -version 1.0 -taxonomy /Video_Processing 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 INFO: [HLS 200-802] Generated output file hls_overlay_prj/solution1/impl/export.zip
-INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:29; Allocated memory: 4.191 MB.
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:32; Allocated memory: 3.766 MB.

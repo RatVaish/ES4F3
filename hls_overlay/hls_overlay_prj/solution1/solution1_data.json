@@ -137,7 +137,7 @@
     "Name": "overlay_core",
     "Version": "1.0",
     "DisplayName": "Easter Egg Overlay",
-    "Revision": "2114584712",
+    "Revision": "2114584905",
     "Description": "AXI-Stream video overlay with configurable text display",
     "Taxonomy": "\/Video_Processing",
     "AutoFamilySupport": "",
@@ -602,7 +602,7 @@
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "overlay_core",
-      "BindInstances": "select_ln105_fu_266_p3 select_ln105_1_fu_279_p3 add_ln116_fu_286_p2 icmp_ln116_fu_360_p2 select_ln105_2_fu_292_p3 add_ln116_1_fu_299_p2 icmp_ln116_1_fu_365_p2 and_ln116_fu_370_p2 icmp_ln126_fu_389_p2 and_ln126_fu_394_p2 add_ln127_fu_400_p2 icmp_ln127_fu_405_p2 icmp_ln128_fu_411_p2 and_ln127_fu_416_p2 and_ln127_1_fu_422_p2 or_ln127_fu_428_p2 add_ln129_fu_434_p2 icmp_ln129_fu_439_p2 and_ln129_fu_478_p2 add_ln134_fu_445_p2 icmp_ln134_fu_450_p2 add_ln134_1_fu_456_p2 icmp_ln134_1_fu_461_p2 add_ln139_fu_467_p2 icmp_ln139_fu_472_p2 or_ln139_fu_482_p2 and_ln139_fu_486_p2 pixel_out_data_3_fu_491_p3 add_ln146_fu_305_p2 select_ln105_3_fu_311_p3 add_ln149_fu_318_p2 select_ln147_2_fu_324_p3 or_ln147_fu_331_p2 select_ln147_fu_335_p3 select_ln147_1_fu_343_p3 CTRL_s_axi_U"
+      "BindInstances": "icmp_ln42_fu_217_p2 icmp_ln42_1_fu_223_p2 and_ln42_1_fu_229_p2 or_ln42_fu_235_p2 pixel_out_data_2_fu_240_p3 add_ln49_fu_253_p2 select_ln33_fu_259_p3 add_ln52_fu_266_p2 select_ln50_2_fu_272_p3 or_ln50_fu_279_p2 select_ln50_fu_283_p3 select_ln50_1_fu_291_p3 CTRL_s_axi_U"
     },
     "Info": {"overlay_core": {
         "FunctionProtocol": "ap_ctrl_none",
@@ -626,22 +626,22 @@
           "Estimate": "5.275"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_100_1",
+            "Name": "VITIS_LOOP_28_1",
             "TripCount": "inf",
             "Latency": "",
             "PipelineII": "1",
-            "PipelineDepth": "6"
+            "PipelineDepth": "4"
           }],
         "Area": {
           "BRAM_18K": "0",
           "AVAIL_BRAM": "280",
           "UTIL_BRAM": "0",
-          "FF": "1018",
+          "FF": "636",
           "AVAIL_FF": "106400",
           "UTIL_FF": "~0",
-          "LUT": "1107",
+          "LUT": "641",
           "AVAIL_LUT": "53200",
-          "UTIL_LUT": "2",
+          "UTIL_LUT": "1",
           "DSP": "0",
           "AVAIL_DSP": "220",
           "UTIL_DSP": "0",
@@ -654,7 +654,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2026-04-28 01:32:10 +0100",
+    "Time": "2026-04-28 04:45:05 +0100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.1"
   }

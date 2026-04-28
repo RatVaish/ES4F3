@@ -179,8 +179,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "height", "Type" : "None", "Direction" : "I"},
 			{"Name" : "width", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_100_1", "PipelineType" : "pipeline",
-				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter5", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "PreState" : ["ap_ST_fsm_state1"], "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter5", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "PostState" : []}}]},
+			{"Name" : "VITIS_LOOP_28_1", "PipelineType" : "pipeline",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "PreState" : ["ap_ST_fsm_state1"], "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "PostState" : []}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CTRL_s_axi_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_stream_in_V_data_V_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_stream_in_V_keep_V_U", "Parent" : "0"},
@@ -207,13 +207,13 @@ set ArgLastReadFirstWriteLatency {
 		stream_in_V_last_V {Type I LastRead 1 FirstWrite -1}
 		stream_in_V_id_V {Type I LastRead 1 FirstWrite -1}
 		stream_in_V_dest_V {Type I LastRead 1 FirstWrite -1}
-		stream_out_V_data_V {Type O LastRead -1 FirstWrite 5}
-		stream_out_V_keep_V {Type O LastRead -1 FirstWrite 5}
-		stream_out_V_strb_V {Type O LastRead -1 FirstWrite 5}
-		stream_out_V_user_V {Type O LastRead -1 FirstWrite 5}
-		stream_out_V_last_V {Type O LastRead -1 FirstWrite 5}
-		stream_out_V_id_V {Type O LastRead -1 FirstWrite 5}
-		stream_out_V_dest_V {Type O LastRead -1 FirstWrite 5}
+		stream_out_V_data_V {Type O LastRead -1 FirstWrite 3}
+		stream_out_V_keep_V {Type O LastRead -1 FirstWrite 3}
+		stream_out_V_strb_V {Type O LastRead -1 FirstWrite 3}
+		stream_out_V_user_V {Type O LastRead -1 FirstWrite 3}
+		stream_out_V_last_V {Type O LastRead -1 FirstWrite 3}
+		stream_out_V_id_V {Type O LastRead -1 FirstWrite 3}
+		stream_out_V_dest_V {Type O LastRead -1 FirstWrite 3}
 		enable {Type I LastRead 0 FirstWrite -1}
 		x_pos {Type I LastRead -1 FirstWrite -1}
 		y_pos {Type I LastRead -1 FirstWrite -1}

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'overlay_core'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 28 01:32:07 2026
+    * Date:           Tue Apr 28 04:45:02 2026
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        hls_overlay_prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,13 +15,13 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
-    |       Modules       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |            |           |     |
-    |       & Loops       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |    LUT    | URAM|
-    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
-    |+ overlay_core       |  Timing|  -0.41|        -|       -|         -|        -|     -|        no|     -|   -|  1018 (~0%)|  1107 (2%)|    -|
-    | o VITIS_LOOP_100_1  |       -|   4.87|        -|       -|         6|        1|     -|       yes|     -|   -|           -|          -|    -|
-    +---------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
+    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |       Modules      |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |           |          |     |
+    |       & Loops      |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
+    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |+ overlay_core      |  Timing|  -0.41|        -|       -|         -|        -|     -|        no|     -|   -|  636 (~0%)|  641 (1%)|    -|
+    | o VITIS_LOOP_28_1  |       -|   4.87|        -|       -|         4|        1|     -|       yes|     -|   -|          -|         -|    -|
+    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
 
 
 ================================================================
@@ -100,41 +100,18 @@
 | Name                         | DSP | Pragma | Variable         | Op     | Impl     | Latency |
 +------------------------------+-----+--------+------------------+--------+----------+---------+
 | + overlay_core               | 0   |        |                  |        |          |         |
-|   select_ln105_fu_266_p3     |     |        | select_ln105     | select | auto_sel | 0       |
-|   select_ln105_1_fu_279_p3   |     |        | select_ln105_1   | select | auto_sel | 0       |
-|   add_ln116_fu_286_p2        |     |        | add_ln116        | add    | fabric   | 0       |
-|   icmp_ln116_fu_360_p2       |     |        | icmp_ln116       | setlt  | auto     | 0       |
-|   select_ln105_2_fu_292_p3   |     |        | select_ln105_2   | select | auto_sel | 0       |
-|   add_ln116_1_fu_299_p2      |     |        | add_ln116_1      | add    | fabric   | 0       |
-|   icmp_ln116_1_fu_365_p2     |     |        | icmp_ln116_1     | setlt  | auto     | 0       |
-|   and_ln116_fu_370_p2        |     |        | and_ln116        | and    | auto     | 0       |
-|   icmp_ln126_fu_389_p2       |     |        | icmp_ln126       | setlt  | auto     | 0       |
-|   and_ln126_fu_394_p2        |     |        | and_ln126        | and    | auto     | 0       |
-|   add_ln127_fu_400_p2        |     |        | add_ln127        | add    | fabric   | 0       |
-|   icmp_ln127_fu_405_p2       |     |        | icmp_ln127       | setlt  | auto     | 0       |
-|   icmp_ln128_fu_411_p2       |     |        | icmp_ln128       | setlt  | auto     | 0       |
-|   and_ln127_fu_416_p2        |     |        | and_ln127        | and    | auto     | 0       |
-|   and_ln127_1_fu_422_p2      |     |        | and_ln127_1      | and    | auto     | 0       |
-|   or_ln127_fu_428_p2         |     |        | or_ln127         | or     | auto     | 0       |
-|   add_ln129_fu_434_p2        |     |        | add_ln129        | add    | fabric   | 0       |
-|   icmp_ln129_fu_439_p2       |     |        | icmp_ln129       | setlt  | auto     | 0       |
-|   and_ln129_fu_478_p2        |     |        | and_ln129        | and    | auto     | 0       |
-|   add_ln134_fu_445_p2        |     |        | add_ln134        | add    | fabric   | 0       |
-|   icmp_ln134_fu_450_p2       |     |        | icmp_ln134       | setlt  | auto     | 0       |
-|   add_ln134_1_fu_456_p2      |     |        | add_ln134_1      | add    | fabric   | 0       |
-|   icmp_ln134_1_fu_461_p2     |     |        | icmp_ln134_1     | setlt  | auto     | 0       |
-|   add_ln139_fu_467_p2        |     |        | add_ln139        | add    | fabric   | 0       |
-|   icmp_ln139_fu_472_p2       |     |        | icmp_ln139       | setlt  | auto     | 0       |
-|   or_ln139_fu_482_p2         |     |        | or_ln139         | or     | auto     | 0       |
-|   and_ln139_fu_486_p2        |     |        | and_ln139        | and    | auto     | 0       |
-|   pixel_out_data_3_fu_491_p3 |     |        | pixel_out_data_3 | select | auto_sel | 0       |
-|   add_ln146_fu_305_p2        |     |        | add_ln146        | add    | fabric   | 0       |
-|   select_ln105_3_fu_311_p3   |     |        | select_ln105_3   | select | auto_sel | 0       |
-|   add_ln149_fu_318_p2        |     |        | add_ln149        | add    | fabric   | 0       |
-|   select_ln147_2_fu_324_p3   |     |        | select_ln147_2   | select | auto_sel | 0       |
-|   or_ln147_fu_331_p2         |     |        | or_ln147         | or     | auto     | 0       |
-|   select_ln147_fu_335_p3     |     |        | select_ln147     | select | auto_sel | 0       |
-|   select_ln147_1_fu_343_p3   |     |        | select_ln147_1   | select | auto_sel | 0       |
+|   icmp_ln42_fu_217_p2        |     |        | icmp_ln42        | setlt  | auto     | 0       |
+|   icmp_ln42_1_fu_223_p2      |     |        | icmp_ln42_1      | setlt  | auto     | 0       |
+|   and_ln42_1_fu_229_p2       |     |        | and_ln42_1       | and    | auto     | 0       |
+|   or_ln42_fu_235_p2          |     |        | or_ln42          | or     | auto     | 0       |
+|   pixel_out_data_2_fu_240_p3 |     |        | pixel_out_data_2 | select | auto_sel | 0       |
+|   add_ln49_fu_253_p2         |     |        | add_ln49         | add    | fabric   | 0       |
+|   select_ln33_fu_259_p3      |     |        | select_ln33      | select | auto_sel | 0       |
+|   add_ln52_fu_266_p2         |     |        | add_ln52         | add    | fabric   | 0       |
+|   select_ln50_2_fu_272_p3    |     |        | select_ln50_2    | select | auto_sel | 0       |
+|   or_ln50_fu_279_p2          |     |        | or_ln50          | or     | auto     | 0       |
+|   select_ln50_fu_283_p3      |     |        | select_ln50      | select | auto_sel | 0       |
+|   select_ln50_1_fu_291_p3    |     |        | select_ln50_1    | select | auto_sel | 0       |
 +------------------------------+-----+--------+------------------+--------+----------+---------+
 
 
@@ -157,19 +134,16 @@
 +-----------+-----------------------------------+-------------------------------------------------+
 | Type      | Options                           | Location                                        |
 +-----------+-----------------------------------+-------------------------------------------------+
-| inline    |                                   | overlay_core.cpp:37 in draw_char                |
-| inline    |                                   | overlay_core.cpp:62 in draw_text                |
-| unroll    | factor=2                          | overlay_core.cpp:65 in draw_text                |
-| interface | axis port=stream_in               | overlay_core.cpp:83 in overlay_core, stream_in  |
-| interface | axis port=stream_out              | overlay_core.cpp:84 in overlay_core, stream_out |
-| interface | s_axilite port=enable bundle=CTRL | overlay_core.cpp:85 in overlay_core, enable     |
-| interface | s_axilite port=x_pos bundle=CTRL  | overlay_core.cpp:86 in overlay_core, x_pos      |
-| interface | s_axilite port=y_pos bundle=CTRL  | overlay_core.cpp:87 in overlay_core, y_pos      |
-| interface | s_axilite port=height bundle=CTRL | overlay_core.cpp:88 in overlay_core, height     |
-| interface | s_axilite port=width bundle=CTRL  | overlay_core.cpp:89 in overlay_core, width      |
-| interface | s_axilite port=return bundle=CTRL | overlay_core.cpp:90 in overlay_core, return     |
-| interface | ap_ctrl_none port=return          | overlay_core.cpp:91 in overlay_core, return     |
-| pipeline  | II=1                              | overlay_core.cpp:101 in overlay_core            |
+| interface | axis port=stream_in               | overlay_core.cpp:12 in overlay_core, stream_in  |
+| interface | axis port=stream_out              | overlay_core.cpp:13 in overlay_core, stream_out |
+| interface | s_axilite port=enable bundle=CTRL | overlay_core.cpp:14 in overlay_core, enable     |
+| interface | s_axilite port=x_pos bundle=CTRL  | overlay_core.cpp:15 in overlay_core, x_pos      |
+| interface | s_axilite port=y_pos bundle=CTRL  | overlay_core.cpp:16 in overlay_core, y_pos      |
+| interface | s_axilite port=height bundle=CTRL | overlay_core.cpp:17 in overlay_core, height     |
+| interface | s_axilite port=width bundle=CTRL  | overlay_core.cpp:18 in overlay_core, width      |
+| interface | s_axilite port=return bundle=CTRL | overlay_core.cpp:19 in overlay_core, return     |
+| interface | ap_ctrl_none port=return          | overlay_core.cpp:20 in overlay_core, return     |
+| pipeline  | II=1                              | overlay_core.cpp:29 in overlay_core             |
 +-----------+-----------------------------------+-------------------------------------------------+
 
 

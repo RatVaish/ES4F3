@@ -1,12 +1,12 @@
 --- !Failure
 Pass:            reflow-occurrence-inference
 Name:            NonComputableLoopForm
-DebugLoc:        { File: overlay_core.cpp, Line: 100, Column: 23 }
+DebugLoc:        { File: overlay_core.cpp, Line: 28, Column: 22 }
 Function:        _Z12overlay_coreRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_S2_ILi1EES2_ILi16EES8_S8_S8_
 Args:            
   - String:          'Could not analyze occurrence information within '''
-  - LoopName:        VITIS_LOOP_100_1
+  - LoopName:        VITIS_LOOP_28_1
   - String:          '''('
-  - LoopLoc:         'overlay_core.cpp:100:23'
+  - LoopLoc:         'overlay_core.cpp:28:22'
   - String:          ') . Requires loop in simplify form and with single exit.'
 ...

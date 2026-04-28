@@ -29,3 +29,9 @@ platform config -updatehw {C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/sys
 platform generate -domains 
 platform config -updatehw {C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/system_wrapper.xsa}
 platform generate -domains 
+platform config -updatehw {C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/system_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/system_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/system_wrapper.xsa}
+platform generate -domains 

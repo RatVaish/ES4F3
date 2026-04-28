@@ -1,0 +1,6 @@
+set_property SRC_FILE_INFO {cfile:c:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_13/constraints/overlay_core_ooc.xdc rfile:../../../../../pcam_filter.gen/sources_1/bd/system/ip/system_overlay_core_0_13/constraints/overlay_core_ooc.xdc id:1 order:EARLY scoped_inst:U0} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.runs/system_overlay_core_0_13_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:5 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
+create_clock -period 6.667 -name ap_clk [get_ports ap_clk]
+set_property src_info {type:XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP_HIERARCHY SOFT [get_cells U0]

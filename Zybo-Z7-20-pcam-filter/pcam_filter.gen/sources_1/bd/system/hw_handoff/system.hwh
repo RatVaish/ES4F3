@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 27 22:15:15 2026" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 28 04:48:10 2026" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -5652,9 +5652,9 @@
             <CONNECTION INSTANCE="video_dynclk" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="vtg" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
-            <CONNECTION INSTANCE="smartconnect_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ACLK"/>
+            <CONNECTION INSTANCE="smartconnect_0" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="150000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
@@ -5676,8 +5676,8 @@
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_aclk"/>
             <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_clk_wiz_0_150M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="smartconnect_0" PORT="aclk1"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M08_ACLK"/>
+            <CONNECTION INSTANCE="smartconnect_0" PORT="aclk1"/>
             <CONNECTION INSTANCE="overlay_core_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
@@ -5762,7 +5762,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2114584502" FULLNAME="/overlay_core_0" HWVERSION="1.0" INSTANCE="overlay_core_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="overlay_core" VLNV="user.org:user:overlay_core:1.0">
+    <MODULE COREREVISION="2114584905" FULLNAME="/overlay_core_0" HWVERSION="1.0" INSTANCE="overlay_core_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="overlay_core" VLNV="user.org:user:overlay_core:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_CTRL" NAME="Reg" RANGE="65536" USAGE="register">
@@ -5923,7 +5923,7 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CTRL_ADDR_WIDTH" VALUE="6"/>
         <PARAMETER NAME="C_S_AXI_CTRL_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_overlay_core_0_6"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_overlay_core_0_13"/>
         <PARAMETER NAME="II" VALUE="undef"/>
         <PARAMETER NAME="clk_period" VALUE="6.667"/>
         <PARAMETER NAME="combinational" VALUE="0"/>

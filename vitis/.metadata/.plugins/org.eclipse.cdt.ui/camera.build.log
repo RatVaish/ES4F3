@@ -1,10 +1,30 @@
-01:21:17 **** Incremental Build of configuration Debug for project camera ****
+04:41:29 **** Incremental Build of configuration Debug for project camera ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/ov5640/OV5640.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640/OV5640.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/ratul/ES4F3/ES4F3/vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ov5640/OV5640.d" -MT"src/ov5640/OV5640.o" -o "src/ov5640/OV5640.o" "../src/ov5640/OV5640.cpp"
+'Finished building: ../src/ov5640/OV5640.cpp'
+' '
+'Building file: ../src/main_test.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/ratul/ES4F3/ES4F3/vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main_test.d" -MT"src/main_test.o" -o "src/main_test.o" "../src/main_test.cc"
+'Finished building: ../src/main_test.cc'
+' '
+'Building target: camera.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ratul/ES4F3/ES4F3/vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "camera.elf"  ./src/ov5640/OV5640.o  ./src/main_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: camera.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size camera.elf  |tee "camera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 644464	   3896	  29152	 677512	  a5688	camera.elf
+'Finished building: camera.elf.size'
+' '
 
-01:21:17 Build Finished (took 575ms)
+04:41:36 Build Finished (took 7s.375ms)
 

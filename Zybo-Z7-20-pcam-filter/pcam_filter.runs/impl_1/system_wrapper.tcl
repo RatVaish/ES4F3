@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -106,6 +105,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
+  set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
@@ -116,7 +116,7 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.cache/wt [current_project]
   set_property parent.project_path C:/Users/ratul/ES4F3/ES4F3/Zybo-Z7-20-pcam-filter/pcam_filter.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/ratul/ES4F3/ES4F3/ip_sources/repo
+  c:/Users/ratul/ES4F3/ES4F3/ip_sources/repo
   C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip
 } [current_project]
   update_ip_catalog

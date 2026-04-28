@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Apr 28 01:32:14 2026
-# Process ID: 26628
+# Start of session at: Tue Apr 28 04:45:09 2026
+# Process ID: 18604
 # Current directory: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/vivado.log
@@ -17,9 +17,9 @@
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :6387 MB
-# Swap memory       :18610 MB
-# Total Virtual     :24997 MB
-# Available Virtual :5929 MB
+# Swap memory       :18608 MB
+# Total Virtual     :24995 MB
+# Available Virtual :6178 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
 INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/solution1_data.json outdir=C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip srcdir=C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1 sort_interfaces_ports=false
@@ -27,7 +27,7 @@ INFO: Copied 1 ipmisc file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_over
 INFO: Copied 5 verilog file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/verilog
 INFO: Copied 3 vhdl file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/vhdl
 INFO: Copied 10 swdriver file(s) to C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 504.352 ; gain = 192.121
+ipx::create_core: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 505.543 ; gain = 193.203
 INFO: Import ports from HDL: C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/hdl/vhdl/overlay_core.vhd (overlay_core)
 INFO: Add axi4lite interface s_axi_CTRL
 INFO: Add clock interface ap_clk
@@ -42,4 +42,4 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/component.xml
 INFO: Created IP archive C:/Users/ratul/ES4F3/ES4F3/hls_overlay/hls_overlay_prj/solution1/impl/ip/user_org_user_overlay_core_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 01:32:38 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 04:45:36 2026...

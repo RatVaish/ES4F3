@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Mon Apr 27 22:13:24 2026
+--Date        : Tue Apr 28 04:47:55 2026
 --Host        : LAPTOP-AMKTF75G running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -4259,6 +4259,31 @@ architecture STRUCTURE of system is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component system_rst_clk_wiz_0_150M_0;
+  component system_axi_gpio_0_0 is
+  port (
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awready : out STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_wready : out STD_LOGIC;
+    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bvalid : out STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arready : out STD_LOGIC;
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rvalid : out STD_LOGIC;
+    s_axi_rready : in STD_LOGIC;
+    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio2_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component system_axi_gpio_0_0;
   component system_smartconnect_0_0 is
   port (
     aclk : in STD_LOGIC;
@@ -4303,32 +4328,7 @@ architecture STRUCTURE of system is
     M00_AXI_rready : out STD_LOGIC
   );
   end component system_smartconnect_0_0;
-  component system_axi_gpio_0_0 is
-  port (
-    s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_wready : out STD_LOGIC;
-    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_bvalid : out STD_LOGIC;
-    s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    s_axi_arvalid : in STD_LOGIC;
-    s_axi_arready : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_rvalid : out STD_LOGIC;
-    s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio2_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component system_axi_gpio_0_0;
-  component system_overlay_core_0_6 is
+  component system_overlay_core_0_13 is
   port (
     s_axi_CTRL_ARADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
     s_axi_CTRL_ARREADY : out STD_LOGIC;
@@ -4368,7 +4368,7 @@ architecture STRUCTURE of system is
     stream_out_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
     stream_out_TVALID : out STD_LOGIC
   );
-  end component system_overlay_core_0_6;
+  end component system_overlay_core_0_13;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TLAST : STD_LOGIC;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TREADY : STD_LOGIC;
@@ -5299,7 +5299,7 @@ multipix_ctrl_0: component system_multipix_ctrl_0_0
       o_vid_vsync => multipix_ctrl_0_o_vid_vsync,
       sw(3 downto 0) => sw_0_1(3 downto 0)
     );
-overlay_core_0: component system_overlay_core_0_6
+overlay_core_0: component system_overlay_core_0_13
      port map (
       ap_clk => mm_clk_150,
       ap_rst_n => rst_clk_wiz_0_50M_peripheral_aresetn(0),

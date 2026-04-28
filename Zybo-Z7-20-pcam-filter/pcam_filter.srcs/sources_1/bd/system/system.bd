@@ -7,7 +7,8 @@
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.1"
+      "tool_version": "2024.1",
+      "validated": "true"
     },
     "design_tree": {
       "AXI_BayerToRGB_1": "",
@@ -54,8 +55,8 @@
       "singlepix_ctrl_0": "",
       "rst_clk_wiz_0_150M": "",
       "axi_gpio_0": "",
-      "overlay_core_0": "",
-      "smartconnect_0": ""
+      "smartconnect_0": "",
+      "overlay_core_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -4387,13 +4388,6 @@
           }
         }
       },
-      "overlay_core_0": {
-        "vlnv": "user.org:user:overlay_core:1.0",
-        "ip_revision": "2114584712",
-        "xci_name": "system_overlay_core_0_9",
-        "xci_path": "ip\\system_overlay_core_0_9\\system_overlay_core_0_9.xci",
-        "inst_hier_path": "overlay_core_0"
-      },
       "smartconnect_0": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "ip_revision": "23",
@@ -4460,6 +4454,13 @@
             }
           }
         }
+      },
+      "overlay_core_0": {
+        "vlnv": "user.org:user:overlay_core:1.0",
+        "ip_revision": "2114584905",
+        "xci_name": "system_overlay_core_0_13",
+        "xci_path": "ip\\system_overlay_core_0_13\\system_overlay_core_0_13.xci",
+        "inst_hier_path": "overlay_core_0"
       }
     },
     "interface_nets": {
@@ -4525,8 +4526,8 @@
       },
       "overlay_core_0_stream_out": {
         "interface_ports": [
-          "axi_vdma_0/S_AXIS_S2MM",
-          "overlay_core_0/stream_out"
+          "overlay_core_0/stream_out",
+          "axi_vdma_0/S_AXIS_S2MM"
         ]
       },
       "processing_system7_0_DDR": {
@@ -4757,8 +4758,8 @@
           "v_axi4s_vid_out_0/aclk",
           "rst_clk_wiz_0_150M/slowest_sync_clk",
           "ps7_0_axi_periph/M08_ACLK",
-          "overlay_core_0/ap_clk",
-          "smartconnect_0/aclk1"
+          "smartconnect_0/aclk1",
+          "overlay_core_0/ap_clk"
         ]
       },
       "multipix_ctrl_0_o_vid_VDE": {
