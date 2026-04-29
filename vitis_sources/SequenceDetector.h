@@ -20,29 +20,18 @@ public:
     
     SequenceDetector() : state_(IDLE), triggered_this_cycle_(false) {
         
-        xil_printf("\r\n=== Initializing Sequence Detector ===\r\n");
-        xil_printf("AXI GPIO Device ID: %d\r\n", XPAR_AXI_GPIO_0_DEVICE_ID);
-        xil_printf("AXI GPIO Base Address: 0x%08X\r\n", XPAR_AXI_GPIO_0_BASEADDR);
-        
         int status = XGpio_Initialize(&gpio_inst_, XPAR_AXI_GPIO_0_DEVICE_ID);
         if (status != XST_SUCCESS) {
-            xil_printf("ERROR: AXI GPIO initialization failed! Status: %d\r\n", status);
+            xil_printf("ERROR: AXI GPIO initialization failed!\r\n");
             init_success_ = false;
             return;
         }
         
-        xil_printf("SUCCESS: AXI GPIO initialized!\r\n");
-        
         XGpio_SetDataDirection(&gpio_inst_, GPIO_SWITCHES_CHANNEL, 0xF);
         XGpio_SetDataDirection(&gpio_inst_, GPIO_BUTTONS_CHANNEL, 0xF);
         
-        u32 test_read = XGpio_DiscreteRead(&gpio_inst_, GPIO_SWITCHES_CHANNEL);
-        xil_printf("Initial switch reading: 0x%X\r\n", test_read);
-        
         init_success_ = true;
-        xil_printf("Sequence Detector ready!\r\n");
-        xil_printf("Secret sequence: sw0 ON -> sw1 ON -> sw0 OFF -> sw2 ON\r\n");
-        xil_printf("======================================\r\n\r\n");
+        xil_printf("Easter Egg ready! Sequence: sw0 -> sw1 -> sw0 off -> sw2\r\n");
     }
     
     bool update() {
@@ -56,12 +45,6 @@ public:
         bool sw1 = (switch_data & 0x02) != 0;
         bool sw2 = (switch_data & 0x04) != 0;
         bool sw3 = (switch_data & 0x08) != 0;
-        
-        static int debug_counter = 0;
-        if (debug_counter++ % 50000 == 0) {
-            xil_printf("[DEBUG] Switches: sw0=%d sw1=%d sw2=%d sw3=%d (raw=0x%X)\r\n", 
-                       sw0, sw1, sw2, sw3, switch_data);
-        }
         
         triggered_this_cycle_ = false;
         

@@ -1,4 +1,4 @@
-06:42:28 **** Incremental Build of configuration Debug for project camera ****
+21:21:32 **** Incremental Build of configuration Debug for project camera ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -22,9 +22,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size camera.elf  |tee "camera.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 644596	   3912	  29144	 677652	  a5714	camera.elf
+ 643668	   3912	  29152	 676732	  a537c	camera.elf
 'Finished building: camera.elf.size'
 ' '
 
-06:42:33 Build Finished (took 4s.976ms)
+21:21:47 Build Finished (took 15s.230ms)
 

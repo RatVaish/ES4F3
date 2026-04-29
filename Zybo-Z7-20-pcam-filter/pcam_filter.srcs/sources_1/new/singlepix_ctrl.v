@@ -59,7 +59,7 @@ module singlepix_ctrl#(
         if (!n_rst) begin
             pix_pos <= 0;
         end
-        else if (i_vid_vsync) begin
+        else if (i_vid_hsync) begin
             pix_pos <= 0;
         end
         else if (i_vid_VDE) begin
